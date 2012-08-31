@@ -28,7 +28,7 @@
     <library name="cta-cdmcerif-kettleplugin.jar"/>
     <library name="cta-chaffinch-cerif-datamodel.jar"/>
     <library name="qizxopen.jar"/>
-    <library name="resolver-1.0.jar"/>
+    <library name="resolver.jar"/>
   </libraries>
     
   <localized_category>
