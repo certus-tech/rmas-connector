@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+]>
+<section>
+	<title>আলেখ্যনৰ আচাৰ বিধি</title>
+	 <para>
+		এই হাতপুথিয়ে কিছু শব্দ আৰু খণ্ডবাক্য আৰু তথ্যৰ কিছুমান নিৰ্দ্দিষ্ট অংশক আলোকপাত কৰিবলৈ বহুতো আচাৰ বিধি ব্যৱহাৰ কৰে ।
+	</para>
+	 <para>
+		PDF আৰু কাগজৰ সংস্কৰণত, এই হাতপুথিয়ে <ulink url="https://fedorahosted.org/liberation-fonts/">Liberation Fonts</ulink> গোটৰ পৰা আঁকি থোৱা typeface সমূহ ব্যৱহাৰ কৰে । আপোনাৰ ব্যৱস্থাপ্ৰণালীত সংস্থাপিত হ&#39;লে Liberation Fonts ৰ গোটক HTML সংস্কৰণত ব্যৱহাৰ কৰা হয় । ন&#39;হ&#39;লে, বৈকল্পিক বা একে ধৰণৰ typeface সমূহক প্ৰদৰ্শন কৰা হয় । মন কৰিব: Red Hat Enterprise Linux 5 আৰু তাৰ পিছৰ সংস্কৰণে অবিকল্পিত ভাবে Liberation Fonts ৰ গোট ব্যৱহাৰ কৰে ।
+	</para>
+	 <section>
+		<title>অক্ষৰমূদ্ৰণশালৰ আচাৰ বিধি</title>
+		 <para>
+			নিৰ্দ্দিষ্ট শব্দ আৰু খণ্ডবাক্যলৈ আকৰ্ষণ কৰিবলৈ চাৰিটা অক্ষৰমূদ্ৰণশালৰ আচাৰ বিধি ব্যৱহাৰ কৰা হয় । এই আচাৰ বিধি, আৰু সিহঁতক প্ৰয়োগ কৰাৰ পৰিস্থিতি, এনে ধৰণৰ ।
+		</para>
+		 <para>
+			<literal>Mono-spaced Bold</literal>
+		</para>
+		 <para>
+			শ্বেল আদেশ, নথিপত্ৰ নাম আৰু পথৰ সৈতে, ব্যৱস্থাপ্ৰণালীৰ নিবেশ আলোকপাত কৰিবলৈ, ব্যৱহাৰ কৰা হয় । ইয়াৰ উপৰিও keycaps আৰু key combinations আলোকপাত কৰিবলৈ ব্যৱহাৰ কৰা হয় । যেনে:
+		</para>
+		 <blockquote>
+			<para>
+				আপোনাৰ বৰ্ত্তমানৰ পঞ্জিকাত<filename>my_next_bestselling_novel</filename> ৰ বিষয়বস্তু চাবলৈ, শ্বেল প্ৰ&#39;মপ্টত <command>cat my_next_bestselling_novel</command> লিখকআৰু আদেশ চলাবলৈ <keycap>Enter</keycap> টিপক ।
+			</para>
+
+		</blockquote>
+		 <para>
+			ওপৰত এটা নথিপত্ৰৰ নাম, এটা শ্বেল আদেশ আৰু এটা keycap আছে, সকলো mono-spaced bold ত আৰু সকলো পৃথক প্ৰসঙ্গৰ কাৰণে ।
+		</para>
+		 <para>
+			Key combinations সমূহক keycaps ৰ পৰা বেলেগ বুলি চিনাকি কৰিব পাৰি key combination ৰ প্ৰত্যেকটো অংশৰ মাজত থকা এটা হাইফেনৰ সংযোগেৰে । যেনে:
+		</para>
+		 <blockquote>
+			<para>
+				আদেশ চলাবলৈ <keycap>Enter</keycap> টিপক ।
+			</para>
+			 <para>
+				প্ৰথম বাৰ্চুৱেল টাৰ্মিনেললৈ যাবলৈ <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F1</keycap></keycombo> টিপক । আপোনাৰ X-Windows অধিবেশনলৈ যাবলৈ <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F7</keycap></keycombo> টিপক ।
+			</para>
+
+		</blockquote>
+		 <para>
+			প্ৰথম পৰিচ্ছেদে টিপিব লগা নিৰ্দ্দিষ্ট keycap দেখুৱাই । দ্বিতীটোৱে দুটা key combinations ৰ কথা কয় (প্ৰত্যেক এটা তিনিটা keycaps ৰ গোট য&#39;ত প্ৰত্যেক গোটক একেলগে টিপা হয় ) ।
+		</para>
+		 <para>
+			উৎসৰ কোডৰ কথা আলোচনা কৰিলে, এটা পৰিচ্ছেদত থকা class names, methods, functions, variable names আৰু returned values ওপৰৰ ধৰণেদেখুওৱা হ&#39;ব, <literal>mono-spaced bold</literal> ত । যেনে:
+		</para>
+		 <blockquote>
+			<para>
+				নথিপত্ৰ-সম্বন্ধীয় classes ত<classname>filesystem</classname> নথিপত্ৰপ্ৰণালী ৰ বাবে, <classname>file</classname> নথিপত্ৰৰ বাবে, আৰু <classname>dir</classname> পঞ্জিকাৰ বাবে । প্ৰত্যেক class ৰ নিজৰ আজ্ঞাৰ গোট থাকে ।
+			</para>
+
+		</blockquote>
+		 <para>
+			<application>Proportional Bold</application>
+		</para>
+		 <para>
+			এটা ব্যৱস্থাপ্ৰণালীত থকা শব্দ আৰু খণ্ডবাক্যৰ কথা কয়, আৰু তাত অনুপ্ৰয়োগৰ নাম;সম্বাদ বাকছৰ লিপি; লেবেল থকা বুটাম; ছেক বাকছ আৰু ৰেডিঅ&#39; বুটামৰ লেবেল;মেনুৰ শিৰোনাম আৰু উপ-মেনুৰ শিৰোনাম থাকে । যেনে:
+		</para>
+		 <blockquote>
+			<para>
+				মূখ্য তালিকাৰ বাৰৰ পৰা <menuchoice><guimenu>ব্যৱস্থাপ্ৰণালী </guimenu><guisubmenu> পছন্দ </guisubmenu><guimenuitem> মাউছ</guimenuitem></menuchoice> নিৰ্ব্বাচন কৰক <application>মাউছৰ পছন্দ</application> আৰম্ভ কৰিবলৈ । <guilabel>বুটাম</guilabel> টেবত, <guilabel>বাওঁ-হতীয়া মাউছ</guilabel> ছেক বাকছ টিপক আৰু <guibutton>বন্ধ কৰক</guibutton> টিপক মূখ্য মাউছ বুটামক বাওঁৰ পৰা সোঁ-ফাললৈ সলনি কৰিবলৈ (বাওঁ হাতেৰে মাউছৰ ব্যৱহাৰ কৰা সুবিধা জনক কৰিবলৈ) ।
+			</para>
+			 <para>
+				এটা বিশেষ আখৰক এটা <application>gedit</application> নথিপত্ৰ ভৰাবলৈ, মূখ্য তালিকাৰ বাৰৰ পৰা <menuchoice><guimenu>অনুপ্ৰয়োগ </guimenu><guisubmenu> অতিৰিক্ত </guisubmenu><guimenuitem> কেৰেক্টাৰ মেপ</guimenuitem></menuchoice> নিৰ্ব্বাচন কৰক । ইয়াৰ পিছত, <application>কেৰেক্টাৰ মেপ</application> মেনু বাৰৰ পৰা <menuchoice><guimenu> বিচাৰক </guimenu><guimenuitem> Find&hellip;</guimenuitem></menuchoice> নিৰ্ব্বাচন কৰক, <guilabel>বিচাৰক</guilabel> ক্ষেত্ৰত আখৰৰ নাম লিখকআৰু <guibutton>পিছলৈ</guibutton> টিপক । <guilabel>কেৰেক্টাৰ টেবুল</guilabel> ত আপুনি বিচৰা আখৰক আলোকপাত কৰা হ&#39;ব ।<guilabel>নকল কৰিব লগা লিপি</guilabel> ক্ষেত্ৰত এই আখৰ ৰাখিবলৈ আলোকপাত কৰা এই আখৰক ডাবুল-ক্লিক কৰক আৰু তাৰ পিছত <guibutton>নকল কৰক</guibutton> বুটাম টিপক । এতিয়া আপোনাৰ আলেখ্যনলৈ ওভতি আহক আৰু <application>gedit</application> তালিকা বাৰৰ পৰা <menuchoice><guimenu>সম্পাদন কৰক </guimenu><guimenuitem> আঠা লগাওক</guimenuitem></menuchoice> নিৰ্ব্বাচন কৰক ।
+			</para>
+
+		</blockquote>
+		 <para>
+			ওপৰৰ লিপিত অনুপ্ৰয়োগৰ নাম; ব্যৱস্থাপ্ৰণালৰ ব্যাপকতালিকাৰ নাম আৰু বস্তু ; অনুপ্ৰয়োগ বিশেষ তালিকাৰ নাম; আৰু বুটাম আৰু এটা GUI সংযোগমাধ্যমত থকালিপি আছে, সকলোকে proportional bold ত দেখুওৱা হৈছে আৰু সকলোকে সন্দৰ্ভৰ মতে পৃথক কৰিব পাৰি ।
+		</para>
+		 <para>
+			<command><replaceable>Mono-spaced Bold Italic</replaceable></command> বা <application><replaceable>Proportional Bold Italic</replaceable></application>
+		</para>
+		 <para>
+			mono-spaced bold বা proportional bold এই হওক, italics যোগ কৰিলে সলনি কৰিব পৰা বা বিভিন্ন মান থকা লিপি বুজায় । Italics আপুনি নিবেশ নকৰা লিপি বুজায় বা পৰিস্থিতিৰ মতে সলনি হোৱা লিপি বুজায় । যেনে:
+		</para>
+		 <blockquote>
+			<para>
+				দূৰৰ যন্ত্ৰত ssh ব্যৱহাৰ কৰি সংযোগ কৰিবলৈ, শ্বেল প্ৰমপ্টত <command>ssh <replaceable>username</replaceable>@<replaceable>domain.name</replaceable></command> লিখক । দূৰৰ যন্ত্ৰ <filename>example.com</filename> হ&#39;লেল আৰু তাত আপোনাৰ ব্যৱহাৰকৰোঁতাৰ নাম john হ&#39;লে , <command>ssh john@example.com</command> লিখক ।
+			</para>
+			 <para>
+				<command>mount -o remount <replaceable>file-system</replaceable></command> আদেশে নাম দিয়া নথিপত্ৰৰপ্ৰণালী পুনঃ তুলি লয় । যেনে, <filename>/home</filename> নথিপত্ৰৰপ্ৰণালী পুনঃ তুলিবলৈ, আদেশ হ&#39;ল <command>mount -o remount /home</command> ।
+			</para>
+			 <para>
+				বৰ্ত্তমানে সংস্থাপিত সৰঞ্জামৰ সংস্কৰণ চাবলৈ, <command>rpm -q <replaceable>package</replaceable></command> আদেশ ব্যৱহাৰ কৰক । ইয়াৰ ফলাফল এনেধৰণৰ হ&#39;ব: <command><replaceable>package-version-release</replaceable></command> ।
+			</para>
+
+		</blockquote>
+		 <para>
+			ওপৰত bold italics ত থকা শব্দত মন দিয়ক &mdash; username, domain.name, file-system, package, version আৰু release. প্ৰত্যেকটো এটা স্থান, হয়তো আপুনি আদেশ লিখোঁতে দিয়া লিপি বা ব্যৱস্থাপ্ৰণালীৰ দ্বাৰা প্ৰদৰ্শন কৰা লিপি ।
+		</para>
+		 <para>
+			কোনো কাৰ্য্যৰ নাম প্ৰদৰ্শন কৰাৰ ওপৰিও, italics এ এটা নতুন আৰু গুৰুত্বপূৰ্ণ শব্দৰ প্ৰথম ব্যৱহাৰো বুজায় । যেনে:
+		</para>
+		 <blockquote>
+			<para>
+				Publican এটা <firstterm>DocBook</firstterm> প্ৰকাশনৰ প্ৰণালী ।
+			</para>
+
+		</blockquote>
+
+	</section>
+	
+	 <section>
+		<title>Pull-quote আচাৰ বিধি</title>
+		 <para>
+			টাৰ্মিনেলৰ নিৰ্গম আৰু উৎসৰ কোডৰ তালিকা ওচৰৰ লিপিৰ পৰা প্ৰত্যক্ষ ভাবে আঁতৰুৱা হয় ।
+		</para>
+		 <para>
+			এটা টাৰ্মিনেললৈ আগবঢ়োৱা নিৰ্গম <computeroutput>mono-spaced roman</computeroutput> ত নিৰ্ধাৰিত কৰা হয় আৰু এনেধৰণে দেখুওৱা হয়:
+		</para>
+		 
+<screen>books        Desktop   documentation  drafts  mss    photos   stuff  svn
+books_tests  Desktop1  downloads      images  notes  scripts  svgs</screen>
+		 <para>
+			উৎস-কোডৰ তালিকাও <computeroutput>mono-spaced roman</computeroutput> ত নিৰ্ধাৰিত কৰা হয় কিন্তু এনে ধৰণে দেখুৱা আৰু আলোকপাত কৰা হয়:
+		</para>
+		 
+<programlisting language="Java">package org.jboss.book.jca.ex1;
+
+import javax.naming.InitialContext;
+
+public class ExClient
+{
+   public static void main(String args[]) 
+       throws Exception
+   {
+      InitialContext iniCtx = new InitialContext();
+      Object         ref    = iniCtx.lookup(&#34;EchoBean&#34;);
+      EchoHome       home   = (EchoHome) ref;
+      Echo           echo   = home.create();
+
+      System.out.println(&#34;Created Echo&#34;);
+
+      System.out.println(&#34;Echo.echo(&#39;Hello&#39;) = &#34; + echo.echo(&#34;Hello&#34;));
+   }
+}</programlisting>
+
+	</section>
+	
+	 <section>
+		<title>টোকা আৰু সঁকিয়নী</title>
+		 <para>
+			অৱশেষত, সাধাৰণতে আওকাণ কৰা তথ্যলৈ আকৰ্ষিত কৰিবলৈ আমি তিনিটা প্ৰদৰ্শনৰ ধৰণ ব্যৱহাৰ কৰোঁ ।
+		</para>
+		 <note>
+			<title>টোকা</title>
+			 <para>
+				সঙ্কেত, চমু পথ বা কাম সম্পূৰ্ণ এটা বৈকল্পিক প্ৰৱেশ হৈছে এটা টোকা । এটা টোকা আওকাণ কৰিলে কোনো ক্ষতি হ&#39;ব নালাগে, কিন্তু আপোনাৰ জীৱন সহজ কৰা এটা কায়দা আপুনি এৰি যাব পাৰে ।
+			</para>
+
+		</note>
+		 <important>
+			<title>গুৰুত্বপূৰ্ণ</title>
+			 <para>
+				Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled &#39;Important&#39; won&#39;t cause data loss but may cause irritation and frustration.
+			</para>
+
+		</important>
+		 <warning>
+			<title>সতৰ্কবাণী</title>
+			 <para>
+				সতৰ্কবাণীক আওকাণ কৰিব নালাগে । সতৰ্কবাণী আওকাণ কৰিলে অতি সম্ভৱ তথ্য হেৰুৱাব পাৰে ।
+			</para>
+
+		</warning>
+
+	</section>
+
+</section>
+
+

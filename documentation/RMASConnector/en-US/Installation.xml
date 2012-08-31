@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "RMASConnector.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="chap-RMASConnector-Installation">
+  <title>Installation</title>
+
+  <section id="sect-RMASConnector-Installation-Section_1">
+    <title>Overview</title>
+
+    <para>This chapter details how to install the RMAS Connector on your system. The installable files are available for <ulink url="http://rmas.certus-tech.com">download</ulink>.</para>
+
+    <para>There are three zip files to download: <orderedlist>
+        <listitem>
+          <para>RMASCore.zip</para>
+        </listitem>
+
+        <listitem>
+          <para>RMASWorkedExamples.zip</para>
+        </listitem>
+
+        <listitem>
+          <para>RMASWebServicesExamples.zip</para>
+        </listitem>
+      </orderedlist> It is recommended that the files are downloaded and installed in this order.</para>
+  </section>
+
+  <section id="sect_Installation_Procedure">
+    <title>Installation Procedure</title>
+
+    <para>Installation of the RMAS Connector is performed by extracting the zip archives to one of the locations specified below. Each of the RMAS Connector archives extracts into a root RMAS
+    directory, and the archives are structured in such a way that their contents are combined when extracted. </para>
+
+    <para>On Linux systems it is recommended to install the RMAS Connector into your home directory, typically at<programlisting>/home/username/RMAS</programlisting>On Windows systems it is
+    recommended to install the RMAS Connector into your user profile folder. To open your profile folder, click <emphasis>Start -&gt; Run</emphasis> and enter</para>
+
+    <programlisting>%USERPROFILE%</programlisting>
+
+    <para></para>
+
+    <para>If your home directory (Linux) or user profile folder (Windows) are located on network storage then it is recommended to create a local directory and to install there instead, as running PDI
+    from network storage can lead to significantly degraded performance. Furthermore, if you are unable to install the RMAS Connector to your home directory or user profile folder for any reason, it
+    is necessary to modify a parameter (project.dir) in the worked examples accordingly.</para>
+  </section>
+
+  <section id="sect-RMASConnector-Installation-Section_2">
+    <title>RMAS Core</title>
+
+    <para>The RMASCore.zip file contains Pentaho PDI (Kettle) and some plugins which have been developed for the RMAS Connector.</para>
+
+    <para>To install, unzip the file into an appropriate location, as described in <xref linkend="sect_Installation_Procedure" />. PDI will be extracted into an RMAS directory at this location.</para>
+
+    <para>To run PDI in Linux, run<programlisting>RMAS/kettle/spoon.sh</programlisting> or in Windows, run <programlisting>RMAS\kettle\Spoon.bat</programlisting></para>
+  </section>
+
+  <section id="sect-RMASConnector-Installation-Section_3">
+    <title>Worked Examples</title>
+
+    <para>The RMASWorkedExamples.zip file contains five worked examples and some sample services and input data. These examples may be used to familiarise yourself with the PDI interface and may be
+    customised to work with your own data and services.</para>
+
+    <para>To install the worked examples, unzip the file into an appropriate location, as described in <xref linkend="sect_Installation_Procedure" />. The worked examples will be extracted into the
+    RMAS/examplerepository directory.</para>
+
+    <para>To use the worked examples, you will need to connect to this repository in PDI. On starting PDI, a dialog box (see <xref linkend="sect-RMASConnector-Installation-Section_3_figure_2" />) asks
+    you to connect to a repository. Click green + icon (Add) in the top right of the dialog box to create a new repository connection.</para>
+
+    <figure id="sect-RMASConnector-Installation-Section_3_figure_2">
+      <title>Connect to repository</title>
+
+      <mediaobject>
+        <imageobject condition="web">
+          <imagedata align="center" fileref="images/InstallationGuide/InstallationRepoConnect.png" scalefit="0" />
+        </imageobject>
+
+        <textobject>
+          <phrase>Connect to repository</phrase>
+        </textobject>
+      </mediaobject>
+    </figure>
+
+    <para>Select <emphasis>Kettle file repository</emphasis> and click <emphasis>OK</emphasis>. In the next dialog box, select <emphasis>Browse...</emphasis> and navigate to and select the
+    <emphasis>examplerepository</emphasis> directory. Enter "RMASConnector" in the Name and ID fields (see <xref linkend="sect-RMASConnector-Installation-Section_3_figure_3" />) and click
+    <emphasis>OK</emphasis>.</para>
+
+    <figure id="sect-RMASConnector-Installation-Section_3_figure_3">
+      <title>Configure repository</title>
+
+      <mediaobject>
+        <imageobject condition="web">
+          <imagedata align="center" fileref="images/InstallationGuide/InstallationRepoConfig.png" scalefit="0" />
+        </imageobject>
+
+        <textobject>
+          <phrase>Configure repository</phrase>
+        </textobject>
+      </mediaobject>
+    </figure>
+
+    <para>The new repository will appear in the Repository Connection list. Highlight it and click <emphasis>OK</emphasis> to connect to it. The main window of the PDI application will open, showing
+    the welcome screen. At this point you have successfully connected to the repository, and you will now be able to access the worked example files by selecting <emphasis>File -&gt;
+    Open...</emphasis> and navigating through the repository.</para>
+
+    <section id="sect-RMASConnector-Installation-Section_3_1">
+      <title>Web Services</title>
+
+      <para>The RMASWebServicesExamples.zip file contains an Apache Tomcat application container instance and sample services for use with worked example 4. To install the web services bundle, unzip
+      the file into an appropriate location, as described in <xref linkend="sect_Installation_Procedure" />. The bundle extracts into the RMAS/examplewebservices directory.</para>
+
+      <para>Note that while no further configuration is typically required to allow Worked Example 4 to be run, the Tomcat bundle will attempt to listen for HTTP connections on port 8080, and will
+      fail to start up if this port is already in use.</para>
+
+      <para>The bundled Apache Tomcat must be running for the WorkedExample4 to operate. On Linux you can start and stop Tomcat by running <programlisting>RMAS/exampleservices/apache-tomcat-7.0.27/bin/startup.sh
+RMAS/exampleservices/apache-tomcat-7.0.27/bin/shutdown.sh</programlisting>On Windows systems use <programlisting>RMAS\exampleservices\apache-tomcat-7.0.27\bin\startup.bat
+RMAS\exampleservices\apache-tomcat-7.0.27\bin\shutdown.bat</programlisting></para>
+
+      <section>
+        <title>Repository ID</title>
+
+        <para>The web services for worked example 4 expect the PDI repository containing the worked examples to have been given the ID <emphasis>RMASConnector</emphasis>. The repository ID will need
+        to be changed in PDI if something else has been used. To change the repository ID, select the repository in the Repository Connection window (shown in <xref
+        linkend="sect-RMASConnector-Installation-Section_3_figure_2" />), and click on the pencil icon above and to the right. Change the ID to RMASConnector and click OK.</para>
+      </section>
+    </section>
+  </section>
+</chapter>

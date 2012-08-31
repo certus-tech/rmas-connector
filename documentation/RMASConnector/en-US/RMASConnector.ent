@@ -1,0 +1,4 @@
+<!ENTITY PRODUCT "RMASConnector">
+<!ENTITY BOOKID "RMASConnector">
+<!ENTITY YEAR "2012">
+<!ENTITY HOLDER "| You need to change the HOLDER entity in the en-US/RMASConnector.ent file |">

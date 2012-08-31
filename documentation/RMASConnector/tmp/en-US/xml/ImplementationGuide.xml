@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "RMASConnector.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="chap-RMASConnector-ImplemnentationGuide" lang="en-US">
+	<title>PDI Implementation</title>
+	 <section id="sect-RMASConnector-ImplemnentationGuide_Section_1">
+		<title>Parameterisation</title>
+		 <para>
+			All of the worked examples make use of parameters to allow the jobs and transformations to be configurable. Each transformation may specify its own parameters with default values, but these may be overridden by defaults specified at the job level. The job level defaults may in turn be overridden at runtime, for example with values specified on the command line.
+		</para>
+		 <para>
+			Parameters can be specified in <emphasis>Spoon</emphasis> using the properties editor for a job or transformation. While editing a transformation in Spoon, press <emphasis>CTRL+T</emphasis> and while editing a job press <emphasis>CTRL+J</emphasis>. Then in the dialog select the <emphasis>Parameters</emphasis> tab to access parameter configuration.
+		</para>
+		 <figure id="sect-RMASConnector-ImplemnentationGuide-Section_1_figure_1">
+			<title>The parameters tab</title>
+			 <mediaobject>
+				<imageobject condition="web">
+					<imagedata align="center" fileref="images/Implementation/ImplParameters.png" format="PNG" scalefit="1" width="444" />
+				</imageobject>
+				 <textobject>
+					<phrase>The parameters tab</phrase>
+				</textobject>
+
+			</mediaobject>
+
+		</figure>
+		 <para>
+			You will see a table showing the parameter name, default value and description. The default values specified in transformation parameter configuration can be overridden by specifying the same parameter at the job level. The parameters specified in the job are by default passed to the transformations which the job uses.
+		</para>
+		 <para>
+			The worked examples make use of parameters to configure their input and output stages, such as values required to set up a database connection, or the location and filename of an output file. Thus if a different input source is required (such as using a different database) it is only necessary to go to the Job parameters and change the relevant parameters.
+		</para>
+		 <para>
+			All of the worked examples define a <emphasis>project.dir</emphasis> parameter. This defines the root directory under which all of the other example files may be found or are created. The worked examples all specify input and output filenames relative to project.dir, and should operate &#39;out of the box&#39; with their default project.dir setting if the RMAS Connector has been installed into one of the recommended locations identified in <xref linkend="sect_Installation_Procedure" />.
+		</para>
+
+	</section>
+	
+	 <section id="sect-RMASConnector-ImplemnentationGuide_Section_2">
+		<title>CERIF-based Common Data Model Steps</title>
+		 <para>
+			The RMAS Connector includes customised transformation steps for working with the CERIF-based Common Data Model (CDM). These extend the standard functionality provided by PDI.
+		</para>
+		 <section id="sect-RMASConnector-ImplemnentationGuide_Section_2_1">
+			<title>Map to CDM</title>
+			 <para>
+				This step acts as a mapping step to map from a set of input fields to CDM fields. The step is accessed in the <emphasis>Design</emphasis> window by choosing <emphasis>Transform-&#62;Map to CDM</emphasis>.
+			</para>
+			 <figure id="sect-RMASConnector-ImplemnentationGuide-Section_2_figure_1">
+				<title>The Map to CDM plugin</title>
+				 <mediaobject>
+					<imageobject condition="web">
+						<imagedata align="center" fileref="images/Implementation/ImplMapToCdm.png" format="PNG" scalefit="1" />
+					</imageobject>
+					 <textobject>
+						<phrase>The Map to CDM plugin</phrase>
+					</textobject>
+
+				</mediaobject>
+
+			</figure>
+			 <para>
+				This step can be configured to map <emphasis>from</emphasis> any input fields, but can only map <emphasis>to</emphasis> CDM fields. In the step properties there are three tabs: Select &amp; Alter, Remove and Meta-data.
+			</para>
+			 <para>
+				The <emphasis>Select &amp; Alter</emphasis> tab allows for fields to be selected for inclusion, and renamed. The <emphasis>Get fields to select</emphasis> button on the right-hand-side of the window can be used to automatically determine the available fields from previous steps.
+			</para>
+			 <para>
+				The <emphasis>Remove</emphasis> tab is used to remove fields from the stream. This is useful to prevent unwanted fields from an input source being mapped to CDM (for example if there is no appropriate field to map to), or to remove temporary calculation fields from earlier steps.
+			</para>
+			 <para>
+				The <emphasis>Meta-data</emphasis> tab allows definition of the mappings from the input fields to the CDM Fields. Select an input field in the <emphasis>Fieldname</emphasis> column, and choose a CDM field to map to from the dropdown in the <emphasis>CDM Field</emphasis> column.
+			</para>
+
+		</section>
+		
+		 <section id="sect-RMASConnector-ImplemnentationGuide_Section_2_2">
+			<title>Get CDM fields</title>
+			 <para>
+				The <emphasis>Get CDM fields</emphasis> step is used to retrieve CDM fields made available by an earlier transformation in the same Job.
+			</para>
+			 <para>
+				When it completes, a transformation may export rows of data to the job it executed within. In the worked examples it is typical to have an input transformation which, for example, queries a database. This will then perform any necessary data preparation and use the <emphasis>Map to CDM</emphasis> step to produce a stream containing only rows of CDM fields. The input transformation then ends with a <emphasis>Copy rows to result</emphasis> step to export these rows. If the transformation is run in a job, the rows may be picked up by any subsequent transformations by using the <emphasis>Get CDM fields</emphasis> step.
+			</para>
+			 <figure id="sect-RMASConnector-ImplemnentationGuide-Section_2_figure_2">
+				<title>The Get CDM fields plugin</title>
+				 <mediaobject>
+					<imageobject condition="web">
+						<imagedata align="center" fileref="images/Implementation/ImplGetCDMFields.png" format="PNG" scalefit="1" />
+					</imageobject>
+					 <textobject>
+						<phrase>The Get CDM Fields plugin</phrase>
+					</textobject>
+
+				</mediaobject>
+
+			</figure>
+			 <para>
+				This step cannot be configured and only imports CDM fields into the transformation.
+			</para>
+
+		</section>
+		
+		 <section id="sect-RMASConnector-ImplemnentationGuide_Section_2_3">
+			<title>Convert CDM to CERIF</title>
+			 <para>
+				<emphasis>Convert CDM to CERIF</emphasis> is used to convert all supported CDM fields to valid CERIF version 1.4. The step is accessed in the <emphasis>Design</emphasis> window by choosing <emphasis>Output-&#62;Convert CDM to CERIF</emphasis>.
+			</para>
+			 <figure id="sect-RMASConnector-ImplemnentationGuide-Section_2_figure_3">
+				<title>The Convert CDM to CERIF plugin</title>
+				 <mediaobject>
+					<imageobject condition="web">
+						<imagedata align="center" fileref="images/Implementation/ImplConvertCDMToCERIF.png" format="PNG" scalefit="1" />
+					</imageobject>
+					 <textobject>
+						<phrase>The Convert CDM to CERIF plugin</phrase>
+					</textobject>
+
+				</mediaobject>
+
+			</figure>
+			 <para>
+				No configuration of this step is necessary and it will automatically serialise all supported CDM fields to valid CERIF XML. This step also performs validation of the resulting document against the CERIF version 1.4 schema. As a result, it is not possible that the resulting XML document contains invalid CERIF if this step completes without reporting any errors.
+			</para>
+
+		</section>
+		
+
+	</section>
+	
+	 <section id="sect-RMASConnector-ImplemnentationGuide_Section_3">
+		<title>Command-Line Invocation</title>
+		 <para>
+			All of the worked examples are intended to be executed in the Spoon graphical environment, but may also be run from the command line. PDI provides a command-line tool called Kitchen for this purpose.
+		</para>
+		 <para>
+			Kitchen utilises the same repository configuration details as Spoon, so once a user has set up the RMAS repository in Spoon they may also run jobs from the command line without further configuration.
+		</para>
+		 <para>
+			Kitchen is found in the root of the PDI installation; in Linux distributions it is located at 
+<programlisting>RMAS/kettle/kitchen.sh</programlisting>
+			 or in Windows, at 
+<programlisting>RMAS\kettle\Kitchen.bat</programlisting>
+		</para>
+		 <para>
+			The following command lines demonstrate how to execute a worked example on both Linux and Windows. Note that the worked example job files each reside in their own subdirectory within the repository. Also note that the quote marks around the repository name are optional in this case, but they must be included if the repository name contains spaces.
+		</para>
+		 <para>
+			Linux: 
+<programlisting>kitchen.sh -rep=&#34;RMASConnector&#34; -dir=/WorkedExample2/ -job=WorkedExample2 -param:input.file=/var/test/data.csv</programlisting>
+		</para>
+		 <para>
+			Windows:
+<programlisting>Kitchen.bat /rep:&#34;RMASConnector&#34; /dir:/WorkedExample2 /job:WorkedExample2 /param:input.file:c:\tmp\data.csv</programlisting>
+		</para>
+
+	</section>
+
+</chapter>
+

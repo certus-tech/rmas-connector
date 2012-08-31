@@ -1,0 +1,396 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "RMASConnector.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="chap-RMASConnector-WorkedExample4" lang="en-US">
+	<title>Worked Example 4: Event data SOAP wrapper to XML payload</title>
+	 <section id="sect-RMASConnector-WorkedExample4-Section_1">
+		<title>Overview</title>
+		 <para>
+			Worked example 4 demonstrates job execution in response to a trigger from a third party. To start the process, a transformation is run which posts data into a web service. The web service acts as a listener endpoint, such as may be attached to an Enterprise Service Bus (ESB). It invokes a job to convert the data to CERIF XML and post it onwards to a second web service, via a SOAP interface.
+		</para>
+
+	</section>
+	
+	 <section id="sect-RMASConnector-WorkedExample4-Section_2">
+		<title>User Story</title>
+		 <para>
+			An information systems manager maintains an Enterprise Service Bus (ESB) to facilitate the integration of services. The manager already has a service which may be configured to respond to important activities - such as the insertion of a new record in the HR database - and wishes to trigger data integration by invoking a remote web service. The remote web service ingests CERIF XML, and may be invoked by posting a SOAP message via HTTP.
+		</para>
+		 <para>
+			The user first configures their local service to post a message containing the newly inserted data to the ESB. The ESB is then configured to forward the message content to a RESTful web service endpoint.
+		</para>
+		 <para>
+			The web service receives the message content and invokes the RMAS Connector, which handles conversion of the data to CERIF XML and invokes the remote web service via SOAP.
+		</para>
+
+	</section>
+	
+	 <section id="sect-RMASConnector-WorkedExample4-Section_3">
+		<title>Structure of the Example</title>
+		 <para>
+			Worked example 4 consists of a transformation which posts some content to the ‘listener’ web service endpoint (<emphasis>PostFileToTriggerService</emphasis>), and a main job which performs the conversion to CERIF XML and posts the result to the final web service (<emphasis>WorkedExample4</emphasis>). The <emphasis>WorkedExample4</emphasis> job comprises two transformations: <emphasis>SymplecticCSVInput</emphasis> and <emphasis>CERIFXMLToSOAPOutput</emphasis>.
+		</para>
+		 <para>
+			<xref linkend="sect-RMASConnector-WorkedExample4-Section_3_1_figure" /> aims to clarify the structure of the worked example. It indicates the four major steps which occur, the means by which they are connected, and the data which passes between them.
+		</para>
+		 <figure id="sect-RMASConnector-WorkedExample4-Section_3_1_figure">
+			<title>Process overview of worked example 4</title>
+			 <mediaobject>
+				<imageobject condition="web">
+					<imagedata align="center" fileref="images/WorkedExample4/WE4_Overview.png" format="PNG" width="444" />
+				</imageobject>
+				 <textobject>
+					<phrase>Process overview of worked example 4</phrase>
+				</textobject>
+
+			</mediaobject>
+
+		</figure>
+		 <section id="sect-RMASConnector-WorkedExample4-Section_3_1">
+			<title>Parameters</title>
+			 <para>
+				The <emphasis>PostFileToTriggerService</emphasis> transformation has the following parameters:
+			</para>
+			 <table id="sect-RMASConnector-WorkedExample4-Section_3_1_table">
+				<caption></caption> <thead>
+					<tr>
+						<td>
+							Parameter
+						</td>
+						 <td>
+							Description
+						</td>
+
+					</tr>
+
+				</thead>
+				 <tbody>
+					<tr>
+						<td>
+							datafile
+						</td>
+						 <td>
+							The path, including the filename, to the file which is posted to the listener web service. This should be a Symplectic CSV publication data export, or compatible.
+						</td>
+
+					</tr>
+					 <tr>
+						<td>
+							service.url
+						</td>
+						 <td>
+							The URL to post the file to. This is the URL of the listener service.
+						</td>
+
+					</tr>
+					 <tr>
+						<td>
+							project.dir
+						</td>
+						 <td>
+							The root directory for the project.
+						</td>
+
+					</tr>
+
+				</tbody>
+
+			</table>
+			 <para>
+				The <emphasis>WorkedExample4</emphasis> job has the following parameters:
+			</para>
+			 <table id="sect-RMASConnector-WorkedExample4-Section_3_2_table">
+				<caption></caption> <thead>
+					<tr>
+						<td>
+							Parameter
+						</td>
+						 <td>
+							Description
+						</td>
+
+					</tr>
+
+				</thead>
+				 <tbody>
+					<tr>
+						<td>
+							input.file
+						</td>
+						 <td>
+							The path, including the filename, to the Symplectic CSV export which is read by the CSV input Transformation. When the Job is invoked by the listener web service, this parameter is overridden on the command line.
+						</td>
+
+					</tr>
+					 <tr>
+						<td>
+							soap.template
+						</td>
+						 <td>
+							The path, including the filename, to the XML document containing the complete SOAP message template. The template may contain the placeholder <emphasis>CERIF_DATA</emphasis> at the point at which the CERIF XML serialisation should be inserted.
+						</td>
+
+					</tr>
+					 <tr>
+						<td>
+							webservice.url
+						</td>
+						 <td>
+							URL to the web service which the SOAP message is posted to.
+						</td>
+
+					</tr>
+					 <tr>
+						<td>
+							webservice.action
+						</td>
+						 <td>
+							URI of the web service action to invoke.
+						</td>
+
+					</tr>
+					 <tr>
+						<td>
+							project.dir
+						</td>
+						 <td>
+							The root directory of the project.
+						</td>
+
+					</tr>
+
+				</tbody>
+
+			</table>
+
+		</section>
+		
+
+	</section>
+	
+	 <section id="sect-RMASConnector-WorkedExample4-Section_4">
+		<title>Running the job from Spoon</title>
+		 <para>
+			This section describes how to configure and/or run the job from the Spoon visual editor.
+		</para>
+		 <section id="sect-RMASConnector-WorkedExample4-Section_4_1">
+			<title>Triggering Transformation</title>
+			 <figure id="sect-RMASConnector-WorkedExample4-Section_4_1_figure">
+				<title>Overview of the triggering transformation</title>
+				 <mediaobject>
+					<imageobject condition="web">
+						<imagedata align="center" fileref="images/WorkedExample4/WE4_PostToTrigger.png" format="PNG" scalefit="0" />
+					</imageobject>
+					 <textobject>
+						<phrase>Overview of the triggering transformation</phrase>
+					</textobject>
+
+				</mediaobject>
+
+			</figure>
+			 <para>
+				The first step reads a file from disk and puts its contents into a single field. This step requires minimal configuration: simply the file(s) to load.
+			</para>
+			 <para>
+				The next step performs an HTTP post, and is configured to post the entire file read as the HTTP request body. The service URL it posts to - the ‘listener’ service - expects to receive data in this way - no headers or other data are required.
+			</para>
+
+		</section>
+		
+		 <section id="sect-RMASConnector-WorkedExample4-Section_4_2">
+			<title>Listener Web Service</title>
+			 <para>
+				The listener web service is a simple REST-like service which receives content directly in the body of an HTTP POST. An example has been included in the RMAS Web Services Examples package and is available whenever the associated Apache Tomcat instance is running.
+			</para>
+			 <para>
+				Note for Windows users: although the Transformation described in <xref linkend="sect-RMASConnector-WorkedExample4-Section_4_1" /> can invoke this service, the service is unable to launch the job described below as a process, i.e. the job cannot be triggered externally in Windows. However, the job can be run manually in both Windows and Linux environments, and the following sections apply to both environments.
+			</para>
+
+		</section>
+		
+		 <section id="sect-RMASConnector-WorkedExample4-Section_4_3">
+			<title>Main Job</title>
+			 <para>
+				The main job comprises two transformation entries:
+			</para>
+			 <figure id="sect-RMASConnector-WorkedExample4-Section_4_2_figure">
+				<title>The worked example 4 job</title>
+				 <mediaobject>
+					<imageobject condition="web">
+						<imagedata align="center" fileref="images/WorkedExample4/WE4_Job.png" format="PNG" scalefit="0" width="444" />
+					</imageobject>
+					 <textobject>
+						<phrase>Worked example 4 job</phrase>
+					</textobject>
+
+				</mediaobject>
+
+			</figure>
+
+		</section>
+		
+		 <section id="sect-RMASConnector-WorkedExample4-Section_4_4">
+			<title>Read Symplectic CSV</title>
+			 <para>
+				The first transformation is a CSV input transformation which loads CSV data and maps the fields to the CERIF-based Common Data Model (CDM):
+			</para>
+			 <figure id="sect-RMASConnector-WorkedExample4-Section_4_3_figure">
+				<title>The Read Symplectic CSV transformation</title>
+				 <mediaobject>
+					<imageobject condition="web">
+						<imagedata align="center" fileref="images/WorkedExample2/WE2_CSVInput.png" format="PNG" scalefit="0" width="444" />
+					</imageobject>
+					 <textobject>
+						<phrase>Read Symplectic CSV transformation</phrase>
+					</textobject>
+
+				</mediaobject>
+
+			</figure>
+			 <para>
+				The first step reads from the CSV file, and introduces the configured fields into the transformation. As CSV is intrinsically similar to the way data is handled in transformations - as a series of rows with a defined set of fields (columns) - no special handling is required, and a standard PDI <emphasis>CSV Input</emphasis> step is used. Although all rows and columns in the input data are read by this step, only the field names defined in the CSV Input step are added to the stream.
+			</para>
+			 <para>
+				Next, a JavaScript step is used to convert any dates in a dd/MM/yyyy format into the xs:dateTime format which is required by CERIF (yyyy-MM-dd). Dates with times are also converted into a CERIF-compatible format. These converted dates and dateTimes are added as new fields to each row.
+			</para>
+			 <para>
+				A <emphasis>Map to CDM</emphasis> step then maps from the local fields to CDM fields. In worked example 4 the <emphasis>Map to CDM</emphasis> step is configured to: 
+				<itemizedlist>
+					<listitem>
+						<para>
+							Remove the now spurious original date fields loaded from the CSV file. This is configured via the field listing on the <emphasis>Remove</emphasis> tab.
+						</para>
+
+					</listitem>
+					 <listitem>
+						<para>
+							Map the remaining fields to <emphasis>CDM Fields</emphasis> via the <emphasis>Meta-data tab</emphasis>.
+						</para>
+
+					</listitem>
+
+				</itemizedlist>
+			</para>
+			 <para>
+				The <emphasis>Make rows available</emphasis> step allows the <emphasis>Post CERIF to Web Service</emphasis> transformation to access the data produced by this transformation.
+			</para>
+
+		</section>
+		
+		 <section id="sect-RMASConnector-WorkedExample4-Section_4_5">
+			<title>Post CERIF to Web Service</title>
+			 <para>
+				The <emphasis>Post CERIF to Web Service</emphasis> transformation performs the bulk of the work. The CERIF XML file is wrapped in a SOAP message and posted to a web service.
+			</para>
+			 <figure id="sect-RMASConnector-WorkedExample4-Section_4_4_figure">
+				<title>The worked example 4 job</title>
+				 <mediaobject>
+					<imageobject condition="web">
+						<imagedata align="center" fileref="images/WorkedExample4/WE4_SOAPPost.png" format="PNG" width="444" />
+					</imageobject>
+					 <textobject>
+						<phrase>The SOAP Post transformation</phrase>
+					</textobject>
+
+				</mediaobject>
+
+			</figure>
+			 <para>
+				Forming and posting the SOAP message to the remote web service requires several steps. The first of these is to load a SOAP message template from the filesystem. The message template must contain the placeholder value <emphasis>CERIF_DATA</emphasis> to indicate the point at which the CERIF XML document is to be inserted.
+			</para>
+			 <para>
+				The Combine Fields step is used to merge the stream containing the CERIF XML data and the stream containing the SOAP message template into a single stream.
+			</para>
+			 <para>
+				The Add Action Field and Set Action Value steps introduce the SOAP Action as a new column. The SOAP Action ultimately defines the service method to invoke on the remote endpoint. The action is parameterised, so adding this value requires two steps: firstly to add the new field to the stream, and then to set its value from the transformation parameter.
+			</para>
+			 <para>
+				The SOAP template is then populated with a string replacement, substituting the <emphasis>CERIF_DATA</emphasis> placeholder with the actual data.
+			</para>
+			 <para>
+				An HTTP POST is performed to send the request to the server. The HTTP Post step is configured to post the SOAP message as the request body, and the SOAP Action is passed as an HTTP header. This step is also configured to capture the HTTP response code and body as fields.
+			</para>
+			 <para>
+				Finally, a <emphasis>Write to log</emphasis> step logs a message containing the HTTP status code and response body.
+			</para>
+
+		</section>
+		
+		 <section id="sect-RMASConnector-WorkedExample4-Section_4_6">
+			<title>SOAP Web Service</title>
+			 <para>
+				The download contains an example web service that the SOAP message in this worked example is tailored to. It may be found in the RMAS Web Services Example package.
+			</para>
+
+		</section>
+		
+
+	</section>
+	
+	 <section id="sect-RMASConnector-WorkedExample4-Section_5">
+		<title>Running the job from the command line</title>
+		 <para>
+			You can also run the job from the command line, either as the downloaded worked example or after configuring and saving it using Spoon. The following shows how to run the command from both a linux environment and a Windows environment, using the <emphasis>Kitchen</emphasis> tool which is provided with PDI.
+		</para>
+		 <section id="sect-RMASConnector-WorkedExample4-Section_5_1">
+			<title>Running the job from a Linux command line</title>
+			 <para>
+				Navigate to the RMAS/kettle directory: 
+<programlisting>cd RMAS/kettle</programlisting>
+			</para>
+			 <para>
+				Ensure that the kitchen.sh and pan.sh scripts are executable: 
+<programlisting>chmod u+x kitchen.sh pan.sh</programlisting>
+			</para>
+			 <para>
+				Run the job using the following command. Note that the quote marks around the repository name are optional, but they <emphasis>must</emphasis> be included if the repository name contains whitespace: 
+<programlisting>./kitchen.sh -rep=&#34;RMASConnector&#34; -job=WorkedExample4/WorkedExample4</programlisting>
+				You can also run the entire example by starting the PostFileToTriggerService transformation
+			</para>
+			 
+<programlisting>./pan.sh -rep=&#34;RMASConnector&#34; -trans=WorkedExample4/PostFileToTriggerService</programlisting>
+			 <para>
+			</para>
+
+		</section>
+		
+		 <section id="sect-RMASConnector-WorkedExample4-Section_5_2">
+			<title>Running the job from a Windows command line</title>
+			 <para>
+				Navigate to the RMAS/kettle directory: 
+<programlisting>cd RMAS\kettle</programlisting>
+			</para>
+			 <para>
+				Run the job using the following command. Note that the quote marks around the repository name are optional, but they <emphasis>must</emphasis> be included if the repository name contains whitespace:
+<programlisting>Kitchen.bat /rep:&#34;RMASConnector&#34; /job:WorkedExample4/WorkedExample4</programlisting>
+				You can also run the entire example by starting the PostFileToTriggerService transformation
+			</para>
+			 
+<programlisting>pan.bat /rep:&#34;RMASConnector&#34; /trans:WorkedExample4/PostFileToTriggerService</programlisting>
+
+		</section>
+		
+
+	</section>
+	
+	 <section id="sect-RMASConnector-WorkedExample4-Section_6">
+		<title>A note on configuring the worked example</title>
+		 <para>
+			The <emphasis>PostFileToTriggerService</emphasis> transformation reads an export from Symplectic, in the form of a CSV file. A sample file is located at RMAS/exampledata/WorkedExample4/SymplecticCSV.csv.
+		</para>
+		 <para>
+			The input transformation may be substituted by any transformation which makes available rows of CDM data, such as via the PDI <emphasis>Copy rows to result</emphasis> step. The type of file that the input transformation reads defines the type of file that should be posted to the listener service, and hence what sort of file the <emphasis>PostFileToTriggerService</emphasis> should post. The WorkedExample4 job will pass the parameter <emphasis>input.file</emphasis> to the input transformation, to indicate where data should be read from. When WorkedExample4 is invoked by the listener web service this parameter indicates the location of the temporary file containing the data that has been received by the trigger service.
+		</para>
+		 <para>
+			The <emphasis>CERIFXMLOutputToSOAP</emphasis> transformation reads a SOAP message template from the file system. This is a complete XML document containing the entire message body for an HTTP POST. A sample file is located at RMAS/exampledata/WorkedExample4/SOAPRequestTemplate.xml. Note that as the entire CERIF XML document is included verbatim in the SOAP template, it is necessary to ensure that the SOAP document remains well-formed. For this reason the sample template escapes the CERIF XML by wrapping the placeholder value in a <emphasis>CDATA</emphasis> block.
+		</para>
+		 <para>
+			The <emphasis>CERIFXMLOutputToSOAP</emphasis> transformation captures the HTTP response code and body into two fields. These are logged for convenience, but may be used for additional processing - for example to flag up HTTP 500 errors due to the web service being unavailable.
+		</para>
+
+	</section>
+
+</chapter>
+

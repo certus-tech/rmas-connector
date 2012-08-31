@@ -1,0 +1,50 @@
+(:
+  RMAS (Research Management and Administration System) Connector project
+  for data integration.
+  http://www.rmas.ac.uk/documentation/
+ 
+  Copyright (c) 2012 Certus Technology Associates Limited.
+  http://www.certus-tech.com/
+ 
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+:)
+declare namespace cf = "urn:xmlns:org:eurocris:cerif-1.4-0";
+
+(:
+
+if cfResPubl with PUBLICATION_ID exists
+  update cfStartPage = START_PAGE
+else
+  create cfResPubl for PUBLICATION_ID with cfStartPage = START_PAGE
+
+:)
+
+declare variable $PUBLICATION_ID external;
+declare variable $START_PAGE external;
+
+let $resPubl := /cf:CERIF/cf:cfResPubl[cf:cfResPublId = $PUBLICATION_ID]
+return
+if ($PUBLICATION_ID and $START_PAGE) then (
+  if ($resPubl) then (
+    if ($resPubl/cf:cfStartPage) then (
+      (: No need to modify anything. :)
+    ) else (
+      insert node <cf:cfStartPage>{string($START_PAGE)}</cf:cfStartPage>
+      as last into $resPubl
+    )
+  ) else (
+    insert node <cf:cfresPubl>
+                  <cf:cfResPublId>{string($PUBLICATION_ID)}</cf:cfResPublId>
+                  <cf:cfStartPage>{string($START_PAGE)}</cf:cfStartPage>
+                </cf:cfresPubl>
+    into /cf:CERIF
+  )
+) else ()

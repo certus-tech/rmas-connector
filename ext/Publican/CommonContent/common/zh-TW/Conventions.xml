@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+]>
+<section>
+	<title>文&#x200B;件&#x200B;常&#x200B;規&#x200B;</title>
+	 <para>
+		本&#x200B;指&#x200B;南&#x200B;使&#x200B;用&#x200B;了&#x200B;幾&#x200B;種&#x200B;常&#x200B;規&#x200B;，以&#x200B;強&#x200B;調&#x200B;特&#x200B;定&#x200B;文&#x200B;字&#x200B;與&#x200B;詞&#x200B;組&#x200B;，並&#x200B;著&#x200B;重&#x200B;於&#x200B;特&#x200B;定&#x200B;的&#x200B;資&#x200B;訊&#x200B;。&#x200B;
+	</para>
+	 <para>
+		在&#x200B; PDF 和&#x200B;書&#x200B;面&#x200B;版&#x200B;本&#x200B;中&#x200B;，本&#x200B;指&#x200B;南&#x200B;使&#x200B;用&#x200B;了&#x200B;來&#x200B;自&#x200B;於&#x200B; <ulink url="https://fedorahosted.org/liberation-fonts/">Liberation Fonts</ulink> 字&#x200B;體&#x200B;組&#x200B;的&#x200B; typefaces。&#x200B;倘&#x200B;若&#x200B; Liberation Fonts 字&#x200B;體&#x200B;已&#x200B;安&#x200B;裝&#x200B;在&#x200B;您&#x200B;系&#x200B;統&#x200B;上&#x200B;的&#x200B;話&#x200B;，該&#x200B;字&#x200B;體&#x200B;也&#x200B;會&#x200B;被&#x200B;使&#x200B;用&#x200B;於&#x200B; HTML 版&#x200B;本&#x200B;中&#x200B;。&#x200B;若&#x200B;是&#x200B;沒&#x200B;有&#x200B;的&#x200B;話&#x200B;，其&#x200B;它&#x200B;相&#x200B;等&#x200B;的&#x200B; typefaces 便&#x200B;會&#x200B;被&#x200B;顯&#x200B;示&#x200B;。&#x200B;請&#x200B;注&#x200B;意&#x200B;：就&#x200B;預&#x200B;設&#x200B;值&#x200B;，Red Hat Enterprise Linux 5（與&#x200B;更&#x200B;新&#x200B;版&#x200B;本&#x200B;）已&#x200B;包&#x200B;含&#x200B;了&#x200B; Liberation Fonts 字&#x200B;體&#x200B;。&#x200B;
+	</para>
+	 <section>
+		<title>排&#x200B;字&#x200B;上&#x200B;的&#x200B;常&#x200B;規&#x200B;</title>
+		 <para>
+			有&#x200B;四&#x200B;種&#x200B;被&#x200B;用&#x200B;來&#x200B;強&#x200B;調&#x200B;特&#x200B;定&#x200B;文&#x200B;字&#x200B;與&#x200B;詞&#x200B;組&#x200B;的&#x200B;排&#x200B;字&#x200B;常&#x200B;規&#x200B;。&#x200B;這&#x200B;些&#x200B;常&#x200B;規&#x200B;以&#x200B;及&#x200B;它&#x200B;們&#x200B;所&#x200B;適&#x200B;用&#x200B;於&#x200B;的&#x200B;情&#x200B;況&#x200B;如&#x200B;下&#x200B;。&#x200B;
+		</para>
+		 <para>
+			<literal>固&#x200B;定&#x200B;粗&#x200B;體&#x200B;字&#x200B;型&#x200B;（Mono-spaced Bold）</literal>
+		</para>
+		 <para>
+			用&#x200B;來&#x200B;強&#x200B;調&#x200B;系&#x200B;統&#x200B;輸&#x200B;入&#x200B;，包&#x200B;括&#x200B; shell 指&#x200B;令&#x200B;、&#x200B;檔&#x200B;案&#x200B;名&#x200B;稱&#x200B;與&#x200B;路&#x200B;徑&#x200B;。&#x200B;同&#x200B;時&#x200B;也&#x200B;會&#x200B;被&#x200B;使&#x200B;用&#x200B;來&#x200B;強&#x200B;調&#x200B; key caps 與&#x200B;按&#x200B;鍵&#x200B;組&#x200B;合&#x200B;。&#x200B;例&#x200B;如&#x200B;：
+		</para>
+		 <blockquote>
+			<para>
+				若&#x200B;要&#x200B;查&#x200B;看&#x200B;位&#x200B;於&#x200B;您&#x200B;目&#x200B;前&#x200B;工&#x200B;作&#x200B;目&#x200B;錄&#x200B;中&#x200B;的&#x200B; <filename>my_next_bestselling_novel</filename> 檔&#x200B;案&#x200B;的&#x200B;話&#x200B;，請&#x200B;在&#x200B; shell 提&#x200B;示&#x200B;中&#x200B;輸&#x200B;入&#x200B; <command>cat my_next_bestselling_novel</command> 指&#x200B;令&#x200B;並&#x200B;按&#x200B;下&#x200B; <keycap>Enter</keycap> 來&#x200B;執&#x200B;行&#x200B;該&#x200B;指&#x200B;令&#x200B;。&#x200B;
+			</para>
+
+		</blockquote>
+		 <para>
+			以&#x200B;上&#x200B;包&#x200B;含&#x200B;了&#x200B;一&#x200B;個&#x200B;檔&#x200B;案&#x200B;名&#x200B;稱&#x200B;、&#x200B;shell 指&#x200B;令&#x200B;，以&#x200B;及&#x200B; key cap，並&#x200B;且&#x200B;全&#x200B;部&#x200B;以&#x200B;固&#x200B;定&#x200B;粗&#x200B;體&#x200B;字&#x200B;型&#x200B;來&#x200B;顯&#x200B;示&#x200B;。&#x200B;
+		</para>
+		 <para>
+			按&#x200B;鍵&#x200B;組&#x200B;合&#x200B;可&#x200B;透&#x200B;過&#x200B; keycaps 藉&#x200B;由&#x200B;連&#x200B;字&#x200B;符&#x200B;號&#x200B;連&#x200B;接&#x200B;組&#x200B;合&#x200B;鍵&#x200B;來&#x200B;辨&#x200B;別&#x200B;。&#x200B;例&#x200B;如&#x200B;：
+		</para>
+		 <blockquote>
+			<para>
+				請&#x200B;按&#x200B;下&#x200B; <keycap>Enter</keycap> 來&#x200B;執&#x200B;行&#x200B;指&#x200B;令&#x200B;。&#x200B;
+			</para>
+			 <para>
+				請&#x200B;按&#x200B;下&#x200B; <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F1</keycap></keycombo> 來&#x200B;切&#x200B;換&#x200B;至&#x200B;第&#x200B;一&#x200B;個&#x200B;虛&#x200B;擬&#x200B;終&#x200B;端&#x200B;機&#x200B;。&#x200B;按&#x200B;下&#x200B; <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F7</keycap></keycombo> 來&#x200B;返&#x200B;回&#x200B;您&#x200B;的&#x200B; X-Windows session。&#x200B;
+			</para>
+
+		</blockquote>
+		 <para>
+			第&#x200B;一&#x200B;段&#x200B;落&#x200B;強&#x200B;調&#x200B;了&#x200B;應&#x200B;輸&#x200B;入&#x200B;的&#x200B;特&#x200B;定&#x200B; keycap。&#x200B;第&#x200B;二&#x200B;段&#x200B;落&#x200B;強&#x200B;調&#x200B;了&#x200B;兩&#x200B;組&#x200B;含&#x200B;有&#x200B;三&#x200B;個&#x200B; keycaps 的&#x200B;組&#x200B;合&#x200B;鍵&#x200B;，各&#x200B;組&#x200B;組&#x200B;合&#x200B;鍵&#x200B;都&#x200B;是&#x200B;同&#x200B;時&#x200B;按&#x200B;下&#x200B;的&#x200B;。&#x200B;
+		</para>
+		 <para>
+			若&#x200B;討&#x200B;論&#x200B;到&#x200B;原&#x200B;始&#x200B;碼&#x200B;的&#x200B;話&#x200B;，段&#x200B;落&#x200B;中&#x200B;所&#x200B;提&#x200B;及&#x200B;的&#x200B; class 名&#x200B;稱&#x200B;、&#x200B;method、&#x200B;functions、&#x200B;variable 名&#x200B;稱&#x200B;與&#x200B;回&#x200B;傳&#x200B;值&#x200B;，都&#x200B;將&#x200B;會&#x200B;如&#x200B;上&#x200B;一&#x200B;般&#x200B;地&#x200B;以&#x200B;<literal>固&#x200B;定&#x200B;粗&#x200B;體&#x200B;字&#x200B;型&#x200B;</literal>顯&#x200B;示&#x200B;。&#x200B;例&#x200B;如&#x200B;：
+		</para>
+		 <blockquote>
+			<para>
+				和&#x200B;檔&#x200B;案&#x200B;相&#x200B;關&#x200B;的&#x200B; class，其&#x200B;中&#x200B;包&#x200B;含&#x200B;了&#x200B;<classname>filesystem</classname>（檔&#x200B;案&#x200B;系&#x200B;統&#x200B;）、&#x200B;<classname>file</classname>（檔&#x200B;案&#x200B;）以&#x200B;及&#x200B; <classname>dir</classname>（目&#x200B;錄&#x200B;）。&#x200B;各&#x200B;個&#x200B; class 都&#x200B;有&#x200B;著&#x200B;與&#x200B;它&#x200B;關&#x200B;聯&#x200B;的&#x200B;權&#x200B;限&#x200B;組&#x200B;。&#x200B;
+			</para>
+
+		</blockquote>
+		 <para>
+			<application>相&#x200B;稱&#x200B;粗&#x200B;體&#x200B;字&#x200B;型&#x200B;（Proportional Bold）</application>
+		</para>
+		 <para>
+			這&#x200B;代&#x200B;表&#x200B;在&#x200B;系&#x200B;統&#x200B;上&#x200B;所&#x200B;會&#x200B;看&#x200B;見&#x200B;的&#x200B;文&#x200B;字&#x200B;或&#x200B;詞&#x200B;組&#x200B;，這&#x200B;包&#x200B;含&#x200B;了&#x200B;應&#x200B;用&#x200B;程&#x200B;式&#x200B;名&#x200B;稱&#x200B;；對&#x200B;話&#x200B;方&#x200B;塊&#x200B;文&#x200B;字&#x200B;；被&#x200B;標&#x200B;記&#x200B;的&#x200B;按&#x200B;鈕&#x200B;；核&#x200B;取&#x200B;方&#x200B;塊&#x200B;與&#x200B; radio button 標&#x200B;籤&#x200B;；選&#x200B;單&#x200B;標&#x200B;題&#x200B;以&#x200B;及&#x200B;子&#x200B;選&#x200B;單&#x200B;標&#x200B;題&#x200B;。&#x200B;例&#x200B;如&#x200B;：
+		</para>
+		 <blockquote>
+			<para>
+				由&#x200B;主&#x200B;選&#x200B;單&#x200B;選&#x200B;取&#x200B;<menuchoice><guimenu>系&#x200B;統&#x200B;</guimenu><guisubmenu>偏&#x200B;好&#x200B;設&#x200B;定&#x200B;</guisubmenu><guimenuitem>滑&#x200B;鼠&#x200B;</guimenuitem></menuchoice>來&#x200B;啟&#x200B;動&#x200B;<application>滑&#x200B;鼠&#x200B;偏&#x200B;好&#x200B;設&#x200B;定&#x200B;</application>。&#x200B;請&#x200B;在&#x200B;<guilabel>按&#x200B;鈕&#x200B;</guilabel>分&#x200B;頁&#x200B;中&#x200B;點&#x200B;選&#x200B;<guilabel>左&#x200B;手&#x200B;操&#x200B;作&#x200B;滑&#x200B;鼠&#x200B;</guilabel>核&#x200B;取&#x200B;方&#x200B;塊&#x200B;並&#x200B;按&#x200B;下&#x200B;<guibutton>關&#x200B;閉&#x200B;</guibutton>來&#x200B;將&#x200B;主&#x200B;要&#x200B;滑&#x200B;鼠&#x200B;按&#x200B;鍵&#x200B;由&#x200B;左&#x200B;邊&#x200B;切&#x200B;換&#x200B;至&#x200B;右&#x200B;邊&#x200B;（這&#x200B;可&#x200B;讓&#x200B;滑&#x200B;鼠&#x200B;適&#x200B;合&#x200B;以&#x200B;左&#x200B;手&#x200B;使&#x200B;用&#x200B;）。&#x200B;
+			</para>
+			 <para>
+				若&#x200B;要&#x200B;將&#x200B;特&#x200B;殊&#x200B;字&#x200B;元&#x200B;插&#x200B;入&#x200B;一&#x200B;個&#x200B; <application>gedit</application> 檔&#x200B;案&#x200B;中&#x200B;的&#x200B;話&#x200B;，請&#x200B;由&#x200B;主&#x200B;選&#x200B;單&#x200B;中&#x200B;選&#x200B;擇&#x200B;<menuchoice><guimenu>應&#x200B;用&#x200B;程&#x200B;式&#x200B;</guimenu><guisubmenu>附&#x200B;屬&#x200B;應&#x200B;用&#x200B;程&#x200B;式&#x200B;</guisubmenu><guimenuitem>字&#x200B;元&#x200B;對&#x200B;應&#x200B;表&#x200B;</guimenuitem></menuchoice>。&#x200B;接&#x200B;下&#x200B;來&#x200B;，請&#x200B;由&#x200B;<application>字&#x200B;元&#x200B;對&#x200B;應&#x200B;表&#x200B;</application>的&#x200B;選&#x200B;單&#x200B;中&#x200B;選&#x200B;擇&#x200B;<menuchoice><guimenu>搜&#x200B;尋&#x200B;</guimenu><guimenuitem>尋&#x200B;找&#x200B;&hellip;</guimenuitem></menuchoice>，並&#x200B;在&#x200B;<guilabel>搜&#x200B;尋&#x200B;</guilabel>欄&#x200B;位&#x200B;中&#x200B;輸&#x200B;入&#x200B;字&#x200B;元&#x200B;的&#x200B;名&#x200B;稱&#x200B;，然&#x200B;後&#x200B;按&#x200B;下&#x200B;<guibutton>下&#x200B;一&#x200B;步&#x200B;</guibutton>。&#x200B;您&#x200B;所&#x200B;選&#x200B;擇&#x200B;的&#x200B;字&#x200B;元&#x200B;將&#x200B;會&#x200B;顯&#x200B;示&#x200B;於&#x200B;<guilabel>字&#x200B;元&#x200B;表&#x200B;</guilabel>中&#x200B;。&#x200B;在&#x200B;被&#x200B;選&#x200B;定&#x200B;的&#x200B;字&#x200B;元&#x200B;上&#x200B;點&#x200B;兩&#x200B;下&#x200B;滑&#x200B;鼠&#x200B;便&#x200B;可&#x200B;將&#x200B;它&#x200B;放&#x200B;置&#x200B;在&#x200B;<guilabel>準&#x200B;備&#x200B;複&#x200B;製&#x200B;的&#x200B;文&#x200B;字&#x200B;</guilabel>欄&#x200B;位&#x200B;中&#x200B;，接&#x200B;下&#x200B;來&#x200B;請&#x200B;按&#x200B;下&#x200B;旁&#x200B;邊&#x200B;的&#x200B;<guibutton>複&#x200B;製&#x200B;</guibutton>按&#x200B;鈕&#x200B;。&#x200B;現&#x200B;在&#x200B;，請&#x200B;切&#x200B;換&#x200B;回&#x200B;您&#x200B;的&#x200B;文&#x200B;件&#x200B;並&#x200B;由&#x200B; <application>gedit</application> 的&#x200B;選&#x200B;單&#x200B;上&#x200B;選&#x200B;擇&#x200B;<menuchoice><guimenu>編&#x200B;輯&#x200B;</guimenu><guimenuitem>貼&#x200B;上&#x200B;</guimenuitem></menuchoice>。&#x200B;
+			</para>
+
+		</blockquote>
+		 <para>
+			以&#x200B;上&#x200B;文&#x200B;字&#x200B;包&#x200B;含&#x200B;了&#x200B;應&#x200B;用&#x200B;程&#x200B;式&#x200B;名&#x200B;稱&#x200B;；系&#x200B;統&#x200B;全&#x200B;域&#x200B;的&#x200B;選&#x200B;單&#x200B;名&#x200B;稱&#x200B;與&#x200B;項&#x200B;目&#x200B;；應&#x200B;用&#x200B;程&#x200B;式&#x200B;特&#x200B;屬&#x200B;的&#x200B;選&#x200B;單&#x200B;名&#x200B;稱&#x200B;；以&#x200B;及&#x200B;在&#x200B; GUI 介&#x200B;面&#x200B;中&#x200B;所&#x200B;看&#x200B;到&#x200B;的&#x200B;按&#x200B;鈕&#x200B;與&#x200B;文&#x200B;字&#x200B;全&#x200B;部&#x200B;皆&#x200B;以&#x200B;相&#x200B;稱&#x200B;粗&#x200B;體&#x200B;字&#x200B;型&#x200B;來&#x200B;顯&#x200B;示&#x200B;，並&#x200B;且&#x200B;可&#x200B;透&#x200B;過&#x200B;內&#x200B;文&#x200B;來&#x200B;辨&#x200B;別&#x200B;。&#x200B;
+		</para>
+		 <para>
+			<command><replaceable>Mono-spaced Bold Italic</replaceable></command>（固&#x200B;定&#x200B;粗&#x200B;體&#x200B;斜&#x200B;體&#x200B;字&#x200B;型&#x200B;）或&#x200B;是&#x200B; <application><replaceable>Proportional Bold Italic</replaceable></application>（相&#x200B;稱&#x200B;粗&#x200B;體&#x200B;斜&#x200B;體&#x200B;字&#x200B;型&#x200B;）
+		</para>
+		 <para>
+			無&#x200B;論&#x200B;是&#x200B; Mono-spaced Bold 或&#x200B;是&#x200B; Proportional Bold，額&#x200B;外&#x200B;的&#x200B;斜&#x200B;體&#x200B;字&#x200B;型&#x200B;便&#x200B;表&#x200B;示&#x200B;可&#x200B;替&#x200B;換&#x200B;或&#x200B;是&#x200B;變&#x200B;數&#x200B;文&#x200B;字&#x200B;。&#x200B;斜&#x200B;體&#x200B;字&#x200B;型&#x200B;代&#x200B;表&#x200B;您&#x200B;不&#x200B;會&#x200B;照&#x200B;字&#x200B;面&#x200B;輸&#x200B;入&#x200B;的&#x200B;文&#x200B;字&#x200B;，或&#x200B;是&#x200B;會&#x200B;依&#x200B;照&#x200B;情&#x200B;況&#x200B;而&#x200B;改&#x200B;變&#x200B;的&#x200B;文&#x200B;字&#x200B;。&#x200B;比&#x200B;方&#x200B;說&#x200B;：
+		</para>
+		 <blockquote>
+			<para>
+				若&#x200B;要&#x200B;透&#x200B;過&#x200B;使&#x200B;用&#x200B; ssh 來&#x200B;連&#x200B;至&#x200B;一&#x200B;部&#x200B;遠&#x200B;端&#x200B;機&#x200B;器&#x200B;，請&#x200B;在&#x200B; shell 提&#x200B;示&#x200B;中&#x200B;輸&#x200B;入&#x200B; <command>ssh <replaceable>用&#x200B;戶&#x200B;名&#x200B;稱&#x200B;</replaceable>@<replaceable>網&#x200B;域&#x200B;.名&#x200B;稱&#x200B;</replaceable></command>。&#x200B;若&#x200B;遠&#x200B;端&#x200B;機&#x200B;器&#x200B;為&#x200B; <filename>example.com</filename> 而&#x200B;您&#x200B;在&#x200B;該&#x200B;機&#x200B;器&#x200B;上&#x200B;的&#x200B;用&#x200B;戶&#x200B;名&#x200B;稱&#x200B;為&#x200B; john 的&#x200B;話&#x200B;，請&#x200B;輸&#x200B;入&#x200B; <command>ssh john@example.com</command>。&#x200B;
+			</para>
+			 <para>
+				<command>mount -o remount <replaceable>檔&#x200B;案&#x200B;系&#x200B;統&#x200B;</replaceable></command> 指&#x200B;令&#x200B;會&#x200B;將&#x200B; named 檔&#x200B;案&#x200B;系&#x200B;統&#x200B;重&#x200B;新&#x200B;掛&#x200B;載&#x200B;。&#x200B;比&#x200B;方&#x200B;說&#x200B;，若&#x200B;要&#x200B;重&#x200B;新&#x200B;掛&#x200B;載&#x200B; <filename>/home</filename> 檔&#x200B;案&#x200B;系&#x200B;統&#x200B;的&#x200B;話&#x200B;，該&#x200B;指&#x200B;令&#x200B;就&#x200B;會&#x200B;是&#x200B; <command>mount -o remount /home</command>。&#x200B;
+			</para>
+			 <para>
+				使&#x200B;用&#x200B; <command>rpm -q <replaceable>套&#x200B;件&#x200B;</replaceable></command> 指&#x200B;令&#x200B;來&#x200B;查&#x200B;看&#x200B;目&#x200B;前&#x200B;已&#x200B;安&#x200B;裝&#x200B;套&#x200B;件&#x200B;的&#x200B;版&#x200B;本&#x200B;。&#x200B;系&#x200B;統&#x200B;將&#x200B;會&#x200B;回&#x200B;傳&#x200B;此&#x200B;結&#x200B;果&#x200B;：<command><replaceable>套&#x200B;件&#x200B;發&#x200B;行&#x200B;版&#x200B;本&#x200B;</replaceable></command>。&#x200B;
+			</para>
+
+		</blockquote>
+		 <para>
+			請&#x200B;注&#x200B;意&#x200B;以&#x200B;上&#x200B;以&#x200B;粗&#x200B;體&#x200B;斜&#x200B;體&#x200B;字&#x200B;型&#x200B;所&#x200B;表&#x200B;現&#x200B;出&#x200B;的&#x200B;文&#x200B;字&#x200B; &mdash; 用&#x200B;戶&#x200B;名&#x200B;稱&#x200B;、&#x200B;網&#x200B;域&#x200B;.名&#x200B;稱&#x200B;、&#x200B;檔&#x200B;案&#x200B;系&#x200B;統&#x200B;、&#x200B;套&#x200B;件&#x200B;以&#x200B;及&#x200B;發&#x200B;行&#x200B;版&#x200B;本&#x200B;。&#x200B;所&#x200B;有&#x200B;文&#x200B;字&#x200B;皆&#x200B;為&#x200B;佔&#x200B;位&#x200B;符&#x200B;號&#x200B;，這&#x200B;可&#x200B;代&#x200B;表&#x200B;您&#x200B;提&#x200B;供&#x200B;一&#x200B;項&#x200B;指&#x200B;令&#x200B;時&#x200B;所&#x200B;輸&#x200B;入&#x200B;的&#x200B;文&#x200B;字&#x200B;或&#x200B;是&#x200B;系&#x200B;統&#x200B;所&#x200B;顯&#x200B;示&#x200B;的&#x200B;文&#x200B;字&#x200B;。&#x200B;
+		</para>
+		 <para>
+			除&#x200B;了&#x200B;用&#x200B;來&#x200B;顯&#x200B;示&#x200B;一&#x200B;項&#x200B;作&#x200B;業&#x200B;標&#x200B;題&#x200B;這&#x200B;樣&#x200B;的&#x200B;標&#x200B;準&#x200B;用&#x200B;法&#x200B;，斜&#x200B;體&#x200B;字&#x200B;也&#x200B;可&#x200B;代&#x200B;表&#x200B;第&#x200B;一&#x200B;次&#x200B;使&#x200B;用&#x200B;的&#x200B;重&#x200B;要&#x200B;新&#x200B;詞&#x200B;彙&#x200B;。&#x200B;比&#x200B;方&#x200B;說&#x200B;：
+		</para>
+		 <blockquote>
+			<para>
+				Publican 是&#x200B;個&#x200B; <firstterm>DocBook</firstterm> 發&#x200B;佈&#x200B;系&#x200B;統&#x200B;。&#x200B;
+			</para>
+
+		</blockquote>
+
+	</section>
+	
+	 <section>
+		<title>引&#x200B;述&#x200B;常&#x200B;規&#x200B;</title>
+		 <para>
+			終&#x200B;端&#x200B;機&#x200B;輸&#x200B;出&#x200B;與&#x200B;原&#x200B;始&#x200B;碼&#x200B;資&#x200B;料&#x200B;會&#x200B;被&#x200B;設&#x200B;為&#x200B;在&#x200B;附&#x200B;近&#x200B;的&#x200B;文&#x200B;字&#x200B;間&#x200B;不&#x200B;會&#x200B;被&#x200B;看&#x200B;見&#x200B;。&#x200B;
+		</para>
+		 <para>
+			傳&#x200B;送&#x200B;至&#x200B;終&#x200B;端&#x200B;機&#x200B;的&#x200B;輸&#x200B;出&#x200B;設&#x200B;置&#x200B;為&#x200B; <computeroutput>mono-spaced roman</computeroutput>，並&#x200B;且&#x200B;以&#x200B;此&#x200B;方&#x200B;式&#x200B;顯&#x200B;示&#x200B;：
+		</para>
+		 
+<screen>books        Desktop   documentation  drafts  mss    photos   stuff  svn
+books_tests  Desktop1  downloads      images  notes  scripts  svgs</screen>
+		 <para>
+			原&#x200B;始&#x200B;碼&#x200B;排&#x200B;列&#x200B;亦&#x200B;設&#x200B;置&#x200B;為&#x200B; <computeroutput>mono-spaced roman</computeroutput> 不&#x200B;過&#x200B;會&#x200B;如&#x200B;下&#x200B;加&#x200B;上&#x200B;語&#x200B;法&#x200B;強&#x200B;調&#x200B;：
+		</para>
+		 
+<programlisting language="Java">package org.jboss.book.jca.ex1;
+
+import javax.naming.InitialContext;
+
+public class ExClient
+{
+   public static void main(String args[]) 
+       throws Exception
+   {
+      InitialContext iniCtx = new InitialContext();
+      Object         ref    = iniCtx.lookup(&#34;EchoBean&#34;);
+      EchoHome       home   = (EchoHome) ref;
+      Echo           echo   = home.create();
+
+      System.out.println(&#34;Created Echo&#34;);
+
+      System.out.println(&#34;Echo.echo(&#39;Hello&#39;) = &#34; + echo.echo(&#34;Hello&#34;));
+   }
+}</programlisting>
+
+	</section>
+	
+	 <section>
+		<title>註&#x200B;解&#x200B;和&#x200B;警&#x200B;告&#x200B;</title>
+		 <para>
+			最&#x200B;後&#x200B;，我&#x200B;們&#x200B;將&#x200B;使&#x200B;用&#x200B;三&#x200B;種&#x200B;視&#x200B;覺&#x200B;上&#x200B;的&#x200B;形&#x200B;式&#x200B;，來&#x200B;強&#x200B;調&#x200B;可&#x200B;能&#x200B;會&#x200B;被&#x200B;遺&#x200B;漏&#x200B;掉&#x200B;的&#x200B;資&#x200B;訊&#x200B;。&#x200B;
+		</para>
+		 <note>
+			<title>註&#x200B;解&#x200B;</title>
+			 <para>
+				註&#x200B;解&#x200B;代&#x200B;表&#x200B;某&#x200B;些&#x200B;作&#x200B;業&#x200B;上&#x200B;的&#x200B;提&#x200B;示&#x200B;、&#x200B;捷&#x200B;徑&#x200B;或&#x200B;是&#x200B;其&#x200B;它&#x200B;完&#x200B;成&#x200B;方&#x200B;式&#x200B;。&#x200B;忽&#x200B;略&#x200B;註&#x200B;解&#x200B;並&#x200B;不&#x200B;會&#x200B;帶&#x200B;來&#x200B;太&#x200B;大&#x200B;的&#x200B;負&#x200B;面&#x200B;影&#x200B;響&#x200B;，不&#x200B;過&#x200B;您&#x200B;可&#x200B;能&#x200B;會&#x200B;忽&#x200B;略&#x200B;掉&#x200B;某&#x200B;些&#x200B;能&#x200B;夠&#x200B;較&#x200B;輕&#x200B;鬆&#x200B;完&#x200B;成&#x200B;工&#x200B;作&#x200B;的&#x200B;方&#x200B;式&#x200B;。&#x200B;
+			</para>
+
+		</note>
+		 <important>
+			<title>重&#x200B;點&#x200B;</title>
+			 <para>
+				Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled &#39;Important&#39; won&#39;t cause data loss but may cause irritation and frustration.
+			</para>
+
+		</important>
+		 <warning>
+			<title>警&#x200B;告&#x200B;</title>
+			 <para>
+				任&#x200B;何&#x200B;警&#x200B;告&#x200B;都&#x200B;不&#x200B;該&#x200B;被&#x200B;忽&#x200B;略&#x200B;掉&#x200B;。&#x200B;忽&#x200B;略&#x200B;警&#x200B;告&#x200B;則&#x200B;很&#x200B;有&#x200B;可&#x200B;能&#x200B;會&#x200B;造&#x200B;成&#x200B;資&#x200B;料&#x200B;上&#x200B;的&#x200B;遺&#x200B;失&#x200B;。&#x200B;
+			</para>
+
+		</warning>
+
+	</section>
+
+</section>
+
+

@@ -1,0 +1,3 @@
+"staff_id","surname","forename","middlename","othername","publication_id","pub_date","title","startdate","enddate","number","copyright","volume","edition","series","issue","startpage","endpage","totalpages","url","langcode","translation","InternationalStandardBookNumber","InternationalStandardSerialNumber"
+410962,"SMITH","John","Michael","JS",5,04/05/2006,"Publication 5 title in English","01/10/2010","01/10/2012",1,"Exeter Uni","Vol 2.9",3,4,5,10,15,6,"http://adsabs.harvard.edu/abs/1992MNRAS.2257...67A","en","o","0969-8111","1543-2966"
+365735,"DOE","Jane","Mary",,6,06/07/2008,"Publication 6 title in English","03/07/2008","06/04/2009",3,"Kent Uni",3.6,5,7,2,5,7,3,"http://adsabs.harvard.edu/abs/2005MNRAS.356.1653B","en","o","0264-62021","1354-555X"

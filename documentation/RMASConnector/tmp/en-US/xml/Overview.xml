@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "RMASConnector.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="chap-RMASConnector-Overview" lang="en-US">
+	<title>Overview</title>
+	 <section id="sect-RMASConnector-Overview-Section_1">
+		<title>Project Background</title>
+		 <para>
+			The Research Management and Administration System (RMAS) project aims to facilitate the implementation of research management and administration systems within Higher Education Institutes.
+		</para>
+		 <para>
+			As a part of this project, a number of data integration scenarios have been identified by the Universities of Exeter, Kent and Sunderland. These require a flexible tool to perform Extract, Transform and Load operations (ETL) in order to perform data handling and integration, including serialisation to CERIF, a standardised data interchange format used throughout Europe.
+		</para>
+
+	</section>
+	
+	 <section id="sect-RMASConnector-Overview-Section_2">
+		<title>PDI (Pentaho Kettle)</title>
+		 <para>
+			A number of open source ETL tools were trialled and from these, the Pentaho Data Integration Community Edition (PDI CE), also known as Kettle, was selected. NB: For simplicity, the term <emphasis>PDI</emphasis> will be used throughout this document to refer to this software.
+		</para>
+		 <para>
+			PDI uses the concept of <emphasis>Steps</emphasis> to represent actions performed on data, which can be arranged into <emphasis>transformations</emphasis>, allowing sequences of actions to be performed to manipulate data. transformations can be performed in sequence in a <emphasis>job</emphasis>, meaning that modular approach can be taken to data manipulation, while maintaining the power of the actions can be performed.
+		</para>
+		 <para>
+			A graphical interface allows the user to see how the data flows as it is handled with jobs and transformations.
+		</para>
+
+	</section>
+	
+	 <section id="sect-RMASConnector-Overview-Section_3">
+		<title>PDI Customisation and Worked Examples</title>
+		 <para>
+			To facilitate the use of PDI in the RMAS project, the concept of the CERIF-backed Common Data Model (CDM) is introduced. This is a model to which data can be mapped and passed between Transformations and can then be efficiently serialised into CERIF. Custom plug-ins have been developed for mapping data to the CDM and serialising the CDM to CERIF, and are provided with the release.
+		</para>
+		 <para>
+			Also included with the release are five worked examples which represent some common data handling scenarios. These examples can be used to gain familiarity with the PDI interface, and can be customised to use other data sources as required. Each example is described in detail later in this document.
+		</para>
+
+	</section>
+
+</chapter>
+

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  RMAS (Research Management and Administration System) Connector project
+  for data integration.
+  http://www.rmas.ac.uk/documentation/
+ 
+  Copyright (c) 2012 Certus Technology Associates Limited.
+  http://www.certus-tech.com/
+ 
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+-->
+<cdm xmlns="http://www.certus-tech.com/2012/Chaffinch/CDM/1.0#">
+  
+  <!--                -->
+  <!-- Person Details -->
+  <!--                -->
+  <field cerifSupported="true">
+    <name>PERSON_ID</name>
+    <displayName>Staff Identifier</displayName>
+  </field>
+  <field>
+    <!-- Note CERIF not implemented, UoE have requested title addition to CERIF WG. -->
+    <name>TITLE</name>
+    <displayName>Personal and/or professional title</displayName>    
+  </field>
+  <field>
+    <!-- Note CERIF not implemented, UoE have requested initials addition to CERIF WG. -->
+    <name>INITIALS</name>
+    <displayName>Initials</displayName>    
+  </field>
+  <field cerifSupported="true">
+    <name>FIRST_NAMES</name>
+    <displayName>Given Names</displayName>    
+  </field>
+  <field cerifSupported="true">
+    <name>MIDDLE_NAMES</name>
+    <displayName>Middle Names</displayName>    
+  </field>
+  <field cerifSupported="true">
+    <name>FAMILY_NAMES</name>
+    <displayName>Family Names</displayName>    
+  </field>
+  <field cerifSupported="true">
+    <name>OTHER_NAMES</name>
+    <displayName>Other Names</displayName>    
+  </field>
+  <field cerifSupported="true">
+    <name>EMAIL</name>
+    <displayName>Email</displayName>    
+  </field>
+  <field cerifSupported="true">
+    <name>USERNAME</name>
+    <displayName>Username (electronic access)</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>SCHOOL</name>
+    <displayName>School</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>DEPARTMENT</name>
+    <displayName>Faculty/Service Desc</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>JOB</name>
+    <displayName>Job family code</displayName>
+  </field>  
+  
+  <!--                     -->
+  <!-- Publication Details -->
+  <!--                     -->
+  <field cerifSupported="true">
+    <name>PUBLICATION_ID</name>
+    <displayName>Publication Identifier</displayName>
+  </field>  
+  <field cerifSupported="true">
+    <name>PUBLICATION_DATE</name>
+    <displayName>Publication Date</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>NUMBER</name>
+    <displayName>Number</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>VOLUME</name>
+    <displayName>Volume</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>EDITION</name>
+    <displayName>Edition</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>SERIES</name>
+    <displayName>Series</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>ISSUE</name>
+    <displayName>Issue</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>START_PAGE</name>
+    <displayName>Start Page</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>END_PAGE</name>
+    <displayName>End Page</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>TOTAL_PAGES</name>
+    <displayName>Total Pages</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>ISBN</name>
+    <displayName>ISBN</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>ISSN</name>
+    <displayName>ISSN</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>URI</name>
+    <displayName>URI</displayName>
+  </field>
+  
+  <!-- The fields publication title, language code and translation (as well as the publication ID, handled elsewhere) 
+  all uniquely identify a single entity, so only one of them requires cerifSupported="true". -->
+  <field cerifSupported="true">
+    <name>PUBLICATION_TITLE</name>
+    <displayName>Publication Title</displayName>
+  </field>  
+  <field cerifSupported="false">
+    <name>LANGUAGE_CODE</name>
+    <displayName>Language Code</displayName>
+  </field>  
+  <field cerifSupported="false">
+    <name>TRANSLATION</name>
+    <displayName>Translation Method</displayName>
+  </field>  
+  
+  <!-- Publication/Person link fields. -->
+  <field cerifSupported="true">
+    <name>PUBLICATION_START_DATE</name>
+    <displayName>Publication Start Date</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>PUBLICATION_END_DATE</name>
+    <displayName>Publication End Date</displayName>
+  </field>  
+  <field cerifSupported="true">
+    <name>COPYRIGHT</name>
+    <displayName>Copyright</displayName>
+  </field>
+    
+  <!-- Person/Organisation link fields. -->
+  <field cerifSupported="true">
+    <name>STAFF_START_DATE</name>
+    <displayName>Staff Start Date</displayName>
+  </field>
+  <field cerifSupported="true">
+    <name>STAFF_END_DATE</name>
+    <displayName>Staff End Date</displayName>
+  </field>  
+  <field cerifSupported="true">
+    <name>FTE_FRACTION</name>
+    <displayName>FTE Fraction</displayName>
+  </field>  
+</cdm>

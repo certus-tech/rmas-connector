@@ -1,0 +1,49 @@
+/* Turn off the right title link as there is no image to display here atm. */
+#title .right {
+  display: none;
+}
+
+.producttitle {
+  border-radius: 24px;
+  -moz-border-radius: 24px;
+  /* Turn off dotted background image behind the title */
+  background-image: none;  
+}
+
+/* Center image captions. */
+div.figure h6 {
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+/* List style refers to a bullet image which by default is blank. A default bullet style will look fine. */
+ul li {
+  list-style-image: none;
+  list-style-type: disc;
+}
+
+/* Improvements to the basic table styling. */
+table, th, td {
+  border-color: #494949;
+}
+.book table td {
+  padding: 0.5em;
+}
+/* Table headings and captions are not differentiated from table data by default. */
+table caption {
+  font-weight: bold;
+  color: #369;
+}
+table thead td {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Prefer to manage whitespace around figures in terms of margins rather than br tags. */
+br.figure-break {
+  display: none;
+}
+div.figure {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}

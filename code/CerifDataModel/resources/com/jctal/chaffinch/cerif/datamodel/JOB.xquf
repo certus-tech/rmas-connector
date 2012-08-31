@@ -1,0 +1,64 @@
+(:
+  RMAS (Research Management and Administration System) Connector project
+  for data integration.
+  http://www.rmas.ac.uk/documentation/
+ 
+  Copyright (c) 2012 Certus Technology Associates Limited.
+  http://www.certus-tech.com/
+ 
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+:)
+declare namespace cf = "urn:xmlns:org:eurocris:cerif-1.4-0";
+
+(:
+if cfPers_OrgUnit with JOB and DEPARTMENT and PERSON_ID exists
+  do nothing
+else
+  create cfPers_OrgUnit for PERSON_ID with cfOrgUnitId = DEPARTMENT and cfClassId = JOB
+  if cfClassDescr for JOB exists
+    do nothing
+  else
+    create cfClassDescr for JOB with cfClassId = JOB
+:)
+
+declare variable $DEPARTMENT external;
+declare variable $JOB external;
+declare variable $PERSON_ID external;
+
+if ($PERSON_ID and $DEPARTMENT and $JOB) then ( 
+  if (/cf:CERIF/cf:cfPers_OrgUnit[
+      cf:cfOrgUnitId = $DEPARTMENT and 
+      cf:cfClassId = $JOB and 
+      cf:cfPersId = $PERSON_ID]) then (
+      (: No need to modify anything. :)
+  ) else (
+    insert node
+      <cf:cfPers_OrgUnit>
+        <cf:cfPersId>{string($PERSON_ID)}</cf:cfPersId>
+        <cf:cfOrgUnitId>{string($DEPARTMENT)}</cf:cfOrgUnitId>
+        <cf:cfClassId>{string($JOB)}</cf:cfClassId> <!-- Employee -->
+        <cf:cfClassSchemeId>994069a0-1cd6-11e1-8bc2-0800200c9a66</cf:cfClassSchemeId> <!-- 'CERIF1.3-Person-Organisation' -->
+      </cf:cfPers_OrgUnit>
+    into /cf:CERIF,
+
+    if (/cf:CERIF/cf:cfClassDescr/cf:cfClassId = $JOB) then (
+      (: No need to modify anything. :)
+    ) else (  
+      insert node
+      <cf:cfClassDescr>
+        <cf:cfClassId>{string($JOB)}</cf:cfClassId>
+        <cf:cfClassSchemeId>95f861f0-3acf-11e1-b86c-0800200c9a66</cf:cfClassSchemeId> <!-- 'Classification Scheme' -->
+        <cf:cfDescr cfLangCode="en-GB" cfTrans="o">{string($JOB)}</cf:cfDescr>
+      </cf:cfClassDescr>
+      into /cf:CERIF
+    )
+  )
+) else ()

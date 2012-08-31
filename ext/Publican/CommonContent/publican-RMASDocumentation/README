@@ -1,0 +1,7 @@
+This is the Publican Brand for the RMAS Documentation. This folder's name is what was created with:
+  publican create_brand --name=RMASDocumentation
+
+This directory should be available in the Common Content folder, which by default is:
+  /usr/share/publican/Common_Content
+But individual books may override this by setting common_content in their publican.cfg:
+  common_content: ../../ext/Publican/CommonContent

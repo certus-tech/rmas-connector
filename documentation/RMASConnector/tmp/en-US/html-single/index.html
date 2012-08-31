@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>RMASConnector</title><link rel="stylesheet" href="Common_Content/css/default.css" type="text/css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 2.1" /><meta name="package" content="RMASConnector-RMASConnector-1.0-en-US-1-0" /><meta name="description" content="Welcome to the home site of the Research Management and Administration System (RMAS) Connector project. RMASConnector is a data integration platform developed under the JISC funded Research Management and Administration System project. At the heart of the platform is the Pentaho Open Source Data Integration suite, PDI (also known as Kettle). RMASConnector is based on an Extract, Transform and Load (ETL) pattern and is compatible with an Enterprise Service Bus (ESB) pattern, in which best practice requires a common message structure and vocabulary to ensure interoperability. The RMASConnector project therefore includes the definition of, and support for, suitable message structures. The chosen standard for these messages is CERIF, which has been refined and developed as necessary to accommodate RMAS requirements. RMASConnector is available as a download from this site. Also available within the download are load-and-go worked examples of platform usage. These examples are designed to be easily configurable to work with existing data sources." /></head><body class="toc_embeded "><div id="tocdiv" class="toc"><iframe id="tocframe" class="toc" src="../../../../toc.html">This is an iframe, to view it upgrade your browser or enable iframe display.</iframe></div><p id="title"><a class="left" href="http://rmas.certus-tech.com"><img src="Common_Content/images/image_left.png" alt="Product Site" /></a><a class="right" href="http://rmas.certus-tech.com/documentation"><img src="Common_Content/images/image_right.png" alt="Documentation Site" /></a></p><div xml:lang="en-US" class="book" title="RMASConnector" id="id3351252" lang="en-US"><div class="titlepage"><div><div class="producttitle"><span class="productname">RMASConnector</span> <span class="productnumber">1.0</span></div><div><h1 id="id3351252" class="title">RMASConnector</h1></div><div><h2 class="subtitle"></h2></div><p class="edition">Edition 1</p><div><div xml:lang="en-US" class="authorgroup" lang="en-US"><div class="author"><h3 class="author"></h3><div class="affiliation"><span class="orgname">Certus Technology Associated Ltd.</span></div><code class="email"><a class="email" href="mailto:support@certus-tech.com">support@certus-tech.com</a></code></div></div></div><hr /><div><div class="abstract" title="Abstract"><h6>Abstract</h6><div class="para">
+			Welcome to the home site of the Research Management and Administration System (RMAS) Connector project. RMASConnector is a data integration platform developed under the JISC funded Research Management and Administration System project. At the heart of the platform is the Pentaho Open Source Data Integration suite, PDI (also known as Kettle).
+		</div><div class="para">
+			RMASConnector is based on an Extract, Transform and Load (ETL) pattern and is compatible with an Enterprise Service Bus (ESB) pattern, in which best practice requires a common message structure and vocabulary to ensure interoperability. The RMASConnector project therefore includes the definition of, and support for, suitable message structures. The chosen standard for these messages is CERIF, which has been refined and developed as necessary to accommodate RMAS requirements.
+		</div><div class="para">
+			RMASConnector is available as a download from this site. Also available within the download are load-and-go worked examples of platform usage. These examples are designed to be easily configurable to work with existing data sources.
+		</div></div></div></div><hr /></div><div class="toc"><dl><dt><span class="chapter"><a href="#chap-RMASConnector-Overview">1. Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-Overview-Section_1">1.1. Project Background</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-Overview-Section_2">1.2. PDI (Pentaho Kettle)</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-Overview-Section_3">1.3. PDI Customisation and Worked Examples</a></span></dt></dl></dd><dt><span class="chapter"><a href="#chap-RMASConnector-Installation">2. Installation</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-Installation-Section_1">2.1. Overview</a></span></dt><dt><span class="section"><a href="#sect_Installation_Procedure">2.2. Installation Procedure</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-Installation-Section_2">2.3. RMAS Core</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-Installation-Section_3">2.4. Worked Examples</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-Installation-Section_3_1">2.4.1. Web Services</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#chap-RMASConnector-KettleConfiguration">3. Configuration</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-KettleConfiguration-Section_1">3.1. Jobs and Transformations</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-KettleConfiguration-Section_2">3.2. PDI Repository</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-KettleConfiguration-Section_3">3.3. Steps and Hops</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-KettleConfiguration-Section_4">3.4. Previewing a Step</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-KettleConfiguration-Section_5">3.5. Executing a Transformation or Job</a></span></dt></dl></dd><dt><span class="chapter"><a href="#chap-RMASConnector-ImplemnentationGuide">4. PDI Implementation</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-ImplemnentationGuide_Section_1">4.1. Parameterisation</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-ImplemnentationGuide_Section_2">4.2. CERIF-based Common Data Model Steps</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-ImplemnentationGuide_Section_2_1">4.2.1. Map to CDM</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-ImplemnentationGuide_Section_2_2">4.2.2. Get CDM fields</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-ImplemnentationGuide_Section_2_3">4.2.3. Convert CDM to CERIF</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-ImplemnentationGuide_Section_3">4.3. Command-Line Invocation</a></span></dt></dl></dd><dt><span class="chapter"><a href="#chap-RMASConnector-WorkedExample1">5. Worked Example 1: HR database to Symplectic CSV</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_1">5.1. Overview</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_2">5.2. User Story</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_3">5.3. Structure of the Example</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_3_1">5.3.1. Parameters</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_4">5.4. Running the job from Spoon</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_4_1">5.4.1. Job Structure</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_4_2">5.4.2. Read HR database</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_4_3">5.4.3. Output CSV for Symplectic</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_5">5.5. Running the job from the command line</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_5_1">5.5.1. Running the job from a Linux command line</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_5_2">5.5.2. Running the job from a Windows command line</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_6">5.6. A note on configuring the worked example</a></span></dt></dl></dd><dt><span class="chapter"><a href="#chap-RMASConnector-WorkedExample2">6. Worked Example 2: Publication details - Symplectic to Converis</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_1">6.1. Overview</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_2">6.2. User Story</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_3">6.3. Structure of the Example</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_3_1">6.3.1. Parameters</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_4">6.4. Running the job from Spoon</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_4_1">6.4.1. Job Structure</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_4_2">6.4.2. Read Symplectic CSV</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_4_3">6.4.3. CERIF XML Output</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_5">6.5. Running the job from Spoon</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_5_1">6.5.1. Running the job from a Linux command line</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_5_2">6.5.2. Running the job from a Windows command line</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_6">6.6. A note on configuring the worked example</a></span></dt></dl></dd><dt><span class="chapter"><a href="#chap-RMASConnector-WorkedExample3">7. Worked Example 3: Key mapping across multiple tools</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_1">7.1. Overview</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_2">7.2. User Story</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_3">7.3. Structure of the Example</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_3_1">7.3.1. Parameters</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_4">7.4. Running the job from Spoon</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_4_1">7.4.1. Job Structure</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_4_2">7.4.2. Aggregate Data</a></span></dt><dt><span class="section"><a href="#id2871850">7.4.3. A note on scalability</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_5">7.5. Running the job from the command line</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_5_1">7.5.1. Running the job from a Linux command line</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_5_2">7.5.2. Running the job from a Windows command line</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_6">7.6. A note on configuring the worked example</a></span></dt></dl></dd><dt><span class="chapter"><a href="#chap-RMASConnector-WorkedExample4">8. Worked Example 4: Event data SOAP wrapper to XML payload</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_1">8.1. Overview</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_2">8.2. User Story</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_3">8.3. Structure of the Example</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_3_1">8.3.1. Parameters</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_4">8.4. Running the job from Spoon</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_4_1">8.4.1. Triggering Transformation</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_4_2">8.4.2. Listener Web Service</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_4_3">8.4.3. Main Job</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_4_4">8.4.4. Read Symplectic CSV</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_4_5">8.4.5. Post CERIF to Web Service</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_4_6">8.4.6. SOAP Web Service</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_5">8.5. Running the job from the command line</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_5_1">8.5.1. Running the job from a Linux command line</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_5_2">8.5.2. Running the job from a Windows command line</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_6">8.6. A note on configuring the worked example</a></span></dt></dl></dd><dt><span class="chapter"><a href="#chap-RMASConnector-WorkedExample5">9. Worked Example 5: HR to CERIF XML for project costings</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_1">9.1. Overview</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_2">9.2. User Story</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_3">9.3. Structure of the Example</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_3_1">9.3.1. Parameters</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_4">9.4. Running the job from Spoon</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_4_1">9.4.1. Running the job from Spoon</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_4_2">9.4.2. Read HR Database</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_4_3">9.4.3. Write to CERIF XML</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_5">9.5. Running the job from the command line</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_5_1">9.5.1. Running the job from a Linux command line</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_5_2">9.5.2. Running the job from a Windows command line</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_6">9.6. A note on configuring the worked example</a></span></dt></dl></dd></dl></div><div xml:lang="en-US" class="chapter" title="Chapter 1. Overview" id="chap-RMASConnector-Overview" lang="en-US"><div class="titlepage"><div><div><h2 class="title">Chapter 1. Overview</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#sect-RMASConnector-Overview-Section_1">1.1. Project Background</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-Overview-Section_2">1.2. PDI (Pentaho Kettle)</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-Overview-Section_3">1.3. PDI Customisation and Worked Examples</a></span></dt></dl></div><div class="section" title="1.1. Project Background" id="sect-RMASConnector-Overview-Section_1"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-Overview-Section_1">1.1. Project Background</h2></div></div></div><div class="para">
+			The Research Management and Administration System (RMAS) project aims to facilitate the implementation of research management and administration systems within Higher Education Institutes.
+		</div><div class="para">
+			As a part of this project, a number of data integration scenarios have been identified by the Universities of Exeter, Kent and Sunderland. These require a flexible tool to perform Extract, Transform and Load operations (ETL) in order to perform data handling and integration, including serialisation to CERIF, a standardised data interchange format used throughout Europe.
+		</div></div><div class="section" title="1.2. PDI (Pentaho Kettle)" id="sect-RMASConnector-Overview-Section_2"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-Overview-Section_2">1.2. PDI (Pentaho Kettle)</h2></div></div></div><div class="para">
+			A number of open source ETL tools were trialled and from these, the Pentaho Data Integration Community Edition (PDI CE), also known as Kettle, was selected. NB: For simplicity, the term <span class="emphasis"><em>PDI</em></span> will be used throughout this document to refer to this software.
+		</div><div class="para">
+			PDI uses the concept of <span class="emphasis"><em>Steps</em></span> to represent actions performed on data, which can be arranged into <span class="emphasis"><em>transformations</em></span>, allowing sequences of actions to be performed to manipulate data. transformations can be performed in sequence in a <span class="emphasis"><em>job</em></span>, meaning that modular approach can be taken to data manipulation, while maintaining the power of the actions can be performed.
+		</div><div class="para">
+			A graphical interface allows the user to see how the data flows as it is handled with jobs and transformations.
+		</div></div><div class="section" title="1.3. PDI Customisation and Worked Examples" id="sect-RMASConnector-Overview-Section_3"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-Overview-Section_3">1.3. PDI Customisation and Worked Examples</h2></div></div></div><div class="para">
+			To facilitate the use of PDI in the RMAS project, the concept of the CERIF-backed Common Data Model (CDM) is introduced. This is a model to which data can be mapped and passed between Transformations and can then be efficiently serialised into CERIF. Custom plug-ins have been developed for mapping data to the CDM and serialising the CDM to CERIF, and are provided with the release.
+		</div><div class="para">
+			Also included with the release are five worked examples which represent some common data handling scenarios. These examples can be used to gain familiarity with the PDI interface, and can be customised to use other data sources as required. Each example is described in detail later in this document.
+		</div></div></div><div xml:lang="en-US" class="chapter" title="Chapter 2. Installation" id="chap-RMASConnector-Installation" lang="en-US"><div class="titlepage"><div><div><h2 class="title">Chapter 2. Installation</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#sect-RMASConnector-Installation-Section_1">2.1. Overview</a></span></dt><dt><span class="section"><a href="#sect_Installation_Procedure">2.2. Installation Procedure</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-Installation-Section_2">2.3. RMAS Core</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-Installation-Section_3">2.4. Worked Examples</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-Installation-Section_3_1">2.4.1. Web Services</a></span></dt></dl></dd></dl></div><div class="section" title="2.1. Overview" id="sect-RMASConnector-Installation-Section_1"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-Installation-Section_1">2.1. Overview</h2></div></div></div><div class="para">
+			This chapter details how to install the RMAS Connector on your system. The installable files are available for <a href="http://rmas.certus-tech.com">download</a>.
+		</div><div class="para">
+			There are three zip files to download: 
+			<div class="orderedlist"><ol><li class="listitem"><div class="para">
+						RMASCore.zip
+					</div></li><li class="listitem"><div class="para">
+						RMASWorkedExamples.zip
+					</div></li><li class="listitem"><div class="para">
+						RMASWebServicesExamples.zip
+					</div></li></ol></div>
+			 It is recommended that the files are downloaded and installed in this order.
+		</div></div><div class="section" title="2.2. Installation Procedure" id="sect_Installation_Procedure"><div class="titlepage"><div><div><h2 class="title" id="sect_Installation_Procedure">2.2. Installation Procedure</h2></div></div></div><div class="para">
+			Installation of the RMAS Connector is performed by extracting the zip archives to one of the locations specified below. Each of the RMAS Connector archives extracts into a root RMAS directory, and the archives are structured in such a way that their contents are combined when extracted.
+		</div><div class="para">
+			On Linux systems it is recommended to install the RMAS Connector into your home directory, typically at
+<pre class="programlisting">/home/username/RMAS</pre>
+			On Windows systems it is recommended to install the RMAS Connector into your user profile folder. To open your profile folder, click <span class="emphasis"><em>Start -&gt; Run</em></span> and enter
+		</div><pre class="programlisting">%USERPROFILE%</pre><div class="para">
+		</div><div class="para">
+			If your home directory (Linux) or user profile folder (Windows) are located on network storage then it is recommended to create a local directory and to install there instead, as running PDI from network storage can lead to significantly degraded performance. Furthermore, if you are unable to install the RMAS Connector to your home directory or user profile folder for any reason, it is necessary to modify a parameter (project.dir) in the worked examples accordingly.
+		</div></div><div class="section" title="2.3. RMAS Core" id="sect-RMASConnector-Installation-Section_2"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-Installation-Section_2">2.3. RMAS Core</h2></div></div></div><div class="para">
+			The RMASCore.zip file contains Pentaho PDI (Kettle) and some plugins which have been developed for the RMAS Connector.
+		</div><div class="para">
+			To install, unzip the file into an appropriate location, as described in <a class="xref" href="#sect_Installation_Procedure" title="2.2. Installation Procedure">Section 2.2, “Installation Procedure”</a>. PDI will be extracted into an RMAS directory at this location.
+		</div><div class="para">
+			To run PDI in Linux, run
+<pre class="programlisting">RMAS/kettle/spoon.sh</pre>
+			 or in Windows, run 
+<pre class="programlisting">RMAS\kettle\Spoon.bat</pre>
+		</div></div><div class="section" title="2.4. Worked Examples" id="sect-RMASConnector-Installation-Section_3"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-Installation-Section_3">2.4. Worked Examples</h2></div></div></div><div class="para">
+			The RMASWorkedExamples.zip file contains five worked examples and some sample services and input data. These examples may be used to familiarise yourself with the PDI interface and may be customised to work with your own data and services.
+		</div><div class="para">
+			To install the worked examples, unzip the file into an appropriate location, as described in <a class="xref" href="#sect_Installation_Procedure" title="2.2. Installation Procedure">Section 2.2, “Installation Procedure”</a>. The worked examples will be extracted into the RMAS/examplerepository directory.
+		</div><div class="para">
+			To use the worked examples, you will need to connect to this repository in PDI. On starting PDI, a dialog box (see <a class="xref" href="#sect-RMASConnector-Installation-Section_3_figure_2" title="Figure 2.1. Connect to repository">Figure 2.1, “Connect to repository”</a>) asks you to connect to a repository. Click green + icon (Add) in the top right of the dialog box to create a new repository connection.
+		</div><div class="figure" title="Figure 2.1. Connect to repository" id="sect-RMASConnector-Installation-Section_3_figure_2"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/InstallationGuide/InstallationRepoConnect.png" align="middle" alt="Connect to repository" /></div></div><h6>Figure 2.1. Connect to repository</h6></div><br class="figure-break" /><div class="para">
+			Select <span class="emphasis"><em>Kettle file repository</em></span> and click <span class="emphasis"><em>OK</em></span>. In the next dialog box, select <span class="emphasis"><em>Browse...</em></span> and navigate to and select the <span class="emphasis"><em>examplerepository</em></span> directory. Enter "RMASConnector" in the Name and ID fields (see <a class="xref" href="#sect-RMASConnector-Installation-Section_3_figure_3" title="Figure 2.2. Configure repository">Figure 2.2, “Configure repository”</a>) and click <span class="emphasis"><em>OK</em></span>.
+		</div><div class="figure" title="Figure 2.2. Configure repository" id="sect-RMASConnector-Installation-Section_3_figure_3"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/InstallationGuide/InstallationRepoConfig.png" align="middle" alt="Configure repository" /></div></div><h6>Figure 2.2. Configure repository</h6></div><br class="figure-break" /><div class="para">
+			The new repository will appear in the Repository Connection list. Highlight it and click <span class="emphasis"><em>OK</em></span> to connect to it. The main window of the PDI application will open, showing the welcome screen. At this point you have successfully connected to the repository, and you will now be able to access the worked example files by selecting <span class="emphasis"><em>File -&gt; Open...</em></span> and navigating through the repository.
+		</div><div class="section" title="2.4.1. Web Services" id="sect-RMASConnector-Installation-Section_3_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-Installation-Section_3_1">2.4.1. Web Services</h3></div></div></div><div class="para">
+				The RMASWebServicesExamples.zip file contains an Apache Tomcat application container instance and sample services for use with worked example 4. To install the web services bundle, unzip the file into an appropriate location, as described in <a class="xref" href="#sect_Installation_Procedure" title="2.2. Installation Procedure">Section 2.2, “Installation Procedure”</a>. The bundle extracts into the RMAS/examplewebservices directory.
+			</div><div class="para">
+				Note that while no further configuration is typically required to allow Worked Example 4 to be run, the Tomcat bundle will attempt to listen for HTTP connections on port 8080, and will fail to start up if this port is already in use.
+			</div><div class="para">
+				The bundled Apache Tomcat must be running for the WorkedExample4 to operate. On Linux you can start and stop Tomcat by running 
+<pre class="programlisting">RMAS/exampleservices/apache-tomcat-7.0.27/bin/startup.sh
+RMAS/exampleservices/apache-tomcat-7.0.27/bin/shutdown.sh</pre>
+				On Windows systems use 
+<pre class="programlisting">RMAS\exampleservices\apache-tomcat-7.0.27\bin\startup.bat
+RMAS\exampleservices\apache-tomcat-7.0.27\bin\shutdown.bat</pre>
+			</div><div class="section" title="2.4.1.1. Repository ID"><div class="titlepage"><div><div><h4 class="title" id="id2876408">2.4.1.1. Repository ID</h4></div></div></div><div class="para">
+					The web services for worked example 4 expect the PDI repository containing the worked examples to have been given the ID <span class="emphasis"><em>RMASConnector</em></span>. The repository ID will need to be changed in PDI if something else has been used. To change the repository ID, select the repository in the Repository Connection window (shown in <a class="xref" href="#sect-RMASConnector-Installation-Section_3_figure_2" title="Figure 2.1. Connect to repository">Figure 2.1, “Connect to repository”</a>), and click on the pencil icon above and to the right. Change the ID to RMASConnector and click OK.
+				</div></div></div></div></div><div xml:lang="en-US" class="chapter" title="Chapter 3. Configuration" id="chap-RMASConnector-KettleConfiguration" lang="en-US"><div class="titlepage"><div><div><h2 class="title">Chapter 3. Configuration</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#sect-RMASConnector-KettleConfiguration-Section_1">3.1. Jobs and Transformations</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-KettleConfiguration-Section_2">3.2. PDI Repository</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-KettleConfiguration-Section_3">3.3. Steps and Hops</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-KettleConfiguration-Section_4">3.4. Previewing a Step</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-KettleConfiguration-Section_5">3.5. Executing a Transformation or Job</a></span></dt></dl></div><div class="section" title="3.1. Jobs and Transformations" id="sect-RMASConnector-KettleConfiguration-Section_1"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-KettleConfiguration-Section_1">3.1. Jobs and Transformations</h2></div></div></div><div class="para">
+			PDI allows creation of two file types: jobs and transformations. A transformation is used to describe the data flows for an Extract-Transform-Load (ETL) process, such as reading from a source, transforming data and loading it into a target location.
+		</div><div class="para">
+			A job is used to coordinate ETL processes. A job might be used, for example, to wait for a file to be created in a directory, trigger an ETL process and finally send an email to communicate success or failure of the process. A job may utilise several transformations to achieve its goal.
+		</div></div><div class="section" title="3.2. PDI Repository" id="sect-RMASConnector-KettleConfiguration-Section_2"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-KettleConfiguration-Section_2">3.2. PDI Repository</h2></div></div></div><div class="para">
+			PDI uses a data repository to store jobs, transformations and metadata. The repository can be either a relational database or a folder on disk. To connect to a repository in PDI go to <span class="emphasis"><em>Tools-&gt;Repository-&gt;Connect...</em></span> or alternatively press <span class="emphasis"><em>CTRL+R</em></span>, then choose the repository you want to connect to. For more information on setting up a repository, please refer to the Installation section or the <a href="http://infocenter.pentaho.com/help/topic/getting_started_with_pdi/task_pdi_connecting_to_per.html">PDI documentation</a>.
+		</div></div><div class="section" title="3.3. Steps and Hops" id="sect-RMASConnector-KettleConfiguration-Section_3"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-KettleConfiguration-Section_3">3.3. Steps and Hops</h2></div></div></div><div class="para">
+			In PDI, transformations and jobs are made up of steps for performing various extract, transform and load operations. They are, in essence, the building blocks of the transformations and jobs. Steps are categorised based on their purpose; for example, there are input steps for reading in data, output steps for outputting data and transform steps for transforming and manipulating the data. See <a href="http://wiki.pentaho.com/display/EAI/Pentaho+Data+Integration+Steps">PDI Steps guide</a> for a list of all of the available steps.
+		</div><div class="figure" title="Figure 3.1. An example of a hop between two steps" id="sect-RMASConnector-KettleConfiguration-Section_3_figure_1"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/Configuration/ConfigurationHop.png" align="middle" alt="An example of a hop between two steps" /></div></div><h6>Figure 3.1. An example of a hop between two steps</h6></div><br class="figure-break" /><div class="para">
+			Hops are links between steps and describe the flow of the ETL process. You can create a hop between two steps by clicking the step you wish to start the hop from, press and holding <span class="emphasis"><em>shift</em></span>, and draw a line to the corresponding step. By clicking the hop you can disable/enable it - disabled hops appear greyed out. Some hops are conditional and represent the flow of the ETL process under particular circumstances - for example when an error occurs. These hops are normally coloured, or have an icon over them to indicate their purpose.
+		</div></div><div class="section" title="3.4. Previewing a Step" id="sect-RMASConnector-KettleConfiguration-Section_4"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-KettleConfiguration-Section_4">3.4. Previewing a Step</h2></div></div></div><div class="para">
+			Some PDI steps allow you to preview the data at that particular stage in the process. To do so, <span class="emphasis"><em>right-click</em></span> on the step you want to preview and select <span class="emphasis"><em>Preview</em></span>. A dialog will appear. Click <span class="emphasis"><em>Quick Launch</em></span> and PDI will attempt to preview the data for you. Note that you can only preview steps within a Transformation, not entries within a Job.
+		</div></div><div class="section" title="3.5. Executing a Transformation or Job" id="sect-RMASConnector-KettleConfiguration-Section_5"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-KettleConfiguration-Section_5">3.5. Executing a Transformation or Job</h2></div></div></div><div class="para">
+			Jobs and transformations can be executed within the Spoon interface by clicking the green run arrow shown in <a class="xref" href="#sect-RMASConnector-KettleConfiguration-Section_5_figure_1" title="Figure 3.2. Spoon run controls">Figure 3.2, “Spoon run controls”</a>.
+		</div><div class="figure" title="Figure 3.2. Spoon run controls" id="sect-RMASConnector-KettleConfiguration-Section_5_figure_1"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/Configuration/ConfigurationControls.png" align="middle" alt="Spoon run controls" /></div></div><h6>Figure 3.2. Spoon run controls</h6></div><br class="figure-break" /><div class="para">
+			This will bring up a window allowing you to configure the execution before it is run. Here you can override job parameters and set the level of logging to be displayed. Click <span class="emphasis"><em>Launch</em></span> to then execute the job or transformation.
+		</div></div></div><div xml:lang="en-US" class="chapter" title="Chapter 4. PDI Implementation" id="chap-RMASConnector-ImplemnentationGuide" lang="en-US"><div class="titlepage"><div><div><h2 class="title">Chapter 4. PDI Implementation</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#sect-RMASConnector-ImplemnentationGuide_Section_1">4.1. Parameterisation</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-ImplemnentationGuide_Section_2">4.2. CERIF-based Common Data Model Steps</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-ImplemnentationGuide_Section_2_1">4.2.1. Map to CDM</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-ImplemnentationGuide_Section_2_2">4.2.2. Get CDM fields</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-ImplemnentationGuide_Section_2_3">4.2.3. Convert CDM to CERIF</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-ImplemnentationGuide_Section_3">4.3. Command-Line Invocation</a></span></dt></dl></div><div class="section" title="4.1. Parameterisation" id="sect-RMASConnector-ImplemnentationGuide_Section_1"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-ImplemnentationGuide_Section_1">4.1. Parameterisation</h2></div></div></div><div class="para">
+			All of the worked examples make use of parameters to allow the jobs and transformations to be configurable. Each transformation may specify its own parameters with default values, but these may be overridden by defaults specified at the job level. The job level defaults may in turn be overridden at runtime, for example with values specified on the command line.
+		</div><div class="para">
+			Parameters can be specified in <span class="emphasis"><em>Spoon</em></span> using the properties editor for a job or transformation. While editing a transformation in Spoon, press <span class="emphasis"><em>CTRL+T</em></span> and while editing a job press <span class="emphasis"><em>CTRL+J</em></span>. Then in the dialog select the <span class="emphasis"><em>Parameters</em></span> tab to access parameter configuration.
+		</div><div class="figure" title="Figure 4.1. The parameters tab" id="sect-RMASConnector-ImplemnentationGuide-Section_1_figure_1"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/Implementation/ImplParameters.png" align="middle" width="444" alt="The parameters tab" /></div></div><h6>Figure 4.1. The parameters tab</h6></div><br class="figure-break" /><div class="para">
+			You will see a table showing the parameter name, default value and description. The default values specified in transformation parameter configuration can be overridden by specifying the same parameter at the job level. The parameters specified in the job are by default passed to the transformations which the job uses.
+		</div><div class="para">
+			The worked examples make use of parameters to configure their input and output stages, such as values required to set up a database connection, or the location and filename of an output file. Thus if a different input source is required (such as using a different database) it is only necessary to go to the Job parameters and change the relevant parameters.
+		</div><div class="para">
+			All of the worked examples define a <span class="emphasis"><em>project.dir</em></span> parameter. This defines the root directory under which all of the other example files may be found or are created. The worked examples all specify input and output filenames relative to project.dir, and should operate 'out of the box' with their default project.dir setting if the RMAS Connector has been installed into one of the recommended locations identified in <a class="xref" href="#sect_Installation_Procedure" title="2.2. Installation Procedure">Section 2.2, “Installation Procedure”</a>.
+		</div></div><div class="section" title="4.2. CERIF-based Common Data Model Steps" id="sect-RMASConnector-ImplemnentationGuide_Section_2"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-ImplemnentationGuide_Section_2">4.2. CERIF-based Common Data Model Steps</h2></div></div></div><div class="para">
+			The RMAS Connector includes customised transformation steps for working with the CERIF-based Common Data Model (CDM). These extend the standard functionality provided by PDI.
+		</div><div class="section" title="4.2.1. Map to CDM" id="sect-RMASConnector-ImplemnentationGuide_Section_2_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-ImplemnentationGuide_Section_2_1">4.2.1. Map to CDM</h3></div></div></div><div class="para">
+				This step acts as a mapping step to map from a set of input fields to CDM fields. The step is accessed in the <span class="emphasis"><em>Design</em></span> window by choosing <span class="emphasis"><em>Transform-&gt;Map to CDM</em></span>.
+			</div><div class="figure" title="Figure 4.2. The Map to CDM plugin" id="sect-RMASConnector-ImplemnentationGuide-Section_2_figure_1"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/Implementation/ImplMapToCdm.png" align="middle" alt="The Map to CDM plugin" /></div></div><h6>Figure 4.2. The Map to CDM plugin</h6></div><br class="figure-break" /><div class="para">
+				This step can be configured to map <span class="emphasis"><em>from</em></span> any input fields, but can only map <span class="emphasis"><em>to</em></span> CDM fields. In the step properties there are three tabs: Select &amp; Alter, Remove and Meta-data.
+			</div><div class="para">
+				The <span class="emphasis"><em>Select &amp; Alter</em></span> tab allows for fields to be selected for inclusion, and renamed. The <span class="emphasis"><em>Get fields to select</em></span> button on the right-hand-side of the window can be used to automatically determine the available fields from previous steps.
+			</div><div class="para">
+				The <span class="emphasis"><em>Remove</em></span> tab is used to remove fields from the stream. This is useful to prevent unwanted fields from an input source being mapped to CDM (for example if there is no appropriate field to map to), or to remove temporary calculation fields from earlier steps.
+			</div><div class="para">
+				The <span class="emphasis"><em>Meta-data</em></span> tab allows definition of the mappings from the input fields to the CDM Fields. Select an input field in the <span class="emphasis"><em>Fieldname</em></span> column, and choose a CDM field to map to from the dropdown in the <span class="emphasis"><em>CDM Field</em></span> column.
+			</div></div><div class="section" title="4.2.2. Get CDM fields" id="sect-RMASConnector-ImplemnentationGuide_Section_2_2"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-ImplemnentationGuide_Section_2_2">4.2.2. Get CDM fields</h3></div></div></div><div class="para">
+				The <span class="emphasis"><em>Get CDM fields</em></span> step is used to retrieve CDM fields made available by an earlier transformation in the same Job.
+			</div><div class="para">
+				When it completes, a transformation may export rows of data to the job it executed within. In the worked examples it is typical to have an input transformation which, for example, queries a database. This will then perform any necessary data preparation and use the <span class="emphasis"><em>Map to CDM</em></span> step to produce a stream containing only rows of CDM fields. The input transformation then ends with a <span class="emphasis"><em>Copy rows to result</em></span> step to export these rows. If the transformation is run in a job, the rows may be picked up by any subsequent transformations by using the <span class="emphasis"><em>Get CDM fields</em></span> step.
+			</div><div class="figure" title="Figure 4.3. The Get CDM fields plugin" id="sect-RMASConnector-ImplemnentationGuide-Section_2_figure_2"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/Implementation/ImplGetCDMFields.png" align="middle" alt="The Get CDM Fields plugin" /></div></div><h6>Figure 4.3. The Get CDM fields plugin</h6></div><br class="figure-break" /><div class="para">
+				This step cannot be configured and only imports CDM fields into the transformation.
+			</div></div><div class="section" title="4.2.3. Convert CDM to CERIF" id="sect-RMASConnector-ImplemnentationGuide_Section_2_3"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-ImplemnentationGuide_Section_2_3">4.2.3. Convert CDM to CERIF</h3></div></div></div><div class="para">
+				<span class="emphasis"><em>Convert CDM to CERIF</em></span> is used to convert all supported CDM fields to valid CERIF version 1.4. The step is accessed in the <span class="emphasis"><em>Design</em></span> window by choosing <span class="emphasis"><em>Output-&gt;Convert CDM to CERIF</em></span>.
+			</div><div class="figure" title="Figure 4.4. The Convert CDM to CERIF plugin" id="sect-RMASConnector-ImplemnentationGuide-Section_2_figure_3"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/Implementation/ImplConvertCDMToCERIF.png" align="middle" alt="The Convert CDM to CERIF plugin" /></div></div><h6>Figure 4.4. The Convert CDM to CERIF plugin</h6></div><br class="figure-break" /><div class="para">
+				No configuration of this step is necessary and it will automatically serialise all supported CDM fields to valid CERIF XML. This step also performs validation of the resulting document against the CERIF version 1.4 schema. As a result, it is not possible that the resulting XML document contains invalid CERIF if this step completes without reporting any errors.
+			</div></div></div><div class="section" title="4.3. Command-Line Invocation" id="sect-RMASConnector-ImplemnentationGuide_Section_3"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-ImplemnentationGuide_Section_3">4.3. Command-Line Invocation</h2></div></div></div><div class="para">
+			All of the worked examples are intended to be executed in the Spoon graphical environment, but may also be run from the command line. PDI provides a command-line tool called Kitchen for this purpose.
+		</div><div class="para">
+			Kitchen utilises the same repository configuration details as Spoon, so once a user has set up the RMAS repository in Spoon they may also run jobs from the command line without further configuration.
+		</div><div class="para">
+			Kitchen is found in the root of the PDI installation; in Linux distributions it is located at 
+<pre class="programlisting">RMAS/kettle/kitchen.sh</pre>
+			 or in Windows, at 
+<pre class="programlisting">RMAS\kettle\Kitchen.bat</pre>
+		</div><div class="para">
+			The following command lines demonstrate how to execute a worked example on both Linux and Windows. Note that the worked example job files each reside in their own subdirectory within the repository. Also note that the quote marks around the repository name are optional in this case, but they must be included if the repository name contains spaces.
+		</div><div class="para">
+			Linux: 
+<pre class="programlisting">kitchen.sh -rep="RMASConnector" -dir=/WorkedExample2/ -job=WorkedExample2 -param:input.file=/var/test/data.csv</pre>
+		</div><div class="para">
+			Windows:
+<pre class="programlisting">Kitchen.bat /rep:"RMASConnector" /dir:/WorkedExample2 /job:WorkedExample2 /param:input.file:c:\tmp\data.csv</pre>
+		</div></div></div><div xml:lang="en-US" class="chapter" title="Chapter 5. Worked Example 1: HR database to Symplectic CSV" id="chap-RMASConnector-WorkedExample1" lang="en-US"><div class="titlepage"><div><div><h2 class="title">Chapter 5. Worked Example 1: HR database to Symplectic CSV</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_1">5.1. Overview</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_2">5.2. User Story</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_3">5.3. Structure of the Example</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_3_1">5.3.1. Parameters</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_4">5.4. Running the job from Spoon</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_4_1">5.4.1. Job Structure</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_4_2">5.4.2. Read HR database</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_4_3">5.4.3. Output CSV for Symplectic</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_5">5.5. Running the job from the command line</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_5_1">5.5.1. Running the job from a Linux command line</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_5_2">5.5.2. Running the job from a Windows command line</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample1-Section_6">5.6. A note on configuring the worked example</a></span></dt></dl></div><div class="section" title="5.1. Overview" id="sect-RMASConnector-WorkedExample1-Section_1"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample1-Section_1">5.1. Overview</h2></div></div></div><div class="para">
+			Worked example 1 demonstrates how human resource data can be extracted from one data source ready for import into another: in particular, how to extract data from a Human Resources (HR) database ready for loading it into Symplectic. The data involved contains some personal details and also academic details such as department and employment.
+		</div><div class="para">
+			Because the source schemas differ, the data must be mapped from one schema to the other in order to ready the data for import.
+		</div></div><div class="section" title="5.2. User Story" id="sect-RMASConnector-WorkedExample1-Section_2"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample1-Section_2">5.2. User Story</h2></div></div></div><div class="para">
+			A project manager wishes to import data from their institution's HR database to their Symplectic database.
+		</div><div class="para">
+			The HR database contains personnel information including details about academic status, such as department, school and whether they teach and/or research. They have been asked to import data from the HR database into the institutionâs Symplectic database. The manager must therefore extract the HR data and deliver it in a form suitable for import into Symplectic.
+		</div><div class="para">
+			The manager starts Spoon and opens the HR to Symplectic job. They modify the job parameters to specify the details of their HR database and the location of the output CSV file. They run the job and a CSV is produced, containing the entries from the HR database in a Symplectic format. The CSV file also contains an extra required field detailing whether each user is an academic. The manager imports this file into Symplectic.
+		</div></div><div class="section" title="5.3. Structure of the Example" id="sect-RMASConnector-WorkedExample1-Section_3"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample1-Section_3">5.3. Structure of the Example</h2></div></div></div><div class="para">
+			Worked example 1 consists of three PDI components: one job (WorkedExample1) and two transformations (HRDatabaseInput, SymplecticCSVOutput). These are located in the WorkedExample1 subdirectory of the PDI repository.
+		</div><div class="para">
+			Worked example 1 may be used in the context of the <span class="emphasis"><em>Spoon</em></span> graphical front end to PDI, by loading the job and executing it directly. It may also be executed from a command line.
+		</div><div class="section" title="5.3.1. Parameters" id="sect-RMASConnector-WorkedExample1-Section_3_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample1-Section_3_1">5.3.1. Parameters</h3></div></div></div><div class="para">
+				The following parameters are defined by the <span class="emphasis"><em>WorkedExample1</em></span> job and used by the transformations:
+			</div><table id="sect-RMASConnector-WorkedExample1-Section_3_1_table"><caption>Table 5.1. </caption><thead><tr>
+						<td>
+							Parameter
+						</td>
+						 <td>
+							Description
+						</td>
+
+					</tr></thead><tbody><tr>
+						<td>
+							DatabaseClass
+						</td>
+						 <td>
+							The database driver class name.
+						</td>
+
+					</tr><tr>
+						<td>
+							DatabaseUrl
+						</td>
+						 <td>
+							The URL for the database connection.
+						</td>
+
+					</tr><tr>
+						<td>
+							DatabaseUsername
+						</td>
+						 <td>
+							The username for accessing the database.
+						</td>
+
+					</tr><tr>
+						<td>
+							DatabasePassword
+						</td>
+						 <td>
+							The password for accessing the database.
+						</td>
+
+					</tr><tr>
+						<td>
+							SQLQuery
+						</td>
+						 <td>
+							The query to execute on the database.
+						</td>
+
+					</tr><tr>
+						<td>
+							output.file
+						</td>
+						 <td>
+							The path to the file which is generated by the process. If the file does not exist, it will be created automatically.
+						</td>
+
+					</tr><tr>
+						<td>
+							project.dir
+						</td>
+						 <td>
+							The root directory for the project.
+						</td>
+
+					</tr></tbody></table></div></div><div class="section" title="5.4. Running the job from Spoon" id="sect-RMASConnector-WorkedExample1-Section_4"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample1-Section_4">5.4. Running the job from Spoon</h2></div></div></div><div class="para">
+			This section describes how to configure and/or run the job from the Spoon visual editor.
+		</div><div class="section" title="5.4.1. Job Structure" id="sect-RMASConnector-WorkedExample1-Section_4_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample1-Section_4_1">5.4.1. Job Structure</h3></div></div></div><div class="figure" title="Figure 5.1. The worked example 1 job" id="sect-RMASConnector-WorkedExample1-Section_4_1_figure_1"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample1/ExampleJob.png" align="middle" width="444" alt="Worked Example 1 Job" /></div></div><h6>Figure 5.1. The worked example 1 job</h6></div><br class="figure-break" /><div class="para">
+				This job comprises two transformation steps. <span class="emphasis"><em>Read HR database</em></span> reads in the data from a specified HR database and maps this to a CERIF-based Common Data Model (CDM). The resulting data is then passed to the second step, <span class="emphasis"><em>Output CSV for Symplectic</em></span>, which maps from CDM to the Symplectic schema and outputs a CSV file ready to be imported into a Symplectic database.
+			</div><div class="para">
+				The HR database being used by the job is configured in the job settings. One parameter is used to specify the database configuration; another is used to define the name of the CSV output file.
+			</div></div><div class="section" title="5.4.2. Read HR database" id="sect-RMASConnector-WorkedExample1-Section_4_2"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample1-Section_4_2">5.4.2. Read HR database</h3></div></div></div><div class="para">
+				Reading the HR database is achieved using a transformation which contains three steps:
+			</div><div class="figure" title="Figure 5.2. Read HR database transformation" id="sect-RMASConnector-WorkedExample1-Section_4_3_figure_2"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample1/ExampleInputTransformation.png" align="middle" width="444" alt="Read HR database transformation" /></div></div><h6>Figure 5.2. Read HR database transformation</h6></div><br class="figure-break" /><div class="para">
+				The <span class="emphasis"><em>Query Database</em></span> step performs a query on the configured HR database using parameters specified in the Worked Example 1 job. The <span class="emphasis"><em>Map to CDM</em></span> step maps the fields we want to import to Symplectic, removing any others. Finally, the data is made available to the <span class="emphasis"><em>Output CSV for Symplectic</em></span> transformation.
+			</div></div><div class="section" title="5.4.3. Output CSV for Symplectic" id="sect-RMASConnector-WorkedExample1-Section_4_3"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample1-Section_4_3">5.4.3. Output CSV for Symplectic</h3></div></div></div><div class="para">
+				The output transformation to create the CSV file with valid Symplectic schema data comprises a number of steps.
+			</div><div class="figure" title="Figure 5.3. Get CDM fields" id="sect-RMASConnector-WorkedExample1-Section_4_3_figure_3"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample1/ExampleOutputTransformationStart.png" align="middle" alt="Get CDM fields" /></div></div><h6>Figure 5.3. Get CDM fields</h6></div><br class="figure-break" /><div class="para">
+				First the transformation reads in the input data output by the <span class="emphasis"><em>Read HR database</em></span> transformation using the <span class="emphasis"><em>Get CDM fields</em></span> step.
+			</div><div class="figure" title="Figure 5.4. Set Is Academic field" id="sect-RMASConnector-WorkedExample1-Section_4_3_figure_4"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample1/ExampleOutputTransformationIsAcademic.png" align="middle" width="444" alt="Set Is Academic field" /></div></div><h6>Figure 5.4. Set Is Academic field</h6></div><br class="figure-break" /><div class="para">
+				Secondly, a new field <span class="emphasis"><em>Is Academic</em></span> is created. Its value is determined by the value of the JOB field. If the value of this field is "Research only", "Teaching only" or "Research and Teaching", then the new <span class="emphasis"><em>Is Academic</em></span> field is set to "Y". If the value is equal to "Not teaching and/or research", then the value is set to "N". Any other value for this field is considered an error and so results in a log entry.
+			</div><div class="figure" title="Figure 5.5. Write output to CSV" id="sect-RMASConnector-WorkedExample1-Section_4_3_figure_5"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample1/ExampleOutputTransformationEnd.png" align="middle" alt="Write output to CSV" /></div></div><h6>Figure 5.5. Write output to CSV</h6></div><br class="figure-break" /><div class="para">
+				The <span class="emphasis"><em>Mapping from CDM to CSV Schema</em></span> step then completes the mapping of the data. This is then output as a CSV file by the final step in the transform.
+			</div></div></div><div class="section" title="5.5. Running the job from the command line" id="sect-RMASConnector-WorkedExample1-Section_5"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample1-Section_5">5.5. Running the job from the command line</h2></div></div></div><div class="para">
+			You can also run the job from the command line, either as the downloaded worked example or after configuring and saving it using Spoon. The following shows how to run the command from both a linux environment and a Windows environment, using the <span class="emphasis"><em>Kitchen</em></span> tool which is provided with PDI.
+		</div><div class="section" title="5.5.1. Running the job from a Linux command line" id="sect-RMASConnector-WorkedExample1-Section_5_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample1-Section_5_1">5.5.1. Running the job from a Linux command line</h3></div></div></div><div class="para">
+				Navigate to the RMAS/kettle directory: 
+<pre class="programlisting">cd RMAS/kettle</pre>
+			</div><div class="para">
+				Ensure that the kitchen.sh script is executable: 
+<pre class="programlisting">chmod u+x kitchen.sh</pre>
+			</div><div class="para">
+				Run the job using the following command. Note that the quote marks around the repository name are optional, but they <span class="emphasis"><em>must</em></span> be included if the repository name contains whitespace: 
+<pre class="programlisting">./kitchen.sh -rep="RMASConnector" -job=WorkedExample1/WorkedExample1</pre>
+			</div></div><div class="section" title="5.5.2. Running the job from a Windows command line" id="sect-RMASConnector-WorkedExample1-Section_5_2"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample1-Section_5_2">5.5.2. Running the job from a Windows command line</h3></div></div></div><div class="para">
+				Navigate to the RMAS/kettle directory: 
+<pre class="programlisting">cd RMAS\kettle</pre>
+			</div><div class="para">
+				Run the job using the following command. Note that the quote marks around the repository name are optional, but they <span class="emphasis"><em>must</em></span> be included if the repository name contains whitespace: 
+<pre class="programlisting">Kitchen.bat /rep:"RMASConnector" /job:WorkedExample1/WorkedExample1</pre>
+			</div></div></div><div class="section" title="5.6. A note on configuring the worked example" id="sect-RMASConnector-WorkedExample1-Section_6"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample1-Section_6">5.6. A note on configuring the worked example</h2></div></div></div><div class="para">
+			Worked example 1 gets its input by running a select query on a Human Resources database. This can be configured by ensuring that all the database parameters are set at the job level. Default values for these parameters have been entered for the sample database which is provided as part of the example (RMAS/exampledata/WorkedExample1/WorkedExample1.script). When configuring your own database, you will need to ensure that the <span class="emphasis"><em>Map to CDM</em></span> step in the <span class="emphasis"><em>Read HR Database</em></span> transformation maps the column names in the database to the appropriate CDM fields.
+		</div><div class="para">
+			The output is a single CSV document, which is created at the location specified in the output.file parameter (the default is tmp/Example1CSVOutput.csv). The CSV will contain data which is compliant with the Symplectic schema.
+		</div></div></div><div xml:lang="en-US" class="chapter" title="Chapter 6. Worked Example 2: Publication details - Symplectic to Converis" id="chap-RMASConnector-WorkedExample2" lang="en-US"><div class="titlepage"><div><div><h2 class="title">Chapter 6. Worked Example 2: Publication details - Symplectic to Converis</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_1">6.1. Overview</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_2">6.2. User Story</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_3">6.3. Structure of the Example</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_3_1">6.3.1. Parameters</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_4">6.4. Running the job from Spoon</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_4_1">6.4.1. Job Structure</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_4_2">6.4.2. Read Symplectic CSV</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_4_3">6.4.3. CERIF XML Output</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_5">6.5. Running the job from Spoon</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_5_1">6.5.1. Running the job from a Linux command line</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_5_2">6.5.2. Running the job from a Windows command line</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample2-Section_6">6.6. A note on configuring the worked example</a></span></dt></dl></div><div class="section" title="6.1. Overview" id="sect-RMASConnector-WorkedExample2-Section_1"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample2-Section_1">6.1. Overview</h2></div></div></div><div class="para">
+			Worked example 2 demonstrates how data from a Symplectic CSV export, containing details of publications, can be mapped to CERIF 1.4 XML. The goal might be to integrate with CERIF XML data from other sources, using PDI or some other CERIF-compliant integration tool such as Converis.
+		</div></div><div class="section" title="6.2. User Story" id="sect-RMASConnector-WorkedExample2-Section_2"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample2-Section_2">6.2. User Story</h2></div></div></div><div class="para">
+			A technical manager maintains a Symplectic system populated with details of publications including names and unique identifiers of authors, publication titles, dates of publication, page numbers, etc. The manager also maintains a Converis system for marshalling the university's research management data, and wishes to import the publication details into it. To import into the Converis system it is necessary to produce a valid CERIF XML representation of their Symplectic data.
+		</div><div class="para">
+			Having first exported the required information from Symplectic to a CSV file, the manager starts PDI and opens the Symplectic to Converis job. They ensure that the job is configured to access their Symplectic export file. They then run the job, which generates a CERIF XML file containing the Symplectic data.
+		</div></div><div class="section" title="6.3. Structure of the Example" id="sect-RMASConnector-WorkedExample2-Section_3"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample2-Section_3">6.3. Structure of the Example</h2></div></div></div><div class="para">
+			Worked example 2 consists of three PDI components: one job (WorkedExample2.kjb) and two transformations (SymplecticCSVInput.ktr, CERIFXMLOutput.ktr). These are located in the WorkedExample2 subdirectory of the PDI repository.
+		</div><div class="para">
+			Worked example 2 may be used in the context of the <span class="emphasis"><em>Spoon</em></span> graphical front end to PDI, by loading the job and executing it directly. It may also be executed from a command line.
+		</div><div class="section" title="6.3.1. Parameters" id="sect-RMASConnector-WorkedExample2-Section_3_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample2-Section_3_1">6.3.1. Parameters</h3></div></div></div><div class="para">
+				The following parameters are defined by the <span class="emphasis"><em>WorkedExample2</em></span> job and used by the transformations:
+			</div><table id="sect-RMASConnector-WorkedExample2-Section_3_1_table"><caption>Table 6.1. </caption><thead><tr>
+						<td>
+							Parameter
+						</td>
+						 <td>
+							Description
+						</td>
+
+					</tr></thead><tbody><tr>
+						<td>
+							input.file
+						</td>
+						 <td>
+							The path, including the filename, to the Symplectic CSV export which is read by the CSV input transformation.
+						</td>
+
+					</tr><tr>
+						<td>
+							output.file
+						</td>
+						 <td>
+							The path to the file which is generated by the process. If the file does not exist, it will be created automatically.
+						</td>
+
+					</tr><tr>
+						<td>
+							project.dir
+						</td>
+						 <td>
+							The root directory of the project.
+						</td>
+
+					</tr></tbody></table></div></div><div class="section" title="6.4. Running the job from Spoon" id="sect-RMASConnector-WorkedExample2-Section_4"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample2-Section_4">6.4. Running the job from Spoon</h2></div></div></div><div class="para">
+			This section describes how to configure and/or run the job from the Spoon visual editor. Worked example 2 may be used in the context of <span class="emphasis"><em>Spoon</em></span> by loading the job and executing it directly. As distributed, it is configured with default parameter values that will allow it to run without modification from a sample Symplectic CSV file.
+		</div><div class="section" title="6.4.1. Job Structure" id="sect-RMASConnector-WorkedExample2-Section_4_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample2-Section_4_1">6.4.1. Job Structure</h3></div></div></div><div class="figure" title="Figure 6.1. The worked example 2 job" id="sect-RMASConnector-WorkedExample2-Section_4_1_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample2/WE2_Job.png" align="middle" alt="Worked Example 2 Job" /></div></div><h6>Figure 6.1. The worked example 2 job</h6></div><br class="figure-break" /><div class="para">
+				Worked example 2 consists simply of reading an input file into the CERIF-based Common Data Model (CDM) and serialising to CERIF XML. No intermediate processing is required. There are therefore just two entries in the job: <span class="emphasis"><em>Read Symplectic CSV</em></span> and <span class="emphasis"><em>Write CERIF XML</em></span>.
+			</div></div><div class="section" title="6.4.2. Read Symplectic CSV" id="sect-RMASConnector-WorkedExample2-Section_4_2"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample2-Section_4_2">6.4.2. Read Symplectic CSV</h3></div></div></div><div class="para">
+				Reading Symplectic CSV is achieved with the following transformation:
+			</div><div class="figure" title="Figure 6.2. The Read Symplectic CSV transformation" id="sect-RMASConnector-WorkedExample2-Section_4_2_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample2/WE2_CSVInput.png" align="middle" alt="The Read Symplectic CSV transformation" /></div></div><h6>Figure 6.2. The Read Symplectic CSV transformation</h6></div><br class="figure-break" /><div class="para">
+				The first step reads from the CSV file, and introduces the configured fields into the transformation. As CSV is intrinsically similar to the way data is handled in transformations - as a series of rows with a defined set of fields (columns) - no special handling is required, and a standard PDI <span class="emphasis"><em>CSV Input</em></span> step is used. Although all rows and columns in the input data are read by this step, only the field names defined in the CSV Input step are added to the stream.
+			</div><div class="para">
+				Next, a JavaScript step is used to convert any dates in a dd/MM/yyyy format into the xs:dateTime format which is required by CERIF (yyyy-MM-dd). Dates with times are also converted into a CERIF-compatible format. These converted dates and dateTimes are added as new fields to each row.
+			</div><div class="para">
+				A <span class="emphasis"><em>Map to CDM</em></span> step then maps from the local fields to CDM fields. In worked example 4 the <span class="emphasis"><em>Map to CDM</em></span> step is configured to: 
+				<div class="itemizedlist"><ul><li class="listitem"><div class="para">
+							Remove the now spurious original date fields loaded from the CSV file. This is configured via the field listing on the <span class="emphasis"><em>Remove</em></span> tab.
+						</div></li><li class="listitem"><div class="para">
+							Map the remaining fields to <span class="emphasis"><em>CDM Fields</em></span> via the <span class="emphasis"><em>Meta-data tab</em></span>.
+						</div></li></ul></div>
+			</div><div class="para">
+				The <span class="emphasis"><em>Make rows available</em></span> step allows the <span class="emphasis"><em>Post CERIF to Web Service</em></span> transformation to access the data produced by this transformation.
+			</div></div><div class="section" title="6.4.3. CERIF XML Output" id="sect-RMASConnector-WorkedExample2-Section_4_3"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample2-Section_4_3">6.4.3. CERIF XML Output</h3></div></div></div><div class="para">
+				The content of the CDM is serialised to a valid CERIF 1.4 XML document with the following transformation:
+			</div><div class="figure" title="Figure 6.3. The CERIF XML Output transformation" id="sect-RMASConnector-WorkedExample2-Section_4_3_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample2/WE2_CERIFOutput.png" align="middle" alt="The CERIF XML Output transformation" /></div></div><h6>Figure 6.3. The CERIF XML Output transformation</h6></div><br class="figure-break" /><div class="para">
+				The <span class="emphasis"><em>Get CDM Fields</em></span> step makes the CDM data from the <span class="emphasis"><em>Read Symplectic CSV</em></span> transformation available to this transformation. The <span class="emphasis"><em>Convert CDM to CERIF</em></span> step serialises the CDM data to CERIF XML and validates it. This step produces a single row with a single field, containing the entire XML document. The final step in the transform writes the content of this field into a plain text file.
+			</div></div></div><div class="section" title="6.5. Running the job from Spoon" id="sect-RMASConnector-WorkedExample2-Section_5"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample2-Section_5">6.5. Running the job from Spoon</h2></div></div></div><div class="para">
+			You can also run the job from the command line, either as the downloaded worked example or after configuring and saving it using Spoon. The following shows how to run the command from both a linux environment and a Windows environment, using the <span class="emphasis"><em>Kitchen</em></span> tool which is provided with PDI.
+		</div><div class="section" title="6.5.1. Running the job from a Linux command line" id="sect-RMASConnector-WorkedExample2-Section_5_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample2-Section_5_1">6.5.1. Running the job from a Linux command line</h3></div></div></div><div class="para">
+				Navigate to the RMAS/kettle directory: 
+<pre class="programlisting">cd RMAS/kettle</pre>
+			</div><div class="para">
+				Ensure that the kitchen.sh script is executable: 
+<pre class="programlisting">chmod u+x kitchen.sh</pre>
+			</div><div class="para">
+				Run the job using the following command. Note that the quote marks around the repository name are optional, but they <span class="emphasis"><em>must</em></span> be included if the repository name contains whitespace: 
+<pre class="programlisting">./kitchen.sh -rep="RMASConnector" -job=WorkedExample2/WorkedExample2</pre>
+			</div></div><div class="section" title="6.5.2. Running the job from a Windows command line" id="sect-RMASConnector-WorkedExample2-Section_5_2"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample2-Section_5_2">6.5.2. Running the job from a Windows command line</h3></div></div></div><div class="para">
+				Navigate to the RMAS/kettle directory: 
+<pre class="programlisting">cd RMAS\kettle</pre>
+			</div><div class="para">
+				Run the job using the following command. Note that the quote marks around the repository name are optional, but they <span class="emphasis"><em>must</em></span> be included if the repository name contains whitespace: 
+<pre class="programlisting">Kitchen.bat /rep:"RMASConnector" /job:WorkedExample2/WorkedExample2</pre>
+			</div></div></div><div class="section" title="6.6. A note on configuring the worked example" id="sect-RMASConnector-WorkedExample2-Section_6"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample2-Section_6">6.6. A note on configuring the worked example</h2></div></div></div><div class="para">
+			Worked example 2 ingests an export from Symplectic, in the form of a CSV file. For details of the columns which are expected in the CSV, refer to the sample data file at RMAS/exampledata/WorkedExample2/SymplecticCSV.csv.
+		</div><div class="para">
+			CSV files with a different schema may be substituted. Doing so requires the following modifications to the input transformation: 
+			<div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						Update the field names as appropriate on the CSV Input step - note that the field names defined here do not have to match the column names in the CSV file; in Symplectic exports it is the position of the columns which is important.
+					</div></li><li class="listitem"><div class="para">
+						Update or remove the date reformatting step, as appropriate. If date conversion is required then the input and output formats may be altered by changing the variables at the top of the script. If no reformatting is required, the step may be removed entirely or routed around. 
+						<div class="itemizedlist"><ul><li class="listitem"><div class="para">
+									To route around a step, redirect the input hop to target the subsequent step and then disable the output hop from the step.
+								</div></li></ul></div>
+					</div></li></ul></div>
+		</div><div class="para">
+			The output from the worked example is a single XML document, which by default is produced at RMAS/output/Example2CERIFOutput.xml. The XML document will contain CERIF 1.4 data which has been validated against the CERIF 1.4 schema.
+		</div></div></div><div xml:lang="en-US" class="chapter" title="Chapter 7. Worked Example 3: Key mapping across multiple tools" id="chap-RMASConnector-WorkedExample3" lang="en-US"><div class="titlepage"><div><div><h2 class="title">Chapter 7. Worked Example 3: Key mapping across multiple tools</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_1">7.1. Overview</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_2">7.2. User Story</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_3">7.3. Structure of the Example</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_3_1">7.3.1. Parameters</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_4">7.4. Running the job from Spoon</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_4_1">7.4.1. Job Structure</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_4_2">7.4.2. Aggregate Data</a></span></dt><dt><span class="section"><a href="#id2871850">7.4.3. A note on scalability</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_5">7.5. Running the job from the command line</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_5_1">7.5.1. Running the job from a Linux command line</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_5_2">7.5.2. Running the job from a Windows command line</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample3-Section_6">7.6. A note on configuring the worked example</a></span></dt></dl></div><div class="section" title="7.1. Overview" id="sect-RMASConnector-WorkedExample3-Section_1"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample3-Section_1">7.1. Overview</h2></div></div></div><div class="para">
+			Worked example 3 demonstrates how data from multiple sources can be joined even when sources maintain different identifying fields (keys). For example, one may wish to aggregate personnel across Human Resources (HR) and project management databases.
+		</div><div class="para">
+			Assuming that the keys for data entries in one source of interest are different from those in another, this example demonstrates how a key mapping file can be utilised. Such a file maintains relationship between keys in different data sets.
+		</div></div><div class="section" title="7.2. User Story" id="sect-RMASConnector-WorkedExample3-Section_2"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample3-Section_2">7.2. User Story</h2></div></div></div><div class="para">
+			A project manager wishes to find the contact details of staff who have released publications in the last twelve months.
+		</div><div class="para">
+			They have been provided with a Symplectic export file (a CSV file) which lists publications from the last twelve months, where the authors are identified by keys which are unique to Symplectic. They also have access to the HR database, where each member of staff is identified by a unique HR key. Finally, they have a mapping file (again in the form of a CSV file), which identifies which key in the HR database relates to map which key in Symplectic.
+		</div><div class="para">
+			The project manager starts PDI and opens the Key Mapping job. They modify the job and transformation parameters to specify the details of the HR database, the locations of their Symplectic and key mapping CSV files, and the location of an output file. They run the job, which joins the publication data with HR data, generating .a CSV file with the required information.
+		</div></div><div class="section" title="7.3. Structure of the Example" id="sect-RMASConnector-WorkedExample3-Section_3"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample3-Section_3">7.3. Structure of the Example</h2></div></div></div><div class="para">
+			Worked example 3 consists of two PDI components: a job (WorkedExample3.kjb) and a transformation (MapAndAggregateData.ktr). These are located in the WorkedExample3 subdirectory of the PDI repository.
+		</div><div class="para">
+			Worked example 3 may be used in the context of the Spoon graphical front end to PDI, by loading the job and executing it directly. It may also be executed on the command line.
+		</div><div class="section" title="7.3.1. Parameters" id="sect-RMASConnector-WorkedExample3-Section_3_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample3-Section_3_1">7.3.1. Parameters</h3></div></div></div><div class="para">
+				The following parameters are defined in the <span class="emphasis"><em>WorkedExample3</em></span> job and used by the transformations:
+			</div><table id="sect-RMASConnector-WorkedExample3-Section_3_1_table"><caption>Table 7.1. </caption><thead><tr>
+						<td>
+							Parameter
+						</td>
+						 <td>
+							Description
+						</td>
+
+					</tr></thead><tbody><tr>
+						<td>
+							CSVFile
+						</td>
+						 <td>
+							The path to the CSV file containing publication data.
+						</td>
+
+					</tr><tr>
+						<td>
+							DatabaseClass
+						</td>
+						 <td>
+							The database driver class name.
+						</td>
+
+					</tr><tr>
+						<td>
+							DatabaseUrl
+						</td>
+						 <td>
+							The URL for the database connection.
+						</td>
+
+					</tr><tr>
+						<td>
+							DatabaseUsername
+						</td>
+						 <td>
+							The username for accessing the database.
+						</td>
+
+					</tr><tr>
+						<td>
+							DatabasePassword
+						</td>
+						 <td>
+							The password for accessing the database.
+						</td>
+
+					</tr><tr>
+						<td>
+							SQLQuery
+						</td>
+						 <td>
+							The query to execute on the database.
+						</td>
+
+					</tr><tr>
+						<td>
+							mapping.file
+						</td>
+						 <td>
+							The path to the CSV file containing key mappings.
+						</td>
+
+					</tr><tr>
+						<td>
+							output.file
+						</td>
+						 <td>
+							The path to the file which is generated by the process. If the file does not exist, it will be created automatically.
+						</td>
+
+					</tr><tr>
+						<td>
+							project.dir
+						</td>
+						 <td>
+							The root directory for the project.
+						</td>
+
+					</tr></tbody></table></div></div><div class="section" title="7.4. Running the job from Spoon" id="sect-RMASConnector-WorkedExample3-Section_4"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample3-Section_4">7.4. Running the job from Spoon</h2></div></div></div><div class="para">
+			This section describes how to configure and/or run the job from the <span class="emphasis"><em>Spoon </em></span>visual editor.
+		</div><div class="section" title="7.4.1. Job Structure" id="sect-RMASConnector-WorkedExample3-Section_4_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample3-Section_4_1">7.4.1. Job Structure</h3></div></div></div><div class="figure" title="Figure 7.1. The worked example 3 job" id="sect-RMASConnector-WorkedExample3-Section_4_1_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample3/Example3Job.png" align="middle" alt="Worked Example 3 Job" /></div></div><h6>Figure 7.1. The worked example 3 job</h6></div><br class="figure-break" /><div class="para">
+				The Worked example 3 job uses a single transformation, <span class="emphasis"><em>MapAndAggregateData</em></span>, to perform the key mapping and join.
+			</div></div><div class="section" title="7.4.2. Aggregate Data" id="sect-RMASConnector-WorkedExample3-Section_4_2"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample3-Section_4_2">7.4.2. Aggregate Data</h3></div></div></div><div class="para">
+				The <span class="emphasis"><em>MapAndAggregateData</em></span> transformation uses two streams. The top stream performs a query on the HR database, and then removes fields which are not required, while mapping others to a CERIF-backed Common Data Model (CDM). The rows are then sorted ready for joining:
+			</div><div class="figure" title="Figure 7.2. The MapAndAggregateData transformation top stream" id="sect-RMASConnector-WorkedExample3-Section_4_2_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample3/Example3TopStream.png" align="middle" alt="The MapAndAggregateData transformation top stream" /></div></div><h6>Figure 7.2. The MapAndAggregateData transformation top stream</h6></div><br class="figure-break" /><div class="para">
+				As an alternative, the fields removed by the <span class="emphasis"><em>Map To CDM</em></span> step could have been omitted by altering the SQLQuery parameter.
+			</div><div class="para">
+				The bottom stream extracts data from a Symplectic CSV file. It removes unwanted fields and maps the remainder to the CDM. A lookup step is then performed, where the key for each row in the Symplectic data is looked up in the mapping CSV file, and the corresponding HR key is added to the row:
+			</div><div class="figure" title="Figure 7.3. The MapAndAggregateData transformation bottom stream" id="sect-RMASConnector-WorkedExample3-Section_4_3_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample3/Example3BottomStream.png" align="middle" alt="The MapAndAggregateData transformation bottom stream" /></div></div><h6>Figure 7.3. The MapAndAggregateData transformation bottom stream</h6></div><br class="figure-break" /><div class="para">
+				Prior to the join, the data in the stream is again sorted on the HR key. This is necessary in order to correctly perform a merge join on the HR key:
+			</div><div class="figure" title="Figure 7.4. The MapAndAggregateData transformation join" id="sect-RMASConnector-WorkedExample3-Section_4_4_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample3/Example3Join.png" align="middle" alt="The MapAndAggregateData transformation join" /></div></div><h6>Figure 7.4. The MapAndAggregateData transformation join</h6></div><br class="figure-break" /><div class="para">
+				The joined data is then saved to a CSV file.
+			</div></div><div class="section" title="7.4.3. A note on scalability"><div class="titlepage"><div><div><h3 class="title" id="id2871850">7.4.3. A note on scalability</h3></div></div></div><div class="para">
+				The previous section describes how data can be aggregated from two sources. In order for this transformation to aggregate data from additional sources, a new stream with a mapping step must be added for each additional source. Because a merge step only allows two inputs, new merge steps need to be added to merge the data from each new stream with the merged data from the inital two streams. As such, the complexity of this transformation increases for each additional source.
+			</div></div></div><div class="section" title="7.5. Running the job from the command line" id="sect-RMASConnector-WorkedExample3-Section_5"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample3-Section_5">7.5. Running the job from the command line</h2></div></div></div><div class="para">
+			You can also run the job from the command line, either as the downloaded worked example or after configuring and saving it using Spoon. The following shows how to run the command from both a linux environment and a Windows environment, using the <span class="emphasis"><em>Kitchen</em></span> tool which is provided with PDI.
+		</div><div class="section" title="7.5.1. Running the job from a Linux command line" id="sect-RMASConnector-WorkedExample3-Section_5_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample3-Section_5_1">7.5.1. Running the job from a Linux command line</h3></div></div></div><div class="para">
+				Navigate to the RMAS/kettle directory: 
+<pre class="programlisting">cd RMAS/kettle</pre>
+			</div><div class="para">
+				Ensure that the kitchen.sh script is executable: 
+<pre class="programlisting">chmod u+x kitchen.sh</pre>
+			</div><div class="para">
+				Run the job using the following command. Note that the quote marks around the repository name are optional, but they <span class="emphasis"><em>must</em></span> be included if the repository name contains whitespace: 
+<pre class="programlisting">./kitchen.sh -rep="RMASConnector" -job=WorkedExample3/WorkedExample3</pre>
+			</div></div><div class="section" title="7.5.2. Running the job from a Windows command line" id="sect-RMASConnector-WorkedExample3-Section_5_2"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample3-Section_5_2">7.5.2. Running the job from a Windows command line</h3></div></div></div><div class="para">
+				Navigate to the RMAS/kettle directory: 
+<pre class="programlisting">cd RMAS\kettle</pre>
+			</div><div class="para">
+				Run the job using the following command. Note that the quote marks around the repository name are optional, but they <span class="emphasis"><em>must</em></span> be included if the repository name contains whitespace: 
+<pre class="programlisting">Kitchen.bat /rep:"RMASConnector" /job:WorkedExample3/WorkedExample3</pre>
+			</div></div></div><div class="section" title="7.6. A note on configuring the worked example" id="sect-RMASConnector-WorkedExample3-Section_6"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample3-Section_6">7.6. A note on configuring the worked example</h2></div></div></div><div class="para">
+			This example requires a connection to a Human Resources database. This can be configured by ensuring that all the database parameters are set at the job level. Default values for these parameters have been entered for the sample database which is provided as part of the example (RMAS/exampledata/WorkedExample3/WorkedExample3.script). When configuring your own database, you will need to ensure that the <span class="emphasis"><em>Map to CDM</em></span> step in the <span class="emphasis"><em>MapAndAggregateData</em></span> transformation maps the column names in the database to the appropriate CDM fields.
+		</div><div class="para">
+			A CSV file of the required publication must be supplied. A sample has been provided as a part of the example and can be found at RMAS/exampledata/WorkedExample3/SymplecticInput.csv. The path to the files must be set as the value of the CSVFile parameter at the job level. As with the database, you should ensure that the <span class="emphasis"><em>Map Symplectic to CDM</em></span> step maps the publication data to the appropriate fields.
+		</div><div class="para">
+			Finally, a CSV mapping file is required. This identifies which keys in the publication data map to which in the HR database. The column headers used for this are “mapping_key” and “HR_key” respectively. An example file is provided at RMAS/exampledata/WorkedExample3/SymplecticKeyMapping.csv.
+		</div><div class="para">
+			On running the job, the joined data is output to a file in the location specified by the output.file parameter. An outer join is performed, so if there is Symplectic data with no corresponding HR data, or vice versa, it will still appear in the output.
+		</div></div></div><div xml:lang="en-US" class="chapter" title="Chapter 8. Worked Example 4: Event data SOAP wrapper to XML payload" id="chap-RMASConnector-WorkedExample4" lang="en-US"><div class="titlepage"><div><div><h2 class="title">Chapter 8. Worked Example 4: Event data SOAP wrapper to XML payload</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_1">8.1. Overview</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_2">8.2. User Story</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_3">8.3. Structure of the Example</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_3_1">8.3.1. Parameters</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_4">8.4. Running the job from Spoon</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_4_1">8.4.1. Triggering Transformation</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_4_2">8.4.2. Listener Web Service</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_4_3">8.4.3. Main Job</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_4_4">8.4.4. Read Symplectic CSV</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_4_5">8.4.5. Post CERIF to Web Service</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_4_6">8.4.6. SOAP Web Service</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_5">8.5. Running the job from the command line</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_5_1">8.5.1. Running the job from a Linux command line</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_5_2">8.5.2. Running the job from a Windows command line</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample4-Section_6">8.6. A note on configuring the worked example</a></span></dt></dl></div><div class="section" title="8.1. Overview" id="sect-RMASConnector-WorkedExample4-Section_1"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample4-Section_1">8.1. Overview</h2></div></div></div><div class="para">
+			Worked example 4 demonstrates job execution in response to a trigger from a third party. To start the process, a transformation is run which posts data into a web service. The web service acts as a listener endpoint, such as may be attached to an Enterprise Service Bus (ESB). It invokes a job to convert the data to CERIF XML and post it onwards to a second web service, via a SOAP interface.
+		</div></div><div class="section" title="8.2. User Story" id="sect-RMASConnector-WorkedExample4-Section_2"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample4-Section_2">8.2. User Story</h2></div></div></div><div class="para">
+			An information systems manager maintains an Enterprise Service Bus (ESB) to facilitate the integration of services. The manager already has a service which may be configured to respond to important activities - such as the insertion of a new record in the HR database - and wishes to trigger data integration by invoking a remote web service. The remote web service ingests CERIF XML, and may be invoked by posting a SOAP message via HTTP.
+		</div><div class="para">
+			The user first configures their local service to post a message containing the newly inserted data to the ESB. The ESB is then configured to forward the message content to a RESTful web service endpoint.
+		</div><div class="para">
+			The web service receives the message content and invokes the RMAS Connector, which handles conversion of the data to CERIF XML and invokes the remote web service via SOAP.
+		</div></div><div class="section" title="8.3. Structure of the Example" id="sect-RMASConnector-WorkedExample4-Section_3"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample4-Section_3">8.3. Structure of the Example</h2></div></div></div><div class="para">
+			Worked example 4 consists of a transformation which posts some content to the ‘listener’ web service endpoint (<span class="emphasis"><em>PostFileToTriggerService</em></span>), and a main job which performs the conversion to CERIF XML and posts the result to the final web service (<span class="emphasis"><em>WorkedExample4</em></span>). The <span class="emphasis"><em>WorkedExample4</em></span> job comprises two transformations: <span class="emphasis"><em>SymplecticCSVInput</em></span> and <span class="emphasis"><em>CERIFXMLToSOAPOutput</em></span>.
+		</div><div class="para">
+			<a class="xref" href="#sect-RMASConnector-WorkedExample4-Section_3_1_figure" title="Figure 8.1. Process overview of worked example 4">Figure 8.1, “Process overview of worked example 4”</a> aims to clarify the structure of the worked example. It indicates the four major steps which occur, the means by which they are connected, and the data which passes between them.
+		</div><div class="figure" title="Figure 8.1. Process overview of worked example 4" id="sect-RMASConnector-WorkedExample4-Section_3_1_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample4/WE4_Overview.png" align="middle" width="444" alt="Process overview of worked example 4" /></div></div><h6>Figure 8.1. Process overview of worked example 4</h6></div><br class="figure-break" /><div class="section" title="8.3.1. Parameters" id="sect-RMASConnector-WorkedExample4-Section_3_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample4-Section_3_1">8.3.1. Parameters</h3></div></div></div><div class="para">
+				The <span class="emphasis"><em>PostFileToTriggerService</em></span> transformation has the following parameters:
+			</div><table id="sect-RMASConnector-WorkedExample4-Section_3_1_table"><caption>Table 8.1. </caption><thead><tr>
+						<td>
+							Parameter
+						</td>
+						 <td>
+							Description
+						</td>
+
+					</tr></thead><tbody><tr>
+						<td>
+							datafile
+						</td>
+						 <td>
+							The path, including the filename, to the file which is posted to the listener web service. This should be a Symplectic CSV publication data export, or compatible.
+						</td>
+
+					</tr><tr>
+						<td>
+							service.url
+						</td>
+						 <td>
+							The URL to post the file to. This is the URL of the listener service.
+						</td>
+
+					</tr><tr>
+						<td>
+							project.dir
+						</td>
+						 <td>
+							The root directory for the project.
+						</td>
+
+					</tr></tbody></table><div class="para">
+				The <span class="emphasis"><em>WorkedExample4</em></span> job has the following parameters:
+			</div><table id="sect-RMASConnector-WorkedExample4-Section_3_2_table"><caption>Table 8.2. </caption><thead><tr>
+						<td>
+							Parameter
+						</td>
+						 <td>
+							Description
+						</td>
+
+					</tr></thead><tbody><tr>
+						<td>
+							input.file
+						</td>
+						 <td>
+							The path, including the filename, to the Symplectic CSV export which is read by the CSV input Transformation. When the Job is invoked by the listener web service, this parameter is overridden on the command line.
+						</td>
+
+					</tr><tr>
+						<td>
+							soap.template
+						</td>
+						 <td>
+							The path, including the filename, to the XML document containing the complete SOAP message template. The template may contain the placeholder <span class="emphasis"><em>CERIF_DATA</em></span> at the point at which the CERIF XML serialisation should be inserted.
+						</td>
+
+					</tr><tr>
+						<td>
+							webservice.url
+						</td>
+						 <td>
+							URL to the web service which the SOAP message is posted to.
+						</td>
+
+					</tr><tr>
+						<td>
+							webservice.action
+						</td>
+						 <td>
+							URI of the web service action to invoke.
+						</td>
+
+					</tr><tr>
+						<td>
+							project.dir
+						</td>
+						 <td>
+							The root directory of the project.
+						</td>
+
+					</tr></tbody></table></div></div><div class="section" title="8.4. Running the job from Spoon" id="sect-RMASConnector-WorkedExample4-Section_4"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample4-Section_4">8.4. Running the job from Spoon</h2></div></div></div><div class="para">
+			This section describes how to configure and/or run the job from the Spoon visual editor.
+		</div><div class="section" title="8.4.1. Triggering Transformation" id="sect-RMASConnector-WorkedExample4-Section_4_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample4-Section_4_1">8.4.1. Triggering Transformation</h3></div></div></div><div class="figure" title="Figure 8.2. Overview of the triggering transformation" id="sect-RMASConnector-WorkedExample4-Section_4_1_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample4/WE4_PostToTrigger.png" align="middle" alt="Overview of the triggering transformation" /></div></div><h6>Figure 8.2. Overview of the triggering transformation</h6></div><br class="figure-break" /><div class="para">
+				The first step reads a file from disk and puts its contents into a single field. This step requires minimal configuration: simply the file(s) to load.
+			</div><div class="para">
+				The next step performs an HTTP post, and is configured to post the entire file read as the HTTP request body. The service URL it posts to - the ‘listener’ service - expects to receive data in this way - no headers or other data are required.
+			</div></div><div class="section" title="8.4.2. Listener Web Service" id="sect-RMASConnector-WorkedExample4-Section_4_2"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample4-Section_4_2">8.4.2. Listener Web Service</h3></div></div></div><div class="para">
+				The listener web service is a simple REST-like service which receives content directly in the body of an HTTP POST. An example has been included in the RMAS Web Services Examples package and is available whenever the associated Apache Tomcat instance is running.
+			</div><div class="para">
+				Note for Windows users: although the Transformation described in <a class="xref" href="#sect-RMASConnector-WorkedExample4-Section_4_1" title="8.4.1. Triggering Transformation">Section 8.4.1, “Triggering Transformation”</a> can invoke this service, the service is unable to launch the job described below as a process, i.e. the job cannot be triggered externally in Windows. However, the job can be run manually in both Windows and Linux environments, and the following sections apply to both environments.
+			</div></div><div class="section" title="8.4.3. Main Job" id="sect-RMASConnector-WorkedExample4-Section_4_3"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample4-Section_4_3">8.4.3. Main Job</h3></div></div></div><div class="para">
+				The main job comprises two transformation entries:
+			</div><div class="figure" title="Figure 8.3. The worked example 4 job" id="sect-RMASConnector-WorkedExample4-Section_4_2_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample4/WE4_Job.png" align="middle" alt="Worked example 4 job" /></div></div><h6>Figure 8.3. The worked example 4 job</h6></div><br class="figure-break" /></div><div class="section" title="8.4.4. Read Symplectic CSV" id="sect-RMASConnector-WorkedExample4-Section_4_4"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample4-Section_4_4">8.4.4. Read Symplectic CSV</h3></div></div></div><div class="para">
+				The first transformation is a CSV input transformation which loads CSV data and maps the fields to the CERIF-based Common Data Model (CDM):
+			</div><div class="figure" title="Figure 8.4. The Read Symplectic CSV transformation" id="sect-RMASConnector-WorkedExample4-Section_4_3_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample2/WE2_CSVInput.png" align="middle" alt="Read Symplectic CSV transformation" /></div></div><h6>Figure 8.4. The Read Symplectic CSV transformation</h6></div><br class="figure-break" /><div class="para">
+				The first step reads from the CSV file, and introduces the configured fields into the transformation. As CSV is intrinsically similar to the way data is handled in transformations - as a series of rows with a defined set of fields (columns) - no special handling is required, and a standard PDI <span class="emphasis"><em>CSV Input</em></span> step is used. Although all rows and columns in the input data are read by this step, only the field names defined in the CSV Input step are added to the stream.
+			</div><div class="para">
+				Next, a JavaScript step is used to convert any dates in a dd/MM/yyyy format into the xs:dateTime format which is required by CERIF (yyyy-MM-dd). Dates with times are also converted into a CERIF-compatible format. These converted dates and dateTimes are added as new fields to each row.
+			</div><div class="para">
+				A <span class="emphasis"><em>Map to CDM</em></span> step then maps from the local fields to CDM fields. In worked example 4 the <span class="emphasis"><em>Map to CDM</em></span> step is configured to: 
+				<div class="itemizedlist"><ul><li class="listitem"><div class="para">
+							Remove the now spurious original date fields loaded from the CSV file. This is configured via the field listing on the <span class="emphasis"><em>Remove</em></span> tab.
+						</div></li><li class="listitem"><div class="para">
+							Map the remaining fields to <span class="emphasis"><em>CDM Fields</em></span> via the <span class="emphasis"><em>Meta-data tab</em></span>.
+						</div></li></ul></div>
+			</div><div class="para">
+				The <span class="emphasis"><em>Make rows available</em></span> step allows the <span class="emphasis"><em>Post CERIF to Web Service</em></span> transformation to access the data produced by this transformation.
+			</div></div><div class="section" title="8.4.5. Post CERIF to Web Service" id="sect-RMASConnector-WorkedExample4-Section_4_5"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample4-Section_4_5">8.4.5. Post CERIF to Web Service</h3></div></div></div><div class="para">
+				The <span class="emphasis"><em>Post CERIF to Web Service</em></span> transformation performs the bulk of the work. The CERIF XML file is wrapped in a SOAP message and posted to a web service.
+			</div><div class="figure" title="Figure 8.5. The worked example 4 job" id="sect-RMASConnector-WorkedExample4-Section_4_4_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample4/WE4_SOAPPost.png" align="middle" width="444" alt="The SOAP Post transformation" /></div></div><h6>Figure 8.5. The worked example 4 job</h6></div><br class="figure-break" /><div class="para">
+				Forming and posting the SOAP message to the remote web service requires several steps. The first of these is to load a SOAP message template from the filesystem. The message template must contain the placeholder value <span class="emphasis"><em>CERIF_DATA</em></span> to indicate the point at which the CERIF XML document is to be inserted.
+			</div><div class="para">
+				The Combine Fields step is used to merge the stream containing the CERIF XML data and the stream containing the SOAP message template into a single stream.
+			</div><div class="para">
+				The Add Action Field and Set Action Value steps introduce the SOAP Action as a new column. The SOAP Action ultimately defines the service method to invoke on the remote endpoint. The action is parameterised, so adding this value requires two steps: firstly to add the new field to the stream, and then to set its value from the transformation parameter.
+			</div><div class="para">
+				The SOAP template is then populated with a string replacement, substituting the <span class="emphasis"><em>CERIF_DATA</em></span> placeholder with the actual data.
+			</div><div class="para">
+				An HTTP POST is performed to send the request to the server. The HTTP Post step is configured to post the SOAP message as the request body, and the SOAP Action is passed as an HTTP header. This step is also configured to capture the HTTP response code and body as fields.
+			</div><div class="para">
+				Finally, a <span class="emphasis"><em>Write to log</em></span> step logs a message containing the HTTP status code and response body.
+			</div></div><div class="section" title="8.4.6. SOAP Web Service" id="sect-RMASConnector-WorkedExample4-Section_4_6"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample4-Section_4_6">8.4.6. SOAP Web Service</h3></div></div></div><div class="para">
+				The download contains an example web service that the SOAP message in this worked example is tailored to. It may be found in the RMAS Web Services Example package.
+			</div></div></div><div class="section" title="8.5. Running the job from the command line" id="sect-RMASConnector-WorkedExample4-Section_5"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample4-Section_5">8.5. Running the job from the command line</h2></div></div></div><div class="para">
+			You can also run the job from the command line, either as the downloaded worked example or after configuring and saving it using Spoon. The following shows how to run the command from both a linux environment and a Windows environment, using the <span class="emphasis"><em>Kitchen</em></span> tool which is provided with PDI.
+		</div><div class="section" title="8.5.1. Running the job from a Linux command line" id="sect-RMASConnector-WorkedExample4-Section_5_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample4-Section_5_1">8.5.1. Running the job from a Linux command line</h3></div></div></div><div class="para">
+				Navigate to the RMAS/kettle directory: 
+<pre class="programlisting">cd RMAS/kettle</pre>
+			</div><div class="para">
+				Ensure that the kitchen.sh and pan.sh scripts are executable: 
+<pre class="programlisting">chmod u+x kitchen.sh pan.sh</pre>
+			</div><div class="para">
+				Run the job using the following command. Note that the quote marks around the repository name are optional, but they <span class="emphasis"><em>must</em></span> be included if the repository name contains whitespace: 
+<pre class="programlisting">./kitchen.sh -rep="RMASConnector" -job=WorkedExample4/WorkedExample4</pre>
+				You can also run the entire example by starting the PostFileToTriggerService transformation
+			</div><pre class="programlisting">./pan.sh -rep="RMASConnector" -trans=WorkedExample4/PostFileToTriggerService</pre><div class="para">
+			</div></div><div class="section" title="8.5.2. Running the job from a Windows command line" id="sect-RMASConnector-WorkedExample4-Section_5_2"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample4-Section_5_2">8.5.2. Running the job from a Windows command line</h3></div></div></div><div class="para">
+				Navigate to the RMAS/kettle directory: 
+<pre class="programlisting">cd RMAS\kettle</pre>
+			</div><div class="para">
+				Run the job using the following command. Note that the quote marks around the repository name are optional, but they <span class="emphasis"><em>must</em></span> be included if the repository name contains whitespace:
+<pre class="programlisting">Kitchen.bat /rep:"RMASConnector" /job:WorkedExample4/WorkedExample4</pre>
+				You can also run the entire example by starting the PostFileToTriggerService transformation
+			</div><pre class="programlisting">pan.bat /rep:"RMASConnector" /trans:WorkedExample4/PostFileToTriggerService</pre></div></div><div class="section" title="8.6. A note on configuring the worked example" id="sect-RMASConnector-WorkedExample4-Section_6"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample4-Section_6">8.6. A note on configuring the worked example</h2></div></div></div><div class="para">
+			The <span class="emphasis"><em>PostFileToTriggerService</em></span> transformation reads an export from Symplectic, in the form of a CSV file. A sample file is located at RMAS/exampledata/WorkedExample4/SymplecticCSV.csv.
+		</div><div class="para">
+			The input transformation may be substituted by any transformation which makes available rows of CDM data, such as via the PDI <span class="emphasis"><em>Copy rows to result</em></span> step. The type of file that the input transformation reads defines the type of file that should be posted to the listener service, and hence what sort of file the <span class="emphasis"><em>PostFileToTriggerService</em></span> should post. The WorkedExample4 job will pass the parameter <span class="emphasis"><em>input.file</em></span> to the input transformation, to indicate where data should be read from. When WorkedExample4 is invoked by the listener web service this parameter indicates the location of the temporary file containing the data that has been received by the trigger service.
+		</div><div class="para">
+			The <span class="emphasis"><em>CERIFXMLOutputToSOAP</em></span> transformation reads a SOAP message template from the file system. This is a complete XML document containing the entire message body for an HTTP POST. A sample file is located at RMAS/exampledata/WorkedExample4/SOAPRequestTemplate.xml. Note that as the entire CERIF XML document is included verbatim in the SOAP template, it is necessary to ensure that the SOAP document remains well-formed. For this reason the sample template escapes the CERIF XML by wrapping the placeholder value in a <span class="emphasis"><em>CDATA</em></span> block.
+		</div><div class="para">
+			The <span class="emphasis"><em>CERIFXMLOutputToSOAP</em></span> transformation captures the HTTP response code and body into two fields. These are logged for convenience, but may be used for additional processing - for example to flag up HTTP 500 errors due to the web service being unavailable.
+		</div></div></div><div xml:lang="en-US" class="chapter" title="Chapter 9. Worked Example 5: HR to CERIF XML for project costings" id="chap-RMASConnector-WorkedExample5" lang="en-US"><div class="titlepage"><div><div><h2 class="title">Chapter 9. Worked Example 5: HR to CERIF XML for project costings</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_1">9.1. Overview</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_2">9.2. User Story</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_3">9.3. Structure of the Example</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_3_1">9.3.1. Parameters</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_4">9.4. Running the job from Spoon</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_4_1">9.4.1. Running the job from Spoon</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_4_2">9.4.2. Read HR Database</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_4_3">9.4.3. Write to CERIF XML</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_5">9.5. Running the job from the command line</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_5_1">9.5.1. Running the job from a Linux command line</a></span></dt><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_5_2">9.5.2. Running the job from a Windows command line</a></span></dt></dl></dd><dt><span class="section"><a href="#sect-RMASConnector-WorkedExample5-Section_6">9.6. A note on configuring the worked example</a></span></dt></dl></div><div class="section" title="9.1. Overview" id="sect-RMASConnector-WorkedExample5-Section_1"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample5-Section_1">9.1. Overview</h2></div></div></div><div class="para">
+			Worked example 5 demonstrates how data from a Human Resources (HR) database can be mapped to CERIF XML, with the intention that it can then be joined with data from pFACT in order to calculate project costings.
+		</div></div><div class="section" title="9.2. User Story" id="sect-RMASConnector-WorkedExample5-Section_2"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample5-Section_2">9.2. User Story</h2></div></div></div><div class="para">
+			A project manager wishes to estimate the cost of an upcoming project. They have used pFACT to determine who will be working on the project and the project timespan. This information has already been exported as CERIF XML. They now need to obtain salary information from HR in order to calculate the costings. Generating this information in CERIF XML format facilitates its merge with the pFACT data.
+		</div><div class="para">
+			The project manager starts PDI and opens the HR To CERIF XML job. They ensure that the job is configured to access their HR database, and write a query to run against that database to obtain the required fields. They ensure that the extracted fields are named as required. They then run the job, which generates a CERIF XML file containing their HR data.
+		</div></div><div class="section" title="9.3. Structure of the Example" id="sect-RMASConnector-WorkedExample5-Section_3"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample5-Section_3">9.3. Structure of the Example</h2></div></div></div><div class="para">
+			Worked example 5 consists of three PDI components: a job (WorkedExample5.kjb) and two transformations (HRDatabaseInput.ktr and CERIFXMLOutput.ktr). These are located in the WorkedExample5 subdirectory of the PDI repository.
+		</div><div class="para">
+			Worked example 5 may be used in the context of the <span class="emphasis"><em>Spoon</em></span> graphical front end to PDI, by loading the job and executing it directly. It may also be executed from a command line.
+		</div><div class="section" title="9.3.1. Parameters" id="sect-RMASConnector-WorkedExample5-Section_3_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample5-Section_3_1">9.3.1. Parameters</h3></div></div></div><div class="para">
+				The following parameters are used to configure the <span class="emphasis"><em>WorkedExample5</em></span> job. They can be set in order to tailor the example to be specific to your local HR:
+			</div><table id="sect-RMASConnector-WorkedExample5-Section_3_1_table"><caption>Table 9.1. </caption><thead><tr>
+						<td>
+							Parameter
+						</td>
+						 <td>
+							Description
+						</td>
+
+					</tr></thead><tbody><tr>
+						<td>
+							DatabaseClass
+						</td>
+						 <td>
+							The database driver class name.
+						</td>
+
+					</tr><tr>
+						<td>
+							DatabaseUrl
+						</td>
+						 <td>
+							The URL for the database connection.
+						</td>
+
+					</tr><tr>
+						<td>
+							DatabaseUsername
+						</td>
+						 <td>
+							The username for accessing the database.
+						</td>
+
+					</tr><tr>
+						<td>
+							DatabasePassword
+						</td>
+						 <td>
+							The password for accessing the database.
+						</td>
+
+					</tr><tr>
+						<td>
+							SQLQuery
+						</td>
+						 <td>
+							The query to execute on the database.
+						</td>
+
+					</tr><tr>
+						<td>
+							output.file
+						</td>
+						 <td>
+							The path to the file which is generated by the process. If the file does not exist, it will be created automatically.
+						</td>
+
+					</tr><tr>
+						<td>
+							project.dir
+						</td>
+						 <td>
+							The root directory for the project.
+						</td>
+
+					</tr></tbody></table></div></div><div class="section" title="9.4. Running the job from Spoon" id="sect-RMASConnector-WorkedExample5-Section_4"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample5-Section_4">9.4. Running the job from Spoon</h2></div></div></div><div class="para">
+			This section describes how to configure and/or run the job from the Spoon visual editor.
+		</div><div class="section" title="9.4.1. Running the job from Spoon" id="sect-RMASConnector-WorkedExample5-Section_4_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample5-Section_4_1">9.4.1. Running the job from Spoon</h3></div></div></div><div class="figure" title="Figure 9.1. The worked example 5 job" id="sect-RMASConnector-WorkedExample5-Section_4_1_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample5/Example5Job.png" align="middle" alt="Worked Example 5 Job" /></div></div><h6>Figure 9.1. The worked example 5 job</h6></div><br class="figure-break" /><div class="para">
+				Worked example 5 uses a <span class="emphasis"><em>Read HR Database</em></span> transformation to extract data from the HR database and map it to a CERIF-based Common Data Model (CDM). The CDM data is then passed to a further transformation, <span class="emphasis"><em>Write to CERIF XML File</em></span>, which serialises it to CERIF XML format and validates it against the CERIF schema. We consider each transformation below.
+			</div></div><div class="section" title="9.4.2. Read HR Database" id="sect-RMASConnector-WorkedExample5-Section_4_2"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample5-Section_4_2">9.4.2. Read HR Database</h3></div></div></div><div class="figure" title="Figure 9.2. The read HR database transformation" id="sect-RMASConnector-WorkedExample5-Section_4_2_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample5/Example5QueryHR.png" align="middle" alt="Read HR database transformation" /></div></div><h6>Figure 9.2. The read HR database transformation</h6></div><br class="figure-break" /><div class="para">
+				This transformation runs a query against a database which is specified by setting the required parameters at the job level (see above). A JavaScript step is used to convert any dates from a dd/MM/yyyy format into the xs:datetime format required by CERIF. The <span class="emphasis"><em>Map to CDM</em></span> step is then used to remove any irrelevant fields and to map the remaining ones to their equivalent CDM fields. Finally, the data is made available to the <span class="emphasis"><em>Write to CERIF XML</em></span> transformation step.
+			</div></div><div class="section" title="9.4.3. Write to CERIF XML" id="sect-RMASConnector-WorkedExample5-Section_4_3"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample5-Section_4_3">9.4.3. Write to CERIF XML</h3></div></div></div><div class="figure" title="Figure 9.3. The write to CERIF XML transformation" id="sect-RMASConnector-WorkedExample5-Section_4_3_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample5/Example5WriteToCerif.png" align="middle" alt="Write to CERIF XML transformation" /></div></div><h6>Figure 9.3. The write to CERIF XML transformation</h6></div><br class="figure-break" /><div class="para">
+				This transformation takes the data made available from the <span class="emphasis"><em>Read HR Database</em></span> transformation and serialises it to CERIF XML. The <span class="emphasis"><em>Convert CDM to CERIF</em></span> step also validates the generated XML against the CERIF schema.
+			</div></div></div><div class="section" title="9.5. Running the job from the command line" id="sect-RMASConnector-WorkedExample5-Section_5"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample5-Section_5">9.5. Running the job from the command line</h2></div></div></div><div class="para">
+			You can also run the job from the command line, either as the downloaded worked example or after configuring and saving it using Spoon. The following shows how to run the command from both a linux environment and a Windows environment, using the <span class="emphasis"><em>Kitchen</em></span> tool which is provided with PDI.
+		</div><div class="section" title="9.5.1. Running the job from a Linux command line" id="sect-RMASConnector-WorkedExample5-Section_5_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample5-Section_5_1">9.5.1. Running the job from a Linux command line</h3></div></div></div><div class="para">
+				Navigate to the RMAS/kettle directory: 
+<pre class="programlisting">cd RMAS/kettle</pre>
+			</div><div class="para">
+				Ensure that the kitchen.sh script is executable: 
+<pre class="programlisting">chmod u+x kitchen.sh</pre>
+			</div><div class="para">
+				Run the job using the following command. Note that the quote marks around the repository name are optional, but they <span class="emphasis"><em>must</em></span> be included if the repository name contains whitespace: 
+<pre class="programlisting">./kitchen.sh -rep="RMASConnector" -job=WorkedExample5/WorkedExample5</pre>
+			</div></div><div class="section" title="9.5.2. Running the job from a Windows command line" id="sect-RMASConnector-WorkedExample5-Section_5_2"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample5-Section_5_2">9.5.2. Running the job from a Windows command line</h3></div></div></div><div class="para">
+				Navigate to the RMAS/kettle directory: 
+<pre class="programlisting">cd RMAS\kettle</pre>
+			</div><div class="para">
+				Run the job using the following command. Note that the quote marks around the repository name are optional, but they <span class="emphasis"><em>must</em></span> be included if the repository name contains whitespace: 
+<pre class="programlisting">Kitchen.bat /rep:"RMASConnector" /job:WorkedExample5/WorkedExample5</pre>
+			</div></div></div><div class="section" title="9.6. A note on configuring the worked example" id="sect-RMASConnector-WorkedExample5-Section_6"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample5-Section_6">9.6. A note on configuring the worked example</h2></div></div></div><div class="para">
+			This example requires a connection to a Human Resources database. This can be configured by ensuring that all the database parameters are set at the job level. Default values for these parameters have been entered for the sample database which is provided as part of the example (RMAS/exampledata/WorkedExample5/WorkedExample5.script). When configuring your own database, you will need to ensure that the <span class="emphasis"><em>Map to CDM</em></span> step in the <span class="emphasis"><em>Read HR Database</em></span> transformation maps the column names in the database to the appropriate CDM fields.
+		</div><div class="para">
+			On running this job, a CERIF XML representation of the data extracted from the database is created in the location specified by the output.file parameter.
+		</div></div></div></div></body></html>

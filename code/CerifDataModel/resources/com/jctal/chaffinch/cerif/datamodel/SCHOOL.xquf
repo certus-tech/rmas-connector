@@ -1,0 +1,74 @@
+(:
+  RMAS (Research Management and Administration System) Connector project
+  for data integration.
+  http://www.rmas.ac.uk/documentation/
+ 
+  Copyright (c) 2012 Certus Technology Associates Limited.
+  http://www.certus-tech.com/
+ 
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+:)
+declare namespace cf = "urn:xmlns:org:eurocris:cerif-1.4-0";
+
+(:
+if cfOrgUnit_OrgUnit with DEPARTMENT and SCHOOL exists
+  do nothing
+else
+  create cfOrgUnit_OrgUnit with cfOrgUnitId = DEPARTMENT and cfOrgUnitId2 = SCHOOL
+  if cfOrgUnitName with SCHOOL exists
+    do nothing
+  else
+    create cfOrgUnitName with cfOrgUnitId = SCHOOL
+  if cfOrgUnit with SCHOOL exists
+    do nothing
+  else
+    create cfOrgUnit with cfOrgUnitId = SCHOOL
+:)
+
+declare variable $DEPARTMENT external;
+declare variable $SCHOOL external;
+
+if ($DEPARTMENT and $SCHOOL) then ( 
+  if (/cf:CERIF/cf:cfOrgUnit_OrgUnit[
+      cf:cfOrgUnitId = $DEPARTMENT and
+      cf:cfOrgUnitId2 = $SCHOOL]) then (
+    (: No need to modify anything. :)
+  ) else (
+    insert node
+      <cf:cfOrgUnit_OrgUnit>
+        <cf:cfOrgUnitId1>{string($DEPARTMENT)}</cf:cfOrgUnitId1>
+        <cf:cfOrgUnitId2>{string($SCHOOL)}</cf:cfOrgUnitId2>
+        <cf:cfClassId>eda28bc2-34c5-11e1-b86c-0800200c9a66</cf:cfClassId> <!-- 'Part' -->
+        <cf:cfClassSchemeId>cf7772d0-3477-11e1-b86c-0800200c9a66</cf:cfClassSchemeId> <!-- 'CERIF1.3-Organisation-Organisation' -->
+      </cf:cfOrgUnit_OrgUnit>
+    into /cf:CERIF,
+
+    if (/cf:CERIF/cf:cfOrgUnit[cf:cfOrgUnitId = $SCHOOL]) then (
+      (: No need to modify anything. :)
+    ) else (
+      insert node
+        <cf:cfOrgUnit>
+          <cf:cfOrgUnitId>{string($SCHOOL)}</cf:cfOrgUnitId>
+        </cf:cfOrgUnit>
+      into /cf:CERIF
+    ),
+
+    if (/cf:CERIF/cf:cfOrgUnitName[cf:cfOrgUnitId = $SCHOOL]) then (
+    ) else (
+      insert node
+        <cf:cfOrgUnitName>
+          <cf:cfOrgUnitId>{string($SCHOOL)}</cf:cfOrgUnitId>
+          <cf:cfName cfLangCode="en-GB" cfTrans="o">{string($SCHOOL)}</cf:cfName>
+        </cf:cfOrgUnitName>
+      into /cf:CERIF
+    )
+  )
+) else ()

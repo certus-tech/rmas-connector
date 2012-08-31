@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "RMASConnector.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="chap-RMASConnector-KettleConfiguration">
+        <title>Configuration</title>
+        <section id="sect-RMASConnector-KettleConfiguration-Section_1">
+                <title>Jobs and Transformations</title>
+                <para>
+                PDI allows creation of two file types: jobs and transformations. A transformation is used to describe the data flows for an Extract-Transform-Load (ETL) process, such as reading from a source, transforming data and loading it into a target location. 
+                </para>
+                <para>
+                A job is used to coordinate ETL processes. A job might be used, for example, to wait for a file to be created in a directory, trigger an ETL process and finally send an email to communicate success or failure of the process. A job may utilise several transformations to achieve its goal.
+                </para>
+        </section>
+        <section id="sect-RMASConnector-KettleConfiguration-Section_2">
+                <title>PDI Repository</title>
+                <para>
+                PDI uses a data repository to store jobs, transformations and metadata. The repository can be either a relational database or a folder on disk. To connect to a repository in PDI go to <emphasis>Tools->Repository->Connect...</emphasis> or alternatively press <emphasis>CTRL+R</emphasis>, then choose the repository you want to connect to. For more information on setting up a repository, please refer to the Installation section or the <ulink url="http://infocenter.pentaho.com/help/topic/getting_started_with_pdi/task_pdi_connecting_to_per.html">PDI documentation</ulink>.
+                </para>
+        </section>
+        <section id="sect-RMASConnector-KettleConfiguration-Section_3">
+                <title>Steps and Hops</title>
+                <para>
+                In PDI, transformations and jobs are made up of steps for performing various extract, transform and load operations. They are, in essence, the building blocks of the transformations and jobs. Steps are categorised based on their purpose; for example, there are input steps for reading in data, output steps for outputting data and transform steps for transforming and manipulating the data. See <ulink url="http://wiki.pentaho.com/display/EAI/Pentaho+Data+Integration+Steps">PDI Steps guide</ulink> for a list of all of the available steps.
+                </para>
+                <figure id="sect-RMASConnector-KettleConfiguration-Section_3_figure_1">
+                    <title>An example of a hop between two steps</title>
+                    <mediaobject>
+                     <imageobject condition="web">
+                       <imagedata fileref="images/Configuration/ConfigurationHop.png" scalefit="1" align="center" />
+                     </imageobject>
+                     <textobject><phrase>An example of a hop between two steps</phrase></textobject>
+                    </mediaobject>
+                </figure>
+                <para>
+                Hops are links between steps and describe the flow of the ETL process. You can create a hop between two steps by clicking the step you wish to start the hop from, press and holding <emphasis>shift</emphasis>, and draw a line to the corresponding step. By clicking the hop you can disable/enable it - disabled hops appear greyed out. Some hops are conditional and represent the flow of the ETL process under particular circumstances - for example when an error occurs. These hops are normally coloured, or have an icon over them to indicate their purpose.
+                </para>
+        </section>
+        <section id="sect-RMASConnector-KettleConfiguration-Section_4">
+                <title>Previewing a Step</title>
+                <para>
+                Some PDI steps allow you to preview the data at that particular stage in the process. To do so, <emphasis>right-click</emphasis> on the step you want to preview and select <emphasis>Preview</emphasis>. A dialog will appear. Click <emphasis>Quick Launch</emphasis> and PDI will attempt to preview the data for you. Note that you can only preview steps within a Transformation, not entries within a Job.
+                </para>
+        </section>
+        <section id="sect-RMASConnector-KettleConfiguration-Section_5">
+                <title>Executing a Transformation or Job</title>
+                <para>
+                Jobs and transformations can be executed within the Spoon interface by clicking the green run arrow shown in <xref linkend="sect-RMASConnector-KettleConfiguration-Section_5_figure_1"/>.
+                </para>
+                <figure id="sect-RMASConnector-KettleConfiguration-Section_5_figure_1">
+                    <title>Spoon run controls</title>
+                    <mediaobject>
+                     <imageobject condition="web">
+                       <imagedata fileref="images/Configuration/ConfigurationControls.png" scalefit="1" align="center" />
+                     </imageobject>
+                     <textobject><phrase>Spoon run controls</phrase></textobject>
+                    </mediaobject>
+                </figure>
+                <para>
+                This will bring up a window allowing you to configure the execution before it is run. Here you can override job parameters and set the level of logging to be displayed. Click <emphasis>Launch</emphasis> to then execute the job or transformation.
+                </para>
+        </section>
+</chapter>
+

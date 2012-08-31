@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Header/>
+  <SOAP-ENV:Body>
+    <tns:postCERIF xmlns:tns="http://soap.demo.chaffinch.jctal.com/">
+      <cerifDataContents><![CDATA[CERIF_DATA]]></cerifDataContents>
+    </tns:postCERIF>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

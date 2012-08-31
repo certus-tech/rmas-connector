@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ============================================================= -->
+<!--     ANT Script for Kettle 'CDMRowsFromResult' step.           -->
+<!-- ============================================================= -->
+<project name="CDMRowsFromResult" default="build" basedir="../../">
+
+  <import file="../CerifDataModel/build.xml" />
+
+  <property file="install/CDMRowsFromResult/build.properties" />
+  <property name="build" value="${tmp.dir}/tmp/CDMRowsFromResult/classes" />
+
+  <target name="init">
+    <mkdir dir="${tmp.dir}/tmp" />
+    <mkdir dir="${tmp.dir}/tmp/CDMRowsFromResult" />
+    <mkdir dir="${tmp.dir}/tmp/CDMRowsFromResult/classes" />
+    <mkdir dir="${tmp.dir}/tmp/CDMRowsFromResult/dist" />
+  </target>
+
+  <target name="build" depends="cerifdatamodel.build,init" >
+    <javac destdir="${build}"
+     debug="${java.debug}"
+     classpath="${CDMRowsFromResult.build.classpath}"
+     >
+      <src path="code/CDMRowsFromResult/src"/>
+    </javac>
+    <jar destfile="${tmp.dir}/tmp/CDMRowsFromResult/dist/${CDMRowsFromResult.jar.name}">
+      <fileset dir="${tmp.dir}/tmp/CDMRowsFromResult/classes"/>
+      <!-- Include XML from the plugin source tree. -->
+      <fileset dir="code/CDMRowsFromResult/src" includes="**/*xml"/>
+    </jar>
+    <copy todir="${tmp.dir}/tmp/CDMRowsFromResult/dist/">
+      <fileset dir="code/CDMRowsFromResult/resources">
+        <include name="*" />
+      </fileset>
+      <fileset file="${tmp.dir}/tmp/CerifDataModel/dist/cta-chaffinch-cerif-datamodel.jar" />
+    </copy>
+  </target>
+
+  <target name="clean">
+    <delete dir="${tmp.dir}/tmp/CDMRowsFromResult"/>
+  </target>
+</project>

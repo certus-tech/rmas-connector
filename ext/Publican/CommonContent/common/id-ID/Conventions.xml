@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+]>
+<section>
+	<title>Konvensi Dokumen</title>
+	 <para>
+		Manual ini menggunakan beberapa konvensi untuk menyorot kata-kata dan frasa tertentu dan menarik perhatian pada informasi spesifik.
+	</para>
+	 <para>
+		Dalam edisi PDF dan kertas, manual ini menggunakan tipografi yang diambil dari set <ulink url="https://fedorahosted.org/liberation-fonts/">Fonta Liberation</ulink>. Set Fonta Liberation juga digunakan dalam edisi HTML jika set tersebut terinstal pada sistem anda. Jika tidak, tipografi alternatif yang setara akan ditampilkan. Catatan: Red Hat Enterprise Linux 5 dan selanjutnya menyertakan Fonta Liberation secara default.
+	</para>
+	 <section>
+		<title>Konvensi Tipografi</title>
+		 <para>
+			Empat konvensi tipografi digunakan untuk menarik perhatian pada kata-kata dan frasa tertentu. Konvensi ini, dan dalam keadaan apa mereka diberlakukan, adalah sebagai berikut.
+		</para>
+		 <para>
+			<literal>Cetak Tebal Berspasi Tunggal</literal>
+		</para>
+		 <para>
+			Dipakai untuk menyorot sistem masukan, termasuk perintah shell, nama berkas dan path. Juga digunakan untuk menyorot tombol dan kombinasi tombol. Contoh:
+		</para>
+		 <blockquote>
+			<para>
+				Untuk melihat isi dari berkas <filename>my_next_bestselling_novel</filename> dalam direktori kerja anda saat ini, masukkan perintah <command>cat my_next_bestselling_novel</command> pada prompt shell dan tekan <keycap>Enter</keycap> untuk menjalankan perintah.
+			</para>
+
+		</blockquote>
+		 <para>
+			Contoh di atas termasuk nama berkas, perintah shell dan tombol, semua disajikan dalam huruf cetak tebal berspasi tunggal dan semua dapat dibedakan berkat konteks.
+		</para>
+		 <para>
+			Kombinasi tombol dapat dibedakan dari tombol oleh tanda hubung yang menghubungkan setiap bagian dari kombinasi tombol. Contoh:
+		</para>
+		 <blockquote>
+			<para>
+				Tekan <keycap>Enter</keycap> untuk menjalankan perintah.
+			</para>
+			 <para>
+				Tekan <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F1</keycap></keycombo> untuk beralih ke terminal virtual pertama. Tekan <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F7</keycap></keycombo> untuk kembali ke sesi X-Windows.
+			</para>
+
+		</blockquote>
+		 <para>
+			Paragraf pertama menyoroti tombol tertentu untuk ditekan. Yang kedua menyoroti dua kombinasi tombol (masing-masing set terdiri dari tiga tombol dimana tiap set ditekan secara bersamaan).
+		</para>
+		 <para>
+			Jika yang dibahas adalah kode sumber, nama kelas, metode, fungsi, nama variabel dan nilai-nilai kembalian yang disebutkan dalam paragraf akan ditampilkan seperti di atas, dalam <literal>huruf cetak tebal berspasi tunggal</literal>. Contoh:
+		</para>
+		 <blockquote>
+			<para>
+				Kelas-kelas terkait berkas termasuk <classname>sistem-berkas</classname> untuk sistem berkas, <classname>berkas</classname> untuk berkas, dan <classname>dir</classname> untuk direktori. Setiap kelas memiliki set perizinan terkaitnya sendiri.
+			</para>
+
+		</blockquote>
+		 <para>
+			<application>Cetak Tebal Proporsional</application>
+		</para>
+		 <para>
+			Ini menunjukkan kata-kata atau frasa yang dijumpai pada sebuah sistem, termasuk nama aplikasi; kotak dialog teks; tombol berlabel; kotak contreng dan tombol radio berlabel; judul menu dan judul sub-menu. Contoh:
+		</para>
+		 <blockquote>
+			<para>
+				Pilih <menuchoice><guimenu>Sistem</guimenu><guisubmenu>Preferensi</guisubmenu><guimenuitem>Tetikus</guimenuitem></menuchoice> dari papan menu utama untuk memulai <application>Preferensi Tetikus</application>. Dalam tab <guilabel>Tombol</guilabel>, klik kotak contreng <guilabel>Tetikus kidal</guilabel> dan klik <guibutton>Tutup</guibutton> untuk menukar tombol utama tetikus dari kiri ke kanan (membuat tetikus cocok digunakan memakai tangan kiri).
+			</para>
+			 <para>
+				Untuk memasukkan karakter khusus ke dalam berkas <application>gedit</application>, pilih <menuchoice><guimenu>Aplikasi</guimenu><guisubmenu>Aksesoris</guisubmenu><guimenuitem>Peta Karakter</guimenuitem></menuchoice> dari papan menu utama. Selanjutnya, pilih <menuchoice><guimenu>Pencarian</guimenu><guimenuitem> Cari&hellip;</guimenuitem></menuchoice> dari papan menu <application>Peta Karakter</application>, ketik nama karakter dalam kolom <guilabel>Pencarian</guilabel> dan klik <guibutton>Berikutnya</guibutton>. Karakter yang anda cari akan disorot dalam <guilabel>Tabel Karakter</guilabel>. Klik dua kali pada karakter yang disorot tersebut untuk menempatkannya pada kolom <guilabel>Teks untuk disalin</guilabel> dan kemudian klik tombol <guibutton>Salin</guibutton>. Sekarang pindah kembali ke dokumen anda dan pilih <menuchoice><guimenu>Sunting</guimenu><guimenuitem>Tempel</guimenuitem></menuchoice> dari papan menu <application>gedit</application>.
+			</para>
+
+		</blockquote>
+		 <para>
+			Teks di atas termasuk nama aplikasi; nama menu dan item pada keseluruhan sistem; nama menu pada aplikasi tertentu; dan tombol dan teks yang ditemukan dalam antarmuka GUI, semua disajikan dalam cetak tebal yang proporsional dan semua dibedakan berdasarkan konteksnya.
+		</para>
+		 <para>
+			<command><replaceable>Cetak Tebal Miring Spasi Tunggal</replaceable></command> atau <application><replaceable>Cetak Tebal Miring Proporsional</replaceable></application>
+		</para>
+		 <para>
+			Apakah huruf cetak tebal spasi tunggal atau huruf cetak tebal proporsional, penambahan huruf cetak miring menunjukkan teks yang dapat diganti atau variabel. Huruf cetak miring menunjukkan teks yang tidak anda masukan secara harfiah atau teks yang ditampilkan berubah tergantung pada keadaan. Contoh:
+		</para>
+		 <blockquote>
+			<para>
+				Untuk menyambung ke mesin remote dengan menggunakan ssh, ketik <command>ssh <replaceable>nama-pengguna</replaceable>@<replaceable>nama.domain</replaceable></command> pada prompt shell. Jika mesin remote adalah <filename>example.com</filename> dan nama pengguna anda pada mesin tersebut john, ketik <command>ssh john@example.com</command>.
+			</para>
+			 <para>
+				Perintah <command>mount -o remount <replaceable>sistem-berkas</replaceable></command> memuat ulang sistem berkas sesuai namanya. Misalnya, untuk memuat ulang sistem berkas <filename>/home</filename>, maka perintahnya adalah <command>mount -o remount /home</command>.
+			</para>
+			 <para>
+				Untuk melihat versi paket yang terinstall saat ini, gunakan perintah <command>rpm -q <replaceable>paket</replaceable></command>. Ini akan menampilkan hasil sebagai berikut: <command><replaceable>paket-versi-rilis</replaceable></command>.
+			</para>
+
+		</blockquote>
+		 <para>
+			Perhatikan kata-kata dalam huruf yang dicetak tebal miring di atas &mdash; nama pengguna, nama.domain, sistem berkas, paket, versi dan rilis. Setiap kata merupakan kata pengganti, baik untuk teks yang anda masukkan ketika mengeluarkan sebuah perintah atau untuk teks yang ditampilkan oleh sistem.
+		</para>
+		 <para>
+			Selain penggunaan standar untuk menampilkan judul sebuah pekerjaan, huruf cetak miring menunjukkan penggunaan pertama kali untuk istilah baru dan penting. Contoh:
+		</para>
+		 <blockquote>
+			<para>
+				Publican adalah sistem penerbitan <firstterm>DocBook</firstterm>.
+			</para>
+
+		</blockquote>
+
+	</section>
+	
+	 <section>
+		<title>Konvensi Kutipan</title>
+		 <para>
+			Keluaran dari terminal dan tampilan kode sumber akan dibedakan secara visual dari teks disekitarnya.
+		</para>
+		 <para>
+			Keluaran yang dikirim ke terminal diset dalam <computeroutput>roman berspasi tunggal</computeroutput> dan disajikan sebagai berikut:
+		</para>
+		 
+<screen>books        Desktop   documentation  drafts  mss    photos   stuff  svn
+books_tests  Desktop1  downloads      images  notes  scripts  svgs</screen>
+		 <para>
+			Tampilan kode sumber juga diset dalam <computeroutput>roman berspasi tunggal</computeroutput> tetapi ditambahkan penyorotan sintaks sebagai berikut:
+		</para>
+		 
+<programlisting language="Java">package org.jboss.book.jca.ex1;
+
+import javax.naming.InitialContext;
+
+public class ExClient
+{
+   public static void main(String args[]) 
+       throws Exception
+   {
+      InitialContext iniCtx = new InitialContext();
+      Object         ref    = iniCtx.lookup(&#34;EchoBean&#34;);
+      EchoHome       home   = (EchoHome) ref;
+      Echo           echo   = home.create();
+
+      System.out.println(&#34;Created Echo&#34;);
+
+      System.out.println(&#34;Echo.echo(&#39;Hello&#39;) = &#34; + echo.echo(&#34;Hello&#34;));
+   }
+}</programlisting>
+
+	</section>
+	
+	 <section>
+		<title>Catatan dan Peringatan</title>
+		 <para>
+			Akhirnya, kami menggunakan tiga gaya visual untuk menarik perhatian pada informasi yang mungkin akan terabaikan.
+		</para>
+		 <note>
+			<title>Catatan</title>
+			 <para>
+				Catatan adalah tips, cara pintas atau pendekatan alternatif untuk sebuah pekerjaan. Mengabaikan catatan tidak memiliki konsekuensi negatif, tetapi anda mungkin kehilangan trik yang membuat hidup anda lebih mudah.
+			</para>
+
+		</note>
+		 <important>
+			<title>Penting</title>
+			 <para>
+				Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled &#39;Important&#39; won&#39;t cause data loss but may cause irritation and frustration.
+			</para>
+
+		</important>
+		 <warning>
+			<title>Peringatan</title>
+			 <para>
+				Peringatan tidak boleh diabaikan. Mengabaikan peringatan kemungkinan besar akan menyebabkan kehilangan data.
+			</para>
+
+		</warning>
+
+	</section>
+
+</section>
+
+

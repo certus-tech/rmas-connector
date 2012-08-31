@@ -1,0 +1,58 @@
+(:
+  RMAS (Research Management and Administration System) Connector project
+  for data integration.
+  http://www.rmas.ac.uk/documentation/
+ 
+  Copyright (c) 2012 Certus Technology Associates Limited.
+  http://www.certus-tech.com/
+ 
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+:)
+declare namespace cf = "urn:xmlns:org:eurocris:cerif-1.4-0";
+
+(:
+
+NOTE: We will NOT attempt to create persName beneath person as that is
+more complicated. This produces logically the same CERIF model.
+
+if persName with PERSON_ID exists
+  update cfMiddleNames = MIDDLE_NAMES
+else
+  create persName for PERSON_ID with cfMiddleNames = MIDDLE_NAMES
+
+:)
+
+declare variable $MIDDLE_NAMES external;
+declare variable $PERSON_ID external;
+
+let $persName := /cf:CERIF/cf:cfPersName[cf:cfPersId = $PERSON_ID]
+let $newMiddleName := <cf:cfMiddleNames>{string($MIDDLE_NAMES)}</cf:cfMiddleNames>
+return
+if ($PERSON_ID and $MIDDLE_NAMES) then ( 
+  if ($persName) then (
+    if ($persName/cf:cfMiddleNames) then (
+      (: No need to modify anything. :)
+    ) else (
+      (: Need to insert, but pay attention to order due to XSD sequence. :)
+      if ($persName/cf:cfFirstNames) then (
+        insert node $newMiddleName before $persName/cf:cfFirstNames
+      ) else (
+        insert node $newMiddleName as last into $persName
+      )
+    )
+  ) else (
+    insert node <cf:cfPersName>
+                  <cf:cfPersId>{string($PERSON_ID)}</cf:cfPersId>
+                  {$newMiddleName}
+                </cf:cfPersName>
+    into /cf:CERIF
+  )
+) else ()

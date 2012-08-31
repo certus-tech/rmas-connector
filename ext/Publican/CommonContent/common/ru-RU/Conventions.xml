@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+]>
+<section>
+	<title>Соглашения документа</title>
+	 <para>
+		В этом руководстве используются различные стили для выделения текста.
+	</para>
+	 <para>
+		В PDF и бумажной версиях руководства используются шрифты семейства <ulink url="https://fedorahosted.org/liberation-fonts/">Liberation</ulink>. Эти же шрифты будут использоваться для отображения HTML-версии, если они установлены в вашей системе. В противном случае будут использоваться аналогичные шрифты. Red Hat Enterprise Linux 5 и более поздние версии включают в свой состав комплект Liberation по умолчанию.
+	</para>
+	 <section>
+		<title>Типографические соглашения</title>
+		 <para>
+			Для выделения текста используются четыре стиля, которые будут перечислены далее.
+		</para>
+		 <para>
+			<literal>Моноширинный жирный шрифт</literal>
+		</para>
+		 <para>
+			Используется для выделения вводимого текста, включая команды оболочки, а также имен файлов, путей и комбинаций клавиш. Пример:
+		</para>
+		 <blockquote>
+			<para>
+				Чтобы просмотреть содержимое файла <filename>my_next_bestselling_novel</filename> в текущем каталоге, в строке приглашения оболочки введите <command>cat my_next_bestselling_novel</command> и нажмите <keycap>Enter</keycap> для выполнения этой команды.
+			</para>
+
+		</blockquote>
+		 <para>
+			Приведенный текст содержит имя файла, команду оболочки и имя клавиши, которые выделены моноширинным жирным шрифтом.
+		</para>
+		 <para>
+			Для разделения клавиш в составе комбинаций используется дефис. Пример:
+		</para>
+		 <blockquote>
+			<para>
+				Нажмите <keycap>Enter</keycap> для исполнения команды.
+			</para>
+			 <para>
+				Нажмите <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F1</keycap></keycombo> для перехода в первый виртуальный терминал. Нажмите <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F7</keycap></keycombo> , чтобы вернуться в сессию X-Windows.
+			</para>
+
+		</blockquote>
+		 <para>
+			В первом примере жирным шрифтом выделено название отдельной клавиши, во втором &mdash; комбинаций клавиш.
+		</para>
+		 <para>
+			Этим же шрифтом выделяются имена классов, методов, функций, переменных и возвращаемые ими значения. Пример:
+		</para>
+		 <blockquote>
+			<para>
+				Классы файлов включают <classname>filesystem</classname> для файловых систем, <classname>file</classname> для файлов, <classname>dir</classname> для каталогов. Каждому классу соответствует набор разрешений.
+			</para>
+
+		</blockquote>
+		 <para>
+			<application>Пропорциональный жирный</application>
+		</para>
+		 <para>
+			Выделяет системные слова и фразы, что включает имена приложений, текст диалогов, названия меню, текст кнопок, флажков и других элементов графического интерфейса. Пример:
+		</para>
+		 <blockquote>
+			<para>
+				В главном меню выберите <menuchoice><guimenu>Система</guimenu><guisubmenu>Параметры</guisubmenu><guimenuitem> Мышь</guimenuitem></menuchoice> для запуска утилиты <application>Настройки мыши</application>. На вкладке <guilabel>Кнопки</guilabel> установите флажок <guilabel>Настроить мышь под левую руку</guilabel> и нажмите кнопку <guibutton>Закрыть</guibutton>, чтобы настроить мышь для левши.
+			</para>
+			 <para>
+				Чтобы вставить специальный символ в файл <application>gedit</application>, выберите <menuchoice><guimenu>Приложения</guimenu><guisubmenu>Стандартные</guisubmenu><guimenuitem> Таблица символов</guimenuitem></menuchoice>. Затем в меню выберите <menuchoice><guimenu>Поиск</guimenu><guimenuitem>Поиск&hellip;</guimenuitem></menuchoice>, введите имя символа и нажмите кнопку <guibutton>Найти следующее</guibutton>. Найденный символ будет выделен в <guilabel>таблице символов</guilabel>. Дважды щелкните на этом символе, чтобы вставить его в поле <guilabel>Текст для копирования</guilabel> и нажмите кнопку <guibutton>Копировать</guibutton>. Теперь вернитесь к вашему документу и в меню выберите <menuchoice><guimenu>Правка</guimenu><guimenuitem>Вставить</guimenuitem></menuchoice>.
+			</para>
+
+		</blockquote>
+		 <para>
+			Приведенный выше текст содержит имя приложения, названия меню, кнопок и текста элементов графического интерфейса.
+		</para>
+		 <para>
+			<command><replaceable>Моноширинный жирный курсив</replaceable></command> или <application><replaceable>пропорциональный жирный курсив</replaceable></application>
+		</para>
+		 <para>
+			Оба типа выделения обозначают изменяемый или заменяемый текст. Курсив сообщает о том, что не следует вводить приведенный текст напрямую, а изменить в соответствии с вашими настройками. Пример:
+		</para>
+		 <blockquote>
+			<para>
+				Для подключения к удаленной машине с помощью SSH в строке приглашения выполните <command>ssh <replaceable>имя_пользователя</replaceable>@<replaceable>имя_домена</replaceable></command>. Скажем, имя удаленной машины &ndash; <filename>example.com</filename>, а ваше имя пользователя &ndash; john, тогда команда будет выглядеть так: <command>ssh john@example.com</command>.
+			</para>
+			 <para>
+				Команда <command>mount -o remount <replaceable>файловая_система</replaceable></command> повторно подключит заданную файловую систему. Например, для <filename>/home</filename> команда будет выглядеть так: <command>mount -o remount /home</command>.
+			</para>
+			 <para>
+				Чтобы просмотреть версию установленного пакета, выполните команду <command>rpm -q <replaceable>пакет</replaceable></command>. Результат команды будет представлен в формате <command><replaceable>пакет-версия-выпуск</replaceable></command>.
+			</para>
+
+		</blockquote>
+		 <para>
+			В приведенных примерах жирным курсивом выделяются имя пользователя, имя домена, файловой системы, пакет, его версия и выпуск.
+		</para>
+		 <para>
+			Также курсивом выделяются термины, которые встречаются в тексте документа впервые. Пример:
+		</para>
+		 <blockquote>
+			<para>
+				Publican &mdash; система публикации <firstterm>DocBook</firstterm>.
+			</para>
+
+		</blockquote>
+
+	</section>
+	
+	 <section>
+		<title>Соглашения по выделению текста</title>
+		 <para>
+			Вывод экрана и листинг исходного кода будут отделены от окружающего текста.
+		</para>
+		 <para>
+			Для отображения текста, который вы увидите на экране, используется <computeroutput>моноширинный шрифт</computeroutput>:
+		</para>
+		 
+<screen>books        Desktop   documentation  drafts  mss    photos   stuff  svn
+books_tests  Desktop1  downloads      images  notes  scripts  svgs</screen>
+		 <para>
+			Для отображения содержимого исходного кода используется <computeroutput>моноширинный шрифт</computeroutput>:
+		</para>
+		 
+<programlisting language="Java">package org.jboss.book.jca.ex1;
+
+import javax.naming.InitialContext;
+
+public class ExClient
+{
+   public static void main(String args[]) 
+       throws Exception
+   {
+      InitialContext iniCtx = new InitialContext();
+      Object         ref    = iniCtx.lookup(&#34;EchoBean&#34;);
+      EchoHome       home   = (EchoHome) ref;
+      Echo           echo   = home.create();
+
+      System.out.println(&#34;Created Echo&#34;);
+
+      System.out.println(&#34;Echo.echo(&#39;Hello&#39;) = &#34; + echo.echo(&#34;Hello&#34;));
+   }
+}</programlisting>
+
+	</section>
+	
+	 <section>
+		<title>Примечания и предупреждения</title>
+		 <para>
+			Наконец, чтобы привлечь внимание читателя к важной информации, используются три стиля.
+		</para>
+		 <note>
+			<title>Примечание</title>
+			 <para>
+				Примечания обычно содержат дополнительную информацию. Если вы их проигнорируете, это не критично, но вы можете пропустить совет, который, возможно, поможет сэкономить время при выполнении задания.
+			</para>
+
+		</note>
+		 <important>
+			<title>Важно</title>
+			 <para>
+				Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled &#39;Important&#39; won&#39;t cause data loss but may cause irritation and frustration.
+			</para>
+
+		</important>
+		 <warning>
+			<title>Предупреждение</title>
+			 <para>
+				Не стоит игнорировать предупреждения, так как они содержат важную информацию, которая позволит избежать потери данных.
+			</para>
+
+		</warning>
+
+	</section>
+
+</section>
+
+

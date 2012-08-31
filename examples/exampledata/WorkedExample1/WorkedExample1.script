@@ -1,0 +1,10 @@
+CREATE SCHEMA PUBLIC AUTHORIZATION DBA
+CREATE MEMORY TABLE HR(STAFF_CODE VARCHAR(255),TITLE VARCHAR(255),FORENAME_1 VARCHAR(255),FORENAME_2 VARCHAR(255),SURNAME VARCHAR(255),INITIALS VARCHAR(255),DOB VARCHAR(255),GENDER VARCHAR(255),EMAIL VARCHAR(255),POSN_REF VARCHAR(255),SCHOOL VARCHAR(255),DEPT VARCHAR(255),JOB_FAMILY VARCHAR(255),REP_UNIT VARCHAR(255),USER_NAME VARCHAR(255),EMAIL_ID VARCHAR(255),FTE VARCHAR(255),CARD_NUMBER VARCHAR(255),CAMPUS VARCHAR(255),WORK_COUNTRY VARCHAR(255),RAE08_CODE VARCHAR(255),REF14_CODE VARCHAR(255))
+CREATE USER SA PASSWORD ""
+GRANT DBA TO SA
+SET WRITE_DELAY 20
+SET SCHEMA PUBLIC
+INSERT INTO HR VALUES('1001','Mr','John','Michael','Smith','JS','18/11/1968 00:00:00','M','J.M.Smith@example.org','P38818','School of Mathematics and Computer Science','Statistical Studies','Teaching and research','Hammersmith','jms202','J.M.Smith@','0.09','300191033','Exeter','France','25','17')
+INSERT INTO HR VALUES('1002','Mrs','Jane','Mary','Doe','JMD','04/06/1981 00:00:00','F','J.M.Doe@example.org','P12390','School of Mathematics and Computer Science','Computational Biology','Teaching only','Hammersmith','jmd107','J.M.Doe@','0.32','300162381','Exeter','United Kingdom','61','15')
+INSERT INTO HR VALUES('1003','Mr','Timothy','x','Durham','TD','13/03/1957 00:00:00','M','T.Durham@example.org','P16799','J. Bloggs College of Geophysical Studies','Seismology','Research only','Cheston House','td710','T.Durham@','0.22','300188190','Sunderland','United Kingdom','65','1')
+INSERT INTO HR VALUES('1004','Miss','Emma','May','Hewitt','EMH','01/08/1961 00:00:00','F','E.M.Hewitt@example.org','P01045','Human Resources','Legal Services','Not teaching and/or research','Scott''s Bridge','emh104','E.M.Hewitt@','0.16','300145512','Sunderland','Sweden','20','28')

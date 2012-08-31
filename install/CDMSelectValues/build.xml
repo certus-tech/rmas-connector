@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ============================================================= -->
+<!--     ANT Script for Kettle 'CDMSelectValues' step.             -->
+<!-- ============================================================= -->
+<project name="CDMSelectValues" default="build" basedir="../../">
+
+  <import file="../CerifDataModel/build.xml" />
+
+  <property file="install/CDMSelectValues/build.properties" />
+  <property name="build" value="${tmp.dir}/tmp/CDMSelectValues/classes" />
+
+  <target name="init">
+    <mkdir dir="${tmp.dir}/tmp" />
+    <mkdir dir="${tmp.dir}/tmp/CDMSelectValues" />
+    <mkdir dir="${tmp.dir}/tmp/CDMSelectValues/classes" />
+    <mkdir dir="${tmp.dir}/tmp/CDMSelectValues/dist" />
+  </target>
+
+  <target name="build" depends="cerifdatamodel.build,init" >
+    <javac destdir="${build}"
+     debug="${java.debug}"
+     classpath="${CDMSelectValues.build.classpath}"
+     >
+      <src path="code/CDMSelectValues/src"/>
+    </javac>
+    <jar destfile="${tmp.dir}/tmp/CDMSelectValues/dist/${CDMSelectValues.jar.name}">
+      <fileset dir="${tmp.dir}/tmp/CDMSelectValues/classes"/>
+      <!-- Include XML from the plugin source tree. -->
+      <fileset dir="code/CDMSelectValues/src" includes="**/*xml"/>
+    </jar>
+    <copy todir="${tmp.dir}/tmp/CDMSelectValues/dist/">
+      <fileset dir="code/CDMSelectValues/resources">
+        <include name="*" />
+      </fileset>
+      <fileset file="${tmp.dir}/tmp/CerifDataModel/dist/cta-chaffinch-cerif-datamodel.jar" />
+    </copy>
+  </target>
+
+  <target name="clean">
+    <delete dir="${tmp.dir}/tmp/CDMSelectValues"/>
+  </target>
+</project>

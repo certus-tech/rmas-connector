@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  RMAS (Research Management and Administration System) Connector project
+  for data integration.
+  http://www.rmas.ac.uk/documentation/
+ 
+  Copyright (c) 2012 Certus Technology Associates Limited.
+  http://www.certus-tech.com/
+ 
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+-->
+<plugin
+   id="CDMSelectValues"
+   iconfile="CDM_SEL.png"
+   description="Map Data to CDM"
+   tooltip="Map data to CERIF-backed Canonical Data Model fields"
+   category="Transform"
+   classname="com.jctal.chaffinch.cerif.kettle.steps.selectvalues.CDMSelectValuesMeta">
+  <libraries>
+    <library name="cta-cdmselectvalues-kettleplugin.jar"/>
+    <library name="cta-chaffinch-cerif-datamodel.jar"/>
+  </libraries>
+    
+  <localized_category>
+    <category locale="en_US">Transform</category>
+  </localized_category>
+  <localized_description>
+    <description locale="en_US">Map to CDM</description>
+  </localized_description>
+  <localized_tooltip>
+    <tooltip locale="en_US">Map data to CERIF-backed Canonical Data Model fields</tooltip>
+  </localized_tooltip>
+   
+</plugin>

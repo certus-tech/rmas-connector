@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+]>
+<section>
+	<title>Convenciones del documentu</title>
+	 <para>
+		Esti manual usa delles convenciones pa solliñar ciertes pallabres y frases y llamar l&#39;atención sobre elementos concretos d&#39;información.
+	</para>
+	 <para>
+		N&#39;ediciones PDF y formatu papel, esti manual usa tipos de lletra estrayíes del set de <ulink url="https://fedorahosted.org/liberation-fonts/"> Fontes Lliberaes </ulink>. El conxunto de Fontes lliberaes úsase tamién nes ediciones HTML si&#39;l conxuntu ta instaláu nel so sistema. Si non, amuésase otra alternativa equivalente de tipos de lletra. Nota: Red Hat Enterprise Linux 5 (y versiones postreres) inclúi les Fontes Lliberaes de mou predetermináu.
+	</para>
+	 <section>
+		<title>Convenciones tipográfiques</title>
+		 <para>
+			Esisten cuatro convenciones tipográfiques que s&#39;usen pa llamar l&#39;atención a les pallabres y frases específiques. Estes convenciones y les circunstancies que s&#39;apliquen son les que vienen darréu.
+		</para>
+		 <para>
+			<literal>Mono-spaced Bold</literal>
+		</para>
+		 <para>
+			Used to highlight system input, including shell commands, file names and paths. Also used to highlight keycaps and key combinations. For example:
+		</para>
+		 <blockquote>
+			<para>
+				Pa ver el conteníu del ficheru <filename>my_next_bestselling_novel</filename> nel so direutoriu de trabayu actual, introduza&#39;l comandu <command>cat my_next_bestselling_novel</command> nel intérprete de comandos y calque <keycap>Enter</keycap> pa executar el comandu.
+			</para>
+
+		</blockquote>
+		 <para>
+			The above includes a file name, a shell command and a keycap, all presented in mono-spaced bold and all distinguishable thanks to context.
+		</para>
+		 <para>
+			Key combinations can be distinguished from keycaps by the hyphen connecting each part of a key combination. For example:
+		</para>
+		 <blockquote>
+			<para>
+				Calque <keycap>Enter</keycap> pa executar el comandu.
+			</para>
+			 <para>
+				Calque <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F1</keycap></keycombo> pa saltar a la primer terminal virtual. Calque <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F7</keycap></keycombo> pa volver a la so sesión de X-Windows.
+			</para>
+
+		</blockquote>
+		 <para>
+			The first paragraph highlights the particular keycap to press. The second highlights two key combinations (each a set of three keycaps with each set pressed simultaneously).
+		</para>
+		 <para>
+			If source code is discussed, class names, methods, functions, variable names and returned values mentioned within a paragraph will be presented as above, in <literal>mono-spaced bold</literal>. For example:
+		</para>
+		 <blockquote>
+			<para>
+				Les clases de ficheru rellacionaes inclúin <classname>filename</classname> pa sistemes de ficheros, <classname>file</classname> pa ficheros y <classname>dir</classname> pa direutorios. Cada clas tiene el so propiu conxuntu asociáu de permisos.
+			</para>
+
+		</blockquote>
+		 <para>
+			<application>Proportional Bold</application>
+		</para>
+		 <para>
+			This denotes words or phrases encountered on a system, including application names; dialog box text; labeled buttons; check-box and radio button labels; menu titles and sub-menu titles. For example:
+		</para>
+		 <blockquote>
+			<para>
+				Choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Mouse</guimenuitem></menuchoice> from the main menu bar to launch <application>Mouse Preferences</application>. In the <guilabel>Buttons</guilabel> tab, click the <guilabel>Left-handed mouse</guilabel> check box and click <guibutton>Close</guibutton> to switch the primary mouse button from the left to the right (making the mouse suitable for use in the left hand).
+			</para>
+			 <para>
+				To insert a special character into a <application>gedit</application> file, choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Accessories</guisubmenu><guimenuitem>Character Map</guimenuitem></menuchoice> from the main menu bar. Next, choose <menuchoice><guimenu>Search</guimenu><guimenuitem>Find&hellip;</guimenuitem></menuchoice> from the <application>Character Map</application> menu bar, type the name of the character in the <guilabel>Search</guilabel> field and click <guibutton>Next</guibutton>. The character you sought will be highlighted in the <guilabel>Character Table</guilabel>. Double-click this highlighted character to place it in the <guilabel>Text to copy</guilabel> field and then click the <guibutton>Copy</guibutton> button. Now switch back to your document and choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem></menuchoice> from the <application>gedit</application> menu bar.
+			</para>
+
+		</blockquote>
+		 <para>
+			The above text includes application names; system-wide menu names and items; application-specific menu names; and buttons and text found within a GUI interface, all presented in proportional bold and all distinguishable by context.
+		</para>
+		 <para>
+			<command><replaceable>Negrina cursiva mono-espaciada</replaceable></command> or <application><replaceable>Negrina cursiva proportional</replaceable></application>
+		</para>
+		 <para>
+			Whether mono-spaced bold or proportional bold, the addition of italics indicates replaceable or variable text. Italics denotes text you do not input literally or displayed text that changes depending on circumstance. For example:
+		</para>
+		 <blockquote>
+			<para>
+				Pa coneutar a una máquina remota usando ssh, escribi <command>ssh <replaceable>nome_usuariu</replaceable>@<replaceable>nome.dominiu</replaceable></command> na terminal. Si la máquina remota ye <filename>exemplu.com</filename> y el to nome d&#39;usuariu nesa máquina ye xurde, escribi <command>ssh xurde@exemplu.com</command>.
+			</para>
+			 <para>
+				El comandu <command>mount-o remount<replaceable>del sistema de ficheros</replaceable> </command> vuelve a montar el sistema de ficheros nomáu. Por exemplu, pa volver a montar el <filename>/home</filename> del sistema de ficheros, el comandu ye <command>mount-o remount /home</command>.
+			</para>
+			 <para>
+				Pa saber la versitón d&#39;un paquete instaláu, use&#39;l comandu <command>rpm -q <replaceable>paquete</replaceable></command>. Esto dará&#39;l resultáu que sigui: <command><replaceable>package-version-release</replaceable></command>.
+			</para>
+
+		</blockquote>
+		 <para>
+			Decátese de les pallabres en negrina cursiva anteriores &mdash; nome_usuariu, nome.dominiu, sistema-ficheros, paquete, versión y llanzamientu. Cada pallabra ye un marcador de posición, yá seya pal testu que s&#39;introduz al ordenar un comandu o pal testu amosáu pol sistema.
+		</para>
+		 <para>
+			Arriendes del usu estándar pa la presentación del títulu d&#39;un trabayu, la cursiva representa&#39;l primer usu d&#39;un términu nuevu ya importante. Por exemplu:
+		</para>
+		 <blockquote>
+			<para>
+				Publican is a <firstterm>DocBook</firstterm> publishing system.
+			</para>
+
+		</blockquote>
+
+	</section>
+	
+	 <section>
+		<title>Convenciones del documentu</title>
+		 <para>
+			Terminal output and source code listings are set off visually from the surrounding text.
+		</para>
+		 <para>
+			Output sent to a terminal is set in <computeroutput>mono-spaced roman</computeroutput> and presented thus:
+		</para>
+		 
+<screen>books        Desktop   documentation  drafts  mss    photos   stuff  svn
+books_tests  Desktop1  downloads      images  notes  scripts  svgs</screen>
+		 <para>
+			Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:
+		</para>
+		 
+<programlisting language="Java">package org.jboss.book.jca.ex1;
+
+import javax.naming.InitialContext;
+
+public class ExClient
+{
+   public static void main(String args[]) 
+       throws Exception
+   {
+      InitialContext iniCtx = new InitialContext();
+      Object         ref    = iniCtx.lookup(&#34;EchoBean&#34;);
+      EchoHome       home   = (EchoHome) ref;
+      Echo           echo   = home.create();
+
+      System.out.println(&#34;Created Echo&#34;);
+
+      System.out.println(&#34;Echo.echo(&#39;Hello&#39;) = &#34; + echo.echo(&#34;Hello&#34;));
+   }
+}</programlisting>
+
+	</section>
+	
+	 <section>
+		<title>Notes y Avisos</title>
+		 <para>
+			Pa finar, úsense trés estilos visuales p&#39;apellar l&#39;atención a la información que d&#39;otru mou podríen pasar inalvertíos.
+		</para>
+		 <note>
+			<title>Nota</title>
+			 <para>
+				Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier.
+			</para>
+
+		</note>
+		 <important>
+			<title>Importante</title>
+			 <para>
+				Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled &#39;Important&#39; won&#39;t cause data loss but may cause irritation and frustration.
+			</para>
+
+		</important>
+		 <warning>
+			<title>Avisu</title>
+			 <para>
+				Warnings should not be ignored. Ignoring warnings will most likely cause data loss.
+			</para>
+
+		</warning>
+
+	</section>
+
+</section>
+
+

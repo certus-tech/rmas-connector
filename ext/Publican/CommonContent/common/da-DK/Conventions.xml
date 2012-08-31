@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+]>
+<section>
+	<title>Dokumentkonventioner</title>
+	 <para>
+		Denne manual bruger flere konventioner til at fremhæve visse ord og sætninger og gør opmærksom på specifikke stykker af information.
+	</para>
+	 <para>
+		I PDF og papirversionerne, bruger denne manual skriftsnit tegnet fra <ulink url="https://fedorahosted.org/liberation-fonts/">Liberation Skrifttype</ulink> sættet. Liberation skrifttypesættet bliver også brugt i HTML-versionerne hvis sættet er installeret på dit system. Hvis ikke, vises et alernativt, men tilsvarende skriftsnit. Bemærk: Red Hat Enterprise Linux 5 og nyere inkluderer Liberation skrifttypesættet som standard.
+	</para>
+	 <section>
+		<title>Typografikonventioner</title>
+		 <para>
+			Der bruges fire typografikonventioner til at gøre opmærksom på specifikke ord og sætninger. Disse konventioner, og de omstændigheder de passer til, er som følger.
+		</para>
+		 <para>
+			<literal>Fastbredde fed</literal>
+		</para>
+		 <para>
+			Bruges til at fremhæve systeminput, som f.eks skalkommandoer, filnavne og stier. Bruges også til at fremhæve versaler og tastekombinationer. For eksempel:
+		</para>
+		 <blockquote>
+			<para>
+				For at se indholdet af filen <filename>min_næste_bedstsælgende_roman</filename> i dit nuværende arbejdskatalog, indtast <command>cat min_næstebedstsælgende_roman</command> kommandoen i en skal og tryk <keycap>Enter</keycap> til at køre kommandoen.
+			</para>
+
+		</blockquote>
+		 <para>
+			Det ovenstående inkluderer et filnavn, en skalkommando og en versal, alle præsenteret i fastbredde fed og alle kan skelnes, takket være konteksten.
+		</para>
+		 <para>
+			Tastekombinationer kan skelnes fra versaler ved bindestregen der forbinder hver del af tastekombinationen. For eksempel:
+		</para>
+		 <blockquote>
+			<para>
+				Tryk <keycap>Enter</keycap> til at køre kommandoen.
+			</para>
+			 <para>
+				Tryk <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F1</keycap></keycombo> for at skifte til den første virtuelle terminal. Tryk <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F7</keycap></keycombo> for at vende tilbage til din X-Vinduesession.
+			</para>
+
+		</blockquote>
+		 <para>
+			Den første paragraf fremhæver den særlige versal at trykke på. Den anden fremhæver to sæt af tre versaler, hvert sæt trykkes samtidig.
+		</para>
+		 <para>
+			Hvis der diskuteres kildekode, vil klassenavne, metoder, funktioner, variabelnavne og returnerede værdier er nævnt indeni en paragraf, vil de blive præsenteret som ovenfor, i <literal>fastbredde fed</literal>. For eksempel:
+		</para>
+		 <blockquote>
+			<para>
+				Filrelaterede klasser inkluderer <classname>filsystem</classname> for filsystemer, <classname>fil</classname> for filer, og <classname>arkiv</classname> for arkiver. Hver klasse har deres eget sæt af rettigheder.
+			</para>
+
+		</blockquote>
+		 <para>
+			<application>Proportionel fed</application>
+		</para>
+		 <para>
+			Disse betegner ord eller sætninger kan man støde på i et system, deriblandt også programnavne; dialogbokstekster; knapper med etiketter; tjekboks- og radioknapetiketter; menutitler og undermenutitler. For eksempel:
+		</para>
+		 <blockquote>
+			<para>
+				Vælg <menuchoice><guimenu>System</guimenu><guisubmenu>Indstillinger</guisubmenu><guimenuitem>Mus</guimenuitem></menuchoice> fra hovedmenuen for at starte <application>Indstillinger for mus</application>. I <guilabel>Knapper</guilabel>-fanebladet, tryk på <guilabel>Venstrehåndsmus</guilabel>-tjekboksen og tryk <guibutton>Luk</guibutton> for at skifte den primære museknap fra venstre til højre (gør musen bedre egnet til venstrehåndsbrug).
+			</para>
+			 <para>
+				For at indsætte et specielt tegn i en <application>gedit</application>-fil, vælg <menuchoice><guimenu>Programmer</guimenu><guisubmenu>Tilbehør</guisubmenu><guimenuitem>Tegnoversigt</guimenuitem></menuchoice> fra hovedmenuen. Derefter skal du vælge <menuchoice><guimenu>Find</guimenu><guimenuitem>Find</guimenuitem></menuchoice> fra <application>Tegnoversigt</application>-menuen, indtast navnet på tegnet i <guilabel>Find</guilabel>-feltet og tryk <guibutton>Næste</guibutton>. Tegnet du søgte efter vil blive fremhævet i <guilabel>Tegntabellen</guilabel>. Dobbeltklik på dette fremhævede tegn for at placere det i <guilabel>Tekst at kopiere</guilabel>-feltet og derefter trykke på <guibutton>Kopiér</guibutton>-knappen. Skift nu tilbage til dit dokument og vælg <menuchoice><guimenu>Redigér</guimenu><guimenuitem>Indsæt</guimenuitem></menuchoice> fra <application>gedit</application>-menuen.
+			</para>
+
+		</blockquote>
+		 <para>
+			Ovenstående tekst inkluderer programnavne; globale menunavne og -punkter; programspecifikke menunavne; og knapper og tekst fundet i en grafisk brugerflade, alt sammen præsenteret i proportionelt fed og alle skelnet af konteksten.
+		</para>
+		 <para>
+			<command><replaceable>Fastbredde fed kursiv</replaceable></command> eller <application><replaceable>Proportionel fed kursiv</replaceable></application>
+		</para>
+		 <para>
+			Uanset om det er fastbredde fed eller proportionel fed, er tilføjelsen af kursiv tegn på udskiftelig eller variabel tekst. Kursiv markerer tekst du ikke bogstaveligt skriver ind eller vist tekst der ændrer sig alt efter omstændighederne. For eksempel:
+		</para>
+		 <blockquote>
+			<para>
+				For at forbinde til en fjernmaskine ved at bruge ssh, skal du skrive <command>ssh <replaceable>brugernavn</replaceable>@<replaceable>domæne.navn</replaceable></command> i en skal. Hvis fjernmaskinen er <filename>eksempel.dk</filename> og dit brugernavn på maskinen er john, skal du skrive <command>ssh john@eksempel.dk</command>.
+			</para>
+			 <para>
+				<command>mount -o remount <replaceable>file-system</replaceable></command>-kommandoen genmonterer det navngivne filsystem. For eksempel, for at genmontere <filename>/home</filename>-filsystemet, er kommandoen <command>mount -o remount /home</command>.
+			</para>
+			 <para>
+				For at se versionen af en installeret pakke, skal du bruge <command>rpm -q <replaceable>pakke</replaceable></command>-kommandoen. Den vil returnere et resultat som følger: <command><replaceable>pakke-version-udgivelse</replaceable></command>.
+			</para>
+
+		</blockquote>
+		 <para>
+			Bemærk at ordene i fed kursiv ovenfor &mdash; brugernavn, domæne.navn, filsystem, pakke, version og udgivelse. Hvert ord er en pladsholder, enten for tekst du indtaster når du kører en kommando eller for tekst vist af systemet.
+		</para>
+		 <para>
+			Bortset fra standardbrug til at præsentere titlen på et arbejde, markerer kursiv første brug af en ny og vigtig term. For eksempel:
+		</para>
+		 <blockquote>
+			<para>
+				Publican er et <firstterm>DocBook</firstterm>-udgivelsessystem.
+			</para>
+
+		</blockquote>
+
+	</section>
+	
+	 <section>
+		<title>Konventionen for trækcitater</title>
+		 <para>
+			Terminaloutput og kildekodeopremsninger bliver visuelt adskilt fra den omkringsstående tekst.
+		</para>
+		 <para>
+			Output sendt til en terminal er vist i <computeroutput>fastbredde roman</computeroutput> og præsenteret således:
+		</para>
+		 
+<screen>books        Desktop   documentation  drafts  mss    photos   stuff  svn
+books_tests  Desktop1  downloads      images  notes  scripts  svgs</screen>
+		 <para>
+			Kildekodevisninger er også vist med <computeroutput>fastbredde roman</computeroutput>, men tilføjer syntaksfremhævning således:
+		</para>
+		 
+<programlisting language="Java">package org.jboss.book.jca.ex1;
+
+import javax.naming.InitialContext;
+
+public class ExClient
+{
+   public static void main(String args[]) 
+       throws Exception
+   {
+      InitialContext iniCtx = new InitialContext();
+      Object         ref    = iniCtx.lookup(&#34;EchoBean&#34;);
+      EchoHome       home   = (EchoHome) ref;
+      Echo           echo   = home.create();
+
+      System.out.println(&#34;Created Echo&#34;);
+
+      System.out.println(&#34;Echo.echo(&#39;Hello&#39;) = &#34; + echo.echo(&#34;Hello&#34;));
+   }
+}</programlisting>
+
+	</section>
+	
+	 <section>
+		<title>Noter og advarsler</title>
+		 <para>
+			Til sidst, bruger vi tre visuelle stile til at fange opmærksomheden på information der ellers ville blive overset.
+		</para>
+		 <note>
+			<title>Note</title>
+			 <para>
+				En note er et tip, en genvej eller en alternativ tilgang til opgaven. At ignorere en note bør ikke have nogen negative konsekvenser, men du går måske glip af et trick, der gør dit liv nemmere.
+			</para>
+
+		</note>
+		 <important>
+			<title>Vigtigt</title>
+			 <para>
+				Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled &#39;Important&#39; won&#39;t cause data loss but may cause irritation and frustration.
+			</para>
+
+		</important>
+		 <warning>
+			<title>Advarsel</title>
+			 <para>
+				En advarsel bør ikke ignoreres. At ignorere advarsler vil højst sandsynligt medføre datatab.
+			</para>
+
+		</warning>
+
+	</section>
+
+</section>
+
+

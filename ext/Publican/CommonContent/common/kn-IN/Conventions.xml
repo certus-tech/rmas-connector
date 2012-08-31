@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+]>
+<section>
+	<title>ದಸ್ತಾವೇಜು ಅನುಸರಣೆಗಳು</title>
+	 <para>
+		ಈ ಕೈಪಿಡಿಯು ಹಲವಾರು ಪದಗಳು ಹಾಗು ಪದಗುಚ್ಛಗಳನ್ನು ಹೈಲೈಟ್ ಮಾಡಿ ಕೆಲವು ನಿಗದಿತ ಮಾಹಿತಿಗಳತ್ತ ಗಮನ ಸೆಳೆಯಲು ಕೆಲವು ಅನುಸರಣೆಯನ್ನು ಬಳಸುತ್ತದೆ.
+	</para>
+	 <para>
+		PDF ಹಾಗು ಪೇಪರ್ ಆವೃತ್ತಿಗಳಲ್ಲಿ, ಈ ಕೈಪಿಡಿಯು<ulink url="https://fedorahosted.org/liberation-fonts/">ಲಿಬರೇಶನ್ ಅಕ್ಷರಶೈಲಿಗಳು</ulink> ಯಿಂದ ಪಡೆದುಕೊಳ್ಳಲಾದ ಟೈಪ್‌ಫೇಸ್‌ಗಳನ್ನು ಬಳಸುತ್ತದೆ. ನಿಮ್ಮ ಗಣಕದಲ್ಲಿ ಲಿಬರೇಶನ್ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗಿದ್ದರೆ HTML ಆವೃತ್ತಿಗಳಲ್ಲಿಯೂ ಸಹ ಇದನ್ನೆ ಬಳಸಲಾಗುತ್ತದೆ. ಇಲ್ಲದೆ ಹೋದಲ್ಲಿ, ಪರ್ಯಾಯವಾದ ಆದರೆ ಅದಕ್ಕೆ ಸಮನಾದ ಟೈಪ್‌ಫೇಸ್‌ಗಳನ್ನು ತೋರಿಸಲಾಗುವುದು. ಸೂಚನೆ: Red Hat Enterprise Linux 5 ಹಾಗು ಅದರ ನಂತರದವುಗಳಲ್ಲಿ ಡೀಫಾಲ್ಟ್‍ ಆಗಿ ಲಿಬರೇಶನ್ ಅಕ್ಷರಶೈಲಿಗಳು ಇರುತ್ತವೆ.
+	</para>
+	 <section>
+		<title>ಟೈಪೋಗ್ರಾಫಿಕ್ ಅನುಸರಣೆಗಳು</title>
+		 <para>
+			ನಿಗದಿತ ಪದಗಳು ಹಾಗು ಪದಗುಚ್ಛಗಳತ್ತ ಗಮನವನ್ನು ಸೆಳೆಯಲು ನಾಲ್ಕು ಟೈಪೋಗ್ರಾಫಿಕ್ ಅನುಸರಣೆಗಳನ್ನು ಬಳಸಲಾಗುತ್ತದೆ. ಈ ಅನುಸರಣೆಗಳು ಹಾಗು ಅವುಗಳನ್ನು ಅನ್ವಯಿಸಲಾಗುವ ಸನ್ನಿವೇಶಗಳು ಈ ಕೆಳಗಿನಂತಿವೆ.
+		</para>
+		 <para>
+			<literal>Mono-spaced Bold</literal>
+		</para>
+		 <para>
+			ಶೆಲ್‌ ಆಜ್ಞೆಗಳು, ಕಡತದ ಹೆಸರುಗಳು ಹಾಗು ಮಾರ್ಗಗಳಂತಹ ಗಣಕದ ಇನ್‌ಪುಟ್ ಅನ್ನು ಹೈಲೈಟ್ ಮಾಡಲು ಬಳಸಲಾಗುತ್ತದೆ. ಅಲ್ಲದೆ ಕೀಲಿ ಕ್ಯಾಪ್‌ಗಳನ್ನು ಹಾಗು ಕೀಲಿ-ಸಂಯೋಜನೆಗಳನ್ನೂ ಸಹ ಹೈಲೈಟ್ ಮಾಡಲು ಬಳಸಲಾಗುತ್ತದೆ. ಉದಾಹರಣೆಗೆ:
+		</para>
+		 <blockquote>
+			<para>
+				<filename>my_next_bestselling_novel</filename> ಕಡತದಲ್ಲಿ ಏನಿದೆ ಎಂದು ನೋಡಲು , ಪ್ರಸಕ್ತ ನೀವು ಕೆಲಸ ಮಾಡುತ್ತಿರುವ ಕೋಶದಲ್ಲಿ, ಶೆಲ್‌ ಪ್ರಾಂಪ್ಟಿನಲ್ಲಿ <command>cat my_next_bestselling_novel</command> ಎಂಬ ಆಜ್ಞೆಯನ್ನು ನಮೂದಿಸಿ ಹಾಗು ಅದನ್ನು ಚಲಾಯಿಸಲು <keycap>Enter</keycap> ಅನ್ನು ಒತ್ತಿ.
+			</para>
+
+		</blockquote>
+		 <para>
+			ಮೇಲೆ ಹೇಳಲಾಗಿದ್ದರಲ್ಲಿ ಒಂದು ಕಡತದ ಹೆಸರು, ಒಂದು ಶೆಲ್‌ ಆಜ್ಞೆ ಹಾಗು ಒಂದು ಕೀಲಿ ಕ್ಯಾಪ್ ಇದೆ, ಹಾಗು ಅವುಗಳೆಲ್ಲವೂ mono-spaced bold ನಲ್ಲಿ ಸೂಚಿಸಲಾಗಿದ್ದರಿಂದ ಬಾಕಿ ಪಠ್ಯಗಳಿಗಿಂತ ಪ್ರತ್ಯೇಕವಾಗಿ ಕಾಣುತ್ತವೆ.
+		</para>
+		 <para>
+			ಕೀಲಿ-ಸಂಯೋಜನೆಯ ಪ್ರತಿಯೊಂದು ಭಾಗವನ್ನು ಹೈಫನ್‌ನಿಂದ ಜೋಡಿಸುವ ಮೂಲಕ ಕೀಲಿ ಕ್ಯಾಪ್‌ಗಳಿಂದ ಕೀಲಿ-ಸಂಯೋಜನೆಗಳನ್ನು ಪ್ರತ್ಯೇಕಿಸಬಹುದಾಗಿದೆ. ಉದಾಹರಣೆಗೆ:
+		</para>
+		 <blockquote>
+			<para>
+				ಆಜ್ಞೆಯನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸಲು <keycap>Enter</keycap> ಅನ್ನು ಒತ್ತಿ.
+			</para>
+			 <para>
+				ಮೊದಲನೆ ವರ್ಚುವಲ್ ಟರ್ಮಿನಲ್‌ಗೆ ಬದಲಾಯಿಸಲು <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F1</keycap></keycombo> ಅನ್ನು ಒತ್ತಿ. ನಿಮ್ಮ X-ವಿಂಡೋಸ ಅಧಿವೇಶನಕ್ಕೆ ಮರಳಲು <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F7</keycap></keycombo> ಅನ್ನು ಒತ್ತಿ.
+			</para>
+
+		</blockquote>
+		 <para>
+			ಮೊದಲನೆ ವಾಕ್ಯವು ನಿಗದಿತ ಕೀಲಿ ಕ್ಯಾಪ್ ಅನ್ನು ಒತ್ತಲು ಹೈಲೈಟ್ ಮಾಡುತ್ತದೆ. ಎರಡನೆಯದು ಎರಡು ಜೋಡಿಗಳನ್ನು ಹೈಲೈಟ್‌ ಮಾಡುತ್ತದೆ(ಪ್ರತಿ ಮೂರು ಕೀಲಿ ಕ್ಯಾಪ್‌ಗಳ ಜೋಡಿಯಲ್ಲಿ ಪ್ರತಿಯೊಂದು ಜೋಡಿಯನ್ನು ಏಕಕಾಲದಲ್ಲಿ ಒತ್ತಲಾಗುತ್ತದೆ).
+		</para>
+		 <para>
+			ಎಲ್ಲಿಯಾದರೂ ಆಕರ ಸಂಜ್ಞೆಯ(ಸೋರ್ಸ್‌ ಕೋಡ್) ಬಗ್ಗೆ ತಿಳಿಸುವಂತಿದ್ದಲ್ಲಿ, ವರ್ಗದ ಹೆಸರುಗಳು, ಕ್ರಮಗಳು, ಕಾರ್ಯಗಳು, ವೇರಿಯಬಲ್ ಹೆಸರುಗಳು ಹಾಗು ಮರಳಿಸಿದ ಮೌಲ್ಯಗಳನ್ನು ಒಂದು ಪ್ಯಾರಾದಲ್ಲಿ ಮೇಲಿನಂತೆ <literal>mono-spaced bold</literal> ನಲ್ಲಿ ತೋರಿಸಲ್ಪಡುತ್ತದೆ. ಉದಾಹರಣೆಗೆ:
+		</para>
+		 <blockquote>
+			<para>
+				ಕಡತಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ವರ್ಗಗಳಾದಂತಹ ಕಡತವ್ಯವಸ್ಥೆಗಳಿಗಾಗಿನ <classname>filesystem</classname>,ಕಡತಕ್ಕಾಗಿನ <classname>file</classname>, ಹಾಗು ಕೋಶಕ್ಕಾಗಿನ <classname>dir</classname>. ಪ್ರತಿ ವರ್ಗವೂ ಅದಕ್ಕೆ ತಕ್ಕಂತೆ ಸ್ವಂತಅನುಮತಿಗಳನ್ನು ಹೊಂದಿರುತ್ತವೆ.
+			</para>
+
+		</blockquote>
+		 <para>
+			<application>Proportional Bold</application>
+		</para>
+		 <para>
+			ಅನ್ವಯದ ಹೆಸರುಗಳು, ಸಂವಾದ ಚೌಕದ ಪಠ್ಯ; ಲೇಬಲ್‌ ಮಾಡಲಾದಂತಹ ಗುಂಡಿಗಳು; ಗುರುತು-ಚೌಕ ಹಾಗು ರೇಡಿಯೋ ಗುಂಡಿಯ ಲೇಬಲ್‌ಗಳು; ಮೆನು ಶೀರ್ಷಿಕೆಗಳು ಹಾಗು ಉಪ-ಮೆನು ಶೀರ್ಷಿಕೆಗಳಂತಹ ಒಂದು ಗಣಕದಲ್ಲಿ ಎದುರಾಗುವ ಪದಗಳು ಅಥವ ವಾಕ್ಯಗಳನ್ನು ಇದು ಸೂಚಿಸುತ್ತದೆ. ಉದಾಹರಣೆಗೆ:
+		</para>
+		 <blockquote>
+			<para>
+				<application>ಮೌಸ್‌ನ ಆದ್ಯತೆಗಳು</application> ಎಂಬುದನ್ನು ಆರಂಭಿಸಲು ಮುಖ್ಯ ಮೆನು ಪಟ್ಟಿಯಿಂದ <menuchoice><guimenu>ವ್ಯವಸ್ಥೆ</guimenu><guisubmenu>ಆದ್ಯತೆಗಳು</guisubmenu><guimenuitem>ಮೌಸ್</guimenuitem></menuchoice> ಅನ್ನು ಆಯ್ಕೆ ಮಾಡಿ. ಮೌಸ್‌ನ ಮೂಲ ಗುಂಡಿಗಳನ್ನು ಎಡದಿಂದ ಬಲಕ್ಕೆ ಬದಲಾಯಿಸಲು (ಎಡಗೈಯಲ್ಲಿ ಬಳಸಲು ಯೋಗ್ಯವಾಗಿಸಲು ),<guilabel>ಗುಂಡಿಗಳು</guilabel> ಟ್ಯಾಬ್‌ನಿಂದ, <guilabel>ಎಡಗೈಯ ಮೌಸ್</guilabel> ಗುರುತು ಚೌಕವನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ ಹಾಗು <guibutton>ಮುಚ್ಚು</guibutton> ಅನ್ನು ಕ್ಲಿಕ್ಕಿಸಿ.
+			</para>
+			 <para>
+				ಒಂದು <application>gedit</application> ಕಡತಕ್ಕೆ ಹೊಸದೊಂದು ಚಿಹ್ನೆಯನ್ನು ಸೇರಿಸಲು, ಮುಖ್ಯ ಮೆನು ಪಟ್ಟಿಯಿಂದ <menuchoice><guimenu>ಅನ್ವಯಗಳು</guimenu><guisubmenu>ಸಲಕರಣೆಗಳು</guisubmenu><guimenuitem>ಕ್ಯಾರೆಕ್ಟರ್ ಮ್ಯಾಪ್</guimenuitem></menuchoice> ಅನ್ನು ಆಯ್ಕೆ ಮಾಡಿ. ಮುಂದಕ್ಕೆ, <application>ಕ್ಯಾರಕ್ಟರ್ ಮ್ಯಾಪ್‌ </application> ಮೆನು ಪಟ್ಟಿಯಿಂದ<menuchoice><guimenu>ಹುಡುಕು</guimenu><guimenuitem>Find&hellip;</guimenuitem></menuchoice> ಅನ್ನು ಆರಿಸಿ, <guilabel>ಹುಡುಕು </guilabel> ಸ್ಥಳದಲ್ಲಿ ಚಿಹ್ನೆಯ ಹೆಸರನ್ನು ನಮೂದಿಸಿ ಹಾಗು <guibutton>ಮುಂದಕ್ಕೆ</guibutton> ಅನ್ನು ಕ್ಲಿಕ್ಕಿಸಿ. ನೀವು ಬಯಸಿದ ಚಿಹ್ನೆಯು <guilabel>ಕ್ಯಾರೆಕ್ಟರ್ ಟೇಬಲ್‌ </guilabel>ನಲ್ಲಿ ಹೈಲೈಟ್‌ ಮಾಡಲ್ಪಡುತ್ತದೆ.<guilabel>ಕಾಪಿ ಮಾಡಬೇಕಿರುವ ಪಠ್ಯ</guilabel> ಸ್ಥಳದಲ್ಲಿ ಇರಿಸಲು ಹೈಲೈಟ್‌ ಆದಂತಹ ಈ ಚಿಹ್ನೆಯ ಮೇಲೆ ಎರಡು ಬಾರಿ ಕ್ಲಿಕ್ಕಿಸಿ ಹಾಗು <guibutton>ಕಾಪಿ ಮಾಡು</guibutton> ಗುಂಡಿಯನ್ನು ಕ್ಲಿಕ್ಕಿಸಿ . ಈಗ ನಿಮ್ಮ ದಸ್ತಾವೇಜಿಗೆ ಮರಳಿ ಹಾಗು <application>gedit</application> ಮೆನು ಪಟ್ಟಿಯಿಂದ <menuchoice><guimenu>ಸಂಪಾದನೆ</guimenu><guimenuitem>ಅಂಟಿಸು</guimenuitem></menuchoice>ಅನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
+			</para>
+
+		</blockquote>
+		 <para>
+			ಮೇಲಿನ ಪಠ್ಯವು ಅನ್ವಯದ ಹೆಸರುಗಳು; ಗಣಕದಾದ್ಯಂತದ ಮೆನು ಹೆಸರುಗಳು ಹಾಗು ಅಂಶಗಳು; ಅನ್ವಯ-ನಿಶ್ಚಿತ ಮೆನು ಹೆಸರುಗಳು; ಹಾಗು ಗುಂಡಿಗಳು ಮತ್ತು ಒಂದು GUI ಸಂಪರ್ಕಸಾಧನದ ಒಳಗಿರುವ ಪಠ್ಯವನ್ನು ಒಳಗೊಂಡಿದ್ದು, ಎಲ್ಲವೂ ಸರಿಯಾದ ಪ್ರಮಾಣದಲ್ಲಿ ಬೋಲ್ಡ್ ಆಗಿದ್ದು ಸನ್ನಿವೇಶಕ್ಕೆ ಸರಿಯಾಗಿ ಪ್ರತ್ಯೇಕಿಸಬಹುದಾಗಿರುತ್ತವೆ.
+		</para>
+		 <para>
+			<command><replaceable>Mono-spaced Bold Italic</replaceable></command> ಅಥವ <application><replaceable>Proportional Bold Italic</replaceable></application>
+		</para>
+		 <para>
+			mono-spaced bold ಅಥವ proportional bold, ಜೊತೆಗೆ ಸೇರಿಸಲಾದ Italics ಬದಲಾಯಿಸಬಹುದಾದ ಹಾಗು ವೇರಿಯಬಲ್ ಪಠ್ಯವನ್ನು ಸೂಚಿಸುತ್ತದೆ. ಓರೆ ಅಕ್ಷರಗಳು, ನೀವು ನಿಜವಾಗಿಯೂ ನಮೂದಿಸದೆ ಇರುವ ಪಠ್ಯವನ್ನು ಅಥವ ತೋರಿಸಲಾಗಿರುವುಗಳಲ್ಲಿ ಸನ್ನಿವೇಶಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಬದಲಾಗುವ ಪಠ್ಯವನ್ನು ಸೂಚಿಸುತ್ತವೆ. ಉದಾಹರಣೆಗೆ:
+		</para>
+		 <blockquote>
+			<para>
+				ssh ಅನ್ನು ಬಳಸಿಕೊಂಡು ದೂರಸ್ಥ ಗಣಕದೊಂದಿಗೆ ಸಂಪರ್ಕ ಹೊಂದಲು, ಶೆಲ್‌ ಪ್ರಾಂಪ್ಟಿನಲ್ಲಿ <command>ssh <replaceable>username</replaceable>@<replaceable>domain.name</replaceable></command> ಎಂದು ನಮೂದಿಸಿ. ದೂರಸ್ಥ ಗಣಕವು <filename>example.com</filename> ಆಗಿದ್ದು ಹಾಗು ಆ ಗಣಕದಲ್ಲಿ ನಿಮ್ಮ ಬಳಕೆದಾರ ಹೆಸರು john ಆಗಿದ್ದಲ್ಲಿ, <command>ssh john@example.com</command> ಎಂದು ನಮೂದಿಸಿ.
+			</para>
+			 <para>
+				<command>mount -o remount <replaceable>file-system</replaceable></command> ಆಜ್ಞೆಯು ಹೆಸರಿಸಲಾದ ಕಡತ ವ್ಯವಸ್ಥೆಯನ್ನು ಮರಳಿ ಆರೋಹಿಸುತ್ತದೆ. ಉದಾಹರಣೆಗೆ, <filename>/home</filename> ಕಡತ ವ್ಯವಸ್ಥೆಯನ್ನು ಮರಳಿ ಆರೋಹಿಸಲು, ಬಳಸಬೇಕಿರು ಆಜ್ಞೆಯು <command>mount -o remount /home</command> ಆಗಿರುತ್ತದೆ.
+			</para>
+			 <para>
+				ಪ್ರಸಕ್ತ ಅನುಸ್ಥಾಪಿತಗೊಂಡಿರುವ ಪ್ಯಾಕೇಜಿನ ಆವೃತ್ತಿಯನ್ನು ನೋಡಲು <command>rpm -q <replaceable>package</replaceable></command> ಆಜ್ಞೆಯನ್ನು ಬಳಸಿ. ಅದು ಈ ಕೆಳಗಿನಂತಿರುವ ಫಲಿತಾಂಶವನ್ನು ಒದಗಿಸುತ್ತದೆ: <command><replaceable>package-version-release</replaceable></command>.
+			</para>
+
+		</blockquote>
+		 <para>
+			ಮೇಲೆ ಓರೆ ಅಕ್ಷರಗಳಲ್ಲಿ ನಮೂದಿಸಲಾದ ಪದಗಳನ್ನು ಗಮನಿಸಿ &mdash; username, domain.name, file-system, package, version ಹಾಗು release. ಪ್ರತಿಯೊಂದು ಪದವೂ , ಒಂದೊ ಒಂದು ಆಜ್ಞೆಯನ್ನು ನೀಡುವಾಗ ನೀವು ನಮೂದಿಸುವ ಪಠ್ಯಕ್ಕೆ ಅಥವ ಗಣಕವು ತೋರಿಸಲಾಗುವ ಪಠ್ಯಕ್ಕೆ ಬದಲೀ ಪದವಾಗಿದೆ.
+		</para>
+		 <para>
+			ಒಂದು ಕಾರ್ಯದ ಶೀರ್ಷಿಕೆಯನ್ನು ತೋರಿಸಲು ಸಾಮಾನ್ಯವಾಗಿ ಬಳಸಲಾಗುವುದಲ್ಲದೆ, ಓರೆ ಅಕ್ಷರಗಳು ಹೊಸ ಹಾಗು ಪ್ರಮುಖವಾದ ಪದವನ್ನು ಪ್ರಥಮವಾಗಿ ಬಳಸಲಾಗಿದೆ ಎಂದೂ ಸಹ ಸೂಚಿಸುತ್ತದೆ. ಉದಾಹರಣೆಗೆ:
+		</para>
+		 <blockquote>
+			<para>
+				Publican ಎನ್ನುವುದು ಒಂದು <firstterm>DocBook</firstterm> ಪ್ರಕಟಿಸುವ ವ್ಯವಸ್ಥೆಯಾಗಿದೆ.
+			</para>
+
+		</blockquote>
+
+	</section>
+	
+	 <section>
+		<title>ಪುಲ್‌-ಕೋಟ್ ಅನುಸರಣೆಗಳು</title>
+		 <para>
+			ಟರ್ಮಿನಲ್ ಔಟ್‌ಪುಟ್ ಹಾಗು ಆಕರ-ಸಂಜ್ಞೆ ಪಟ್ಟಿಗಳು ಸುತ್ತಮುತ್ತಲಿನ ಪಠ್ಯದಿಂದ ಗೋಚರಿಸುವ ರೂಪದಲ್ಲಿ ಹೊಂದಿಸಲಾಗುತ್ತದೆ.
+		</para>
+		 <para>
+			ಟರ್ಮಿನಲ್‌ಗೆ ಕಳುಹಿಸಲಾಗುವ ಔಟ್‌ಪುಟ್‌ಗಳನ್ನು <computeroutput>mono-spaced roman</computeroutput> ನಲ್ಲಿ ಬರೆಯಲಾಗುತ್ತದೆ ಹಾಗು ಹೀಗೆ ಪ್ರದರ್ಶಿಸಲಾಗುತ್ತದೆ:
+		</para>
+		 
+<screen>books        Desktop   documentation  drafts  mss    photos   stuff  svn
+books_tests  Desktop1  downloads      images  notes  scripts  svgs</screen>
+		 <para>
+			ಆಕರ-ಸಂಜ್ಞೆ ಪಟ್ಟಿಗಳನ್ನು <computeroutput>mono-spaced roman</computeroutput> ನಲ್ಲಿಯೂ ಸಹ ಬರೆಯಲಾಗುತ್ತದೆ ಆದರೆ ಈ ಕೆಳಗಿನಂತೆ ಪ್ರದರ್ಶಿಸಿ ಹೈಲೈಟ್ ಮಾಡಲಾಗುತ್ತದೆ:
+		</para>
+		 
+<programlisting language="Java">package org.jboss.book.jca.ex1;
+
+import javax.naming.InitialContext;
+
+public class ExClient
+{
+   public static void main(String args[]) 
+       throws Exception
+   {
+      InitialContext iniCtx = new InitialContext();
+      Object         ref    = iniCtx.lookup(&#34;EchoBean&#34;);
+      EchoHome       home   = (EchoHome) ref;
+      Echo           echo   = home.create();
+
+      System.out.println(&#34;Created Echo&#34;);
+
+      System.out.println(&#34;Echo.echo(&#39;Hello&#39;) = &#34; + echo.echo(&#34;Hello&#34;));
+   }
+}</programlisting>
+
+	</section>
+	
+	 <section>
+		<title>ಸೂಚನೆಗಳು ಹಾಗು ಎಚ್ಚರಿಕೆಗಳು</title>
+		 <para>
+			ಅಂತಿಮವಾಗಿ, ನೀವು ಕಡೆಗಣಿಸಬಹುದಾದ ಮಾಹಿತಿಗಳತ್ತ ನಿಮ್ಮ ಗಮನವನ್ನು ಸೆಳೆಯಲು ನಾವು ಮೂರು ಬಗೆಯ ದೃಶ್ಯ ಶೈಲಿಗಳನ್ನು ಬಳಸುತ್ತೇವೆ.
+		</para>
+		 <note>
+			<title>ಸೂಚನೆ</title>
+			 <para>
+				ಸೂಚನೆಯು, ಕೈಯಲ್ಲಿರುವ ಕೆಲಸವನ್ನು ನಿಭಾಯಿಸಲು ಬಳಸಬಹುದಾದ ಒಂದು ಹತ್ತಿರದ ದಾರಿಗಳು ಅಥವ ಪರ್ಯಾಯ ಪರಿಹಾರವಾಗಿರುತ್ತದೆ. ಸೂಚನೆಯನ್ನು ಆಲಕ್ಷಿಸುವುದರಿಂದ ಯಾವುದೆ ಋಣಾತ್ಮಕ ಪರಿಣಾಮವಿರುವುದಿಲ್ಲದಿದ್ದರೂ ನಿಮ್ಮ ಕೆಲಸವನ್ನು ಸುಲಭಗೊಳಿಸುವ ಒಂದು ಉಪಾಯದಿಂದ ನೀವು ವಂಚಿತರಾಗಬಹುದು.
+			</para>
+
+		</note>
+		 <important>
+			<title>ಮಹತ್ವವಾದ ಮಾಹಿತಿ</title>
+			 <para>
+				Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled &#39;Important&#39; won&#39;t cause data loss but may cause irritation and frustration.
+			</para>
+
+		</important>
+		 <warning>
+			<title>ಎಚ್ಚರಿಕಾ ಸೂಚನೆ</title>
+			 <para>
+				ಒಂದು ಎಚ್ಚರಿಕೆಯನ್ನು ಆಲಕ್ಷಿಸಬಾರದು. ಎಚ್ಚರಿಕೆಗಳನ್ನು ಆಲಕ್ಷಿಸುವುದರಿಂದ ಹೆಚ್ಚಿನ ಬಾರಿ ಮಾಹಿತಿಯು ನಾಶಗೊಳ್ಳಲು ಕಾರಣವಾಗುತ್ತದೆ.
+			</para>
+
+		</warning>
+
+	</section>
+
+</section>
+
+

@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+]>
+<section>
+	<title>Домовленості, що використовуються у документі</title>
+	 <para>
+		У цьому документі використано певні домовленості щодо позначення певних слів чи фраз та привертання уваги до частин інформації.
+	</para>
+	 <para>
+		У паперовій та PDF версіях цього документа використовуються шрифти гарнітури <ulink url="https://fedorahosted.org/liberation-fonts/">Liberation Fonts</ulink>. Набір шрифтів Liberation також використовується у HTML-версії, якщо ці шрифти встановлено у вашій системі. Примітка: шрифти Liberation входять до складу Red Hat Enterprise Linux 5 та новіших версій.
+	</para>
+	 <section>
+		<title>Типографічні стилі</title>
+		 <para>
+			Для привернення уваги до певних частин тексту використано чотири типографічних стилів. Нижче наведено опис цих стилів та обставин, за яких їх застосовують.
+		</para>
+		 <para>
+			<literal>Моноширинний жирний</literal>
+		</para>
+		 <para>
+			Використовується для позначення інформації, що вводиться до системи, зокрема команд оболонки, назв файлів та їх адрес. Крім того, використовується для позначення назв клавіш та комбінацій клавіш. Приклад:
+		</para>
+		 <blockquote>
+			<para>
+				Щоб переглянути вміст файла <filename>my_next_bestselling_novel</filename> у поточному каталозі, введіть у командному рядку команду <command>cat my_next_bestselling_novel</command> та натисніть <keycap>Enter</keycap>, щоб наказати системі виконати команду.
+			</para>
+
+		</blockquote>
+		 <para>
+			У наведеному вище прикладі вказано назву файла, команду оболонки та назву клавіші, які позначено моноширинним жирним шрифтом.
+		</para>
+		 <para>
+			Для відокремлення клавіш у складі комбінацій клавіш використовується знак дефіса. Приклад:
+		</para>
+		 <blockquote>
+			<para>
+				Щоб виконати команду, натисніть <keycap>Enter</keycap>.
+			</para>
+			 <para>
+				Для перемикання на перший віртуальний термінал натисніть <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F1</keycap></keycombo>. Щоб повернутись до вікна сеансу X-Window, натисніть <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F7</keycap></keycombo>.
+			</para>
+
+		</blockquote>
+		 <para>
+			У першому прикладі позначено назву окремої клавіші. У другому — дві комбінації клавіш (кожна є сукупністю трьох клавіш, які слід натискати одночасно).
+		</para>
+		 <para>
+			Цим же шрифтом позначаються тексти програми, назви класів, методи, функції, назви змінних та значення, що повертаються. Приклад:
+		</para>
+		 <blockquote>
+			<para>
+				До класів для роботи з файлами належать: <classname>filesystem</classname> — клас для роботи з файловою системою, <classname>file</classname> — для роботи з файлами, та <classname>dir</classname> — для роботи з каталогами. З кожним класом пов&#39;язаний власний набір прав доступу.
+			</para>
+
+		</blockquote>
+		 <para>
+			<application>Пропорційний жирний</application>
+		</para>
+		 <para>
+			Цим шрифтом позначаються слова та фрази, що зустрічаються у системі, зокрема назви програм, текст з діалогових вікон, назви кнопок, інші елементи графічного інтерфейсу, пункти меню. Приклад:
+		</para>
+		 <blockquote>
+			<para>
+				Щоб запустити програму <application>Параметри миші</application>, виберіть у головному меню <guimenu>Система &#62; Параметри &#62; Миша</guimenu>. Щоб зробити головною кнопкою праву кнопку миші, замість лівої, на вкладці <guilabel>Кнопки</guilabel>, позначте пункт <guilabel>Під ліву руку</guilabel> і натисніть на кнопку <guibutton>Закрити</guibutton> (це зробить мишу зручною для використання лівою рукою).
+			</para>
+			 <para>
+				Щоб вставити спеціальний символ у файлі <application>gedit</application>, у головному меню виберіть <guimenu>Програми &#62; Стандартні &#62; Таблиця символів</guimenu>. Потім, виберіть <guimenu>Пошук &#62; Знайти&hellip;</guimenu> у меню <application>Таблиця символів</application>, введіть назву символу у полі <guilabel>Пошук</guilabel> та натисніть <guibutton>Наступний</guibutton>. Символ, який ви шукаєте, буде позначено у полі <guilabel>Таблиця символів</guilabel>. Двічі клацніть на позначеному символі, щоб помістити його у поле <guilabel>Текст для копіювання</guilabel>, а потім натисніть кнопку <guibutton>Копіювати</guibutton>. Тепер поверніться назад до вашого документа і скористайтеся пунктом меню <guimenu>Правка &#62; Вставити</guimenu> <application>gedit</application>.
+			</para>
+
+		</blockquote>
+		 <para>
+			Наведений вище текст містить назви програм; загальносистемні назви пунктів меню; специфічні для програми пункти меню; назви кнопок та інших елементів графічного інтерфейсу, усі вони позначаються пропорційним жирним шрифтом та розрізняються за контекстом.
+		</para>
+		 <para>
+			<command><replaceable>Моноширинний жирний курсив</replaceable></command> або <application><replaceable>Пропорційний жирний курсив</replaceable></application>
+		</para>
+		 <para>
+			Обидва стилі означають текст, який треба замінити чи змінний текст. Курсив вказує, що текст не слід вводити дослівно, а змінити його залежно від параметрів. Приклад:
+		</para>
+		 <blockquote>
+			<para>
+				Щоб з&#39;єднатись з віддаленим комп&#39;ютером через ssh, введіть у командному рядку <command>ssh <replaceable>ім&#39;я_користувача</replaceable>@<replaceable>назва.домену</replaceable></command>. Наприклад, якщо назва віддаленого комп&#39;ютера <filename>example.com</filename> а назва облікового запису john, введіть <command>ssh john@example.com</command>.
+			</para>
+			 <para>
+				Команда <command>mount -o remount <replaceable>файлова_система</replaceable></command> повторно монтує файлову систему. Наприклад, для повторного монтування файлової системи <filename>/home</filename>, слід вказати команду <command>mount -o remount /home</command>.
+			</para>
+			 <para>
+				Щоб побачити версію встановленого пакету, скористайтеся командою <command>rpm -q <replaceable>пакунок</replaceable></command>. Вона поверне результат у вигляді: <command><replaceable>пакунок-версія-випуск</replaceable></command>.
+			</para>
+
+		</blockquote>
+		 <para>
+			У наведених прикладах жирним курсивом позначаються ім&#39;я_користувача, назва.домену, файлова_система, пакет, версія та випуск. Кожне слово замінюється при вводі на фактичну команду, що вводиться або замінюється при виводі справжнім текстом, який покаже система.
+		</para>
+		 <para>
+			Також курсивом позначається перше використання нового та важливого терміну. Приклад:
+		</para>
+		 <blockquote>
+			<para>
+				Publican — це система публікації документів, заснована на <firstterm>DocBook</firstterm>.
+			</para>
+
+		</blockquote>
+
+	</section>
+	
+	 <section>
+		<title>Умовне позначення цитування</title>
+		 <para>
+			Виведені у терміналі дані або початкові коди програми виокремлюються з навколишнього тексту.
+		</para>
+		 <para>
+			Текст, що виводиться на термінал, також позначається <computeroutput>моноширинним прямим шрифтом</computeroutput>:
+		</para>
+		 
+<screen>books        Desktop   documentation  drafts  mss    photos   stuff  svn
+books_tests  Desktop1  downloads      images  notes  scripts  svgs</screen>
+		 <para>
+			Для текстів програм також застосовується <computeroutput>моноширинний шрифт</computeroutput>, але додається позначення синтаксичних конструкцій:
+		</para>
+		 
+<programlisting language="Java">package org.jboss.book.jca.ex1;
+
+import javax.naming.InitialContext;
+
+public class ExClient
+{
+   public static void main(String args[]) 
+       throws Exception
+   {
+      InitialContext iniCtx = new InitialContext();
+      Object         ref    = iniCtx.lookup(&#34;EchoBean&#34;);
+      EchoHome       home   = (EchoHome) ref;
+      Echo           echo   = home.create();
+
+      System.out.println(&#34;Created Echo&#34;);
+
+      System.out.println(&#34;Echo.echo(&#39;Hello&#39;) = &#34; + echo.echo(&#34;Hello&#34;));
+   }
+}</programlisting>
+
+	</section>
+	
+	 <section>
+		<title>Примітки та попередження</title>
+		 <para>
+			Зрештою, для привертання уваги до важливої інформації використовуються три візуальні стилі.
+		</para>
+		 <note>
+			<title>Примітка</title>
+			 <para>
+				Примітка зазвичай містить додаткову інформацію. Ігнорування примітки не матиме негативних наслідків, але ви можете пропустити пораду, яка спростить вашу роботу.
+			</para>
+
+		</note>
+		 <important>
+			<title>Важливо</title>
+			 <para>
+				Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled &#39;Important&#39; won&#39;t cause data loss but may cause irritation and frustration.
+			</para>
+
+		</important>
+		 <warning>
+			<title>Попередження</title>
+			 <para>
+				Попередження не слід ігнорувати. Попередження містять важливу інформацію, що може запобігти втраті даних.
+			</para>
+
+		</warning>
+
+	</section>
+
+</section>
+
+

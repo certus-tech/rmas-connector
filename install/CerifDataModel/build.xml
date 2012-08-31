@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ============================================================= -->
+<!--     ANT Script for CerifDataModel                             -->
+<!-- ============================================================= -->
+<project name="cerifdatamodel" default="build" basedir="../../">
+
+  <property file="install/CerifDataModel/build.properties" />
+
+  <target name="cerifdatamodel.init" description="Creates necessary temp dirs">
+    <mkdir dir="${tmp.dir}/tmp" />
+    <mkdir dir="${tmp.dir}/tmp/CerifDataModel" />
+    <mkdir dir="${tmp.dir}/tmp/CerifDataModel/jaxb" />
+    <mkdir dir="${tmp.dir}/tmp/CerifDataModel/classes" />
+    <mkdir dir="${tmp.dir}/tmp/CerifDataModel/dist" />
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Build the CerifDataModel schema.                                    -->
+  <!-- =================================================================== -->
+  <target name="cerifdatamodel.jaxb" depends="cerifdatamodel.init">
+    <exec dir="." executable="/usr/local/jdk/bin/xjc" >
+      <arg line="${rc_jaxb_src} -p ${rc_jaxb_package} -d ${tmp.dir}/tmp/CerifDataModel/jaxb" />
+    </exec>
+  </target>
+
+  <target name="cerifdatamodel.compile" depends="cerifdatamodel.jaxb" description="Builds CerifDataModel">
+     <javac destdir="${tmp.dir}/tmp/CerifDataModel/classes"
+     debug="${java.debug}"
+     classpath="${build.classpath}"
+     >
+      <src path="code/CerifDataModel/src"/>
+      <src path="code/XQUF/src"/>
+      <src path="code/QizxOpen/src"/>
+      <src path="${tmp.dir}/tmp/CerifDataModel/jaxb"/>
+    </javac>
+  </target>
+  
+  <target name="build" depends="cerifdatamodel.compile" description="Builds CerifDataModel">
+    <jar destfile="${tmp.dir}/tmp/CerifDataModel/dist/${jar.name}">
+      <fileset dir="${tmp.dir}/tmp/CerifDataModel/classes"/>
+      <!-- Include XML and XSD for CDM. -->
+      <fileset dir="code/CerifDataModel/resources"/>
+    </jar>
+  </target>
+   <target name="clean">
+    <delete dir="${tmp.dir}/tmp/CerifDataModel"/>
+  </target>
+
+</project>

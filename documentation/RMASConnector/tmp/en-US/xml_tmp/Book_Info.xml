@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE bookinfo PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "RMASConnector.ent">
+%BOOK_ENTITIES;
+]>
+<bookinfo id="book-RMASConnector-RMASConnector">
+  <title>RMASConnector</title>
+
+  <subtitle></subtitle>
+
+  <productname>RMASConnector</productname>
+
+  <productnumber>1.0</productnumber>
+
+  <edition>1</edition>
+
+  <pubsnumber>0</pubsnumber>
+
+  <abstract>
+    <para>Welcome to the home site of the Research Management and Administration System (RMAS) Connector project. RMASConnector is a data integration platform developed under the JISC funded Research
+    Management and Administration System project. At the heart of the platform is the Pentaho Open Source Data Integration suite, PDI (also known as Kettle).</para>
+
+    <para>RMASConnector is based on an Extract, Transform and Load (ETL) pattern and is compatible with an Enterprise Service Bus (ESB) pattern, in which best practice requires a common message
+    structure and vocabulary to ensure interoperability. The RMASConnector project therefore includes the definition of, and support for, suitable message structures. The chosen standard for these
+    messages is CERIF, which has been refined and developed as necessary to accommodate RMAS requirements.</para>
+
+    <para>RMASConnector is available as a download from this site. Also available within the download are load-and-go worked examples of platform usage. These examples are designed to be easily
+    configurable to work with existing data sources.</para>
+  </abstract>
+
+  <xi:include href="Author_Group.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+</bookinfo>

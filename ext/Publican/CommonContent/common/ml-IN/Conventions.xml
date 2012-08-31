@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+]>
+<section>
+	<title>രേഖയിലെ കീഴ്‌വഴക്കങ്ങള്‍</title>
+	 <para>
+		ഈ മാനുവലില്‍ ചില വാക്കുകള്‍, വാചകങ്ങള്‍, പ്രത്യേക ചില വിവരങ്ങള്‍ എന്നിവ നിങ്ങളുടെ ശ്രദ്ധയില്‍പ്പെടുത്തുന്നതിനായി അനവധി കീഴ്‌വഴക്കങ്ങള്‍ ഉപയോഗിച്ചിരിക്കുന്നു.
+	</para>
+	 <para>
+		പിഡിഎഫിലും പേപ്പര്‍ പതിപ്പുകളിലും, <ulink url="https://fedorahosted.org/liberation-fonts/"> ലിബറേഷന്‍ അക്ഷരസഞ്ചയങ്ങളുടെ</ulink> സെറ്റില്‍ നിന്നുമുള്ള ടൈപ്പ്ഫെയിസുകള്‍ ഈ മാനുവലില്‍ ഉപയോഗിക്കുന്നു. ലിബറേഷന്‍ അക്ഷരസഞ്ചയങ്ങള്‍ നിങ്ങളുടെ സിസ്റ്റമില്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്തിട്ടുണ്ടെങ്കില്‍ അവ എച്ടിഎംഎല്‍ പതിപ്പുകളിലും ഉപയോഗിക്കുന്നതാണു്. ഇവ ഇല്ലെങ്കില്‍, പകരമായുള്ള ടൈപ്പ്ഫെയിസുകള്‍ ലഭ്യമാകുന്നു. കുറിപ്പു്: Red Hat Enterprise Linux 5-ഉം അതിനു് ശേഷമുള്ളവയിലും സ്വതവേ ഈ ലിബറേഷന്‍ അക്ഷരസഞ്ചയം ഉള്‍പ്പെടുത്തിയിരിക്കുന്നു.
+	</para>
+	 <section>
+		<title>Typographic Conventions</title>
+		 <para>
+			Four typographic conventions are used to call attention to specific words and phrases. These conventions, and the circumstances they apply to, are as follows.
+		</para>
+		 <para>
+			<literal>മോണോ-സ്പെയിസ്ഡ് ബോള്‍ഡ്</literal>
+		</para>
+		 <para>
+			ഷെല്‍ കമാന്‍ഡുകള്‍, ഫയല്‍ നാമങ്ങള്‍ പാഥുകള്‍ എന്നവി ഉള്‍പ്പെടുന്ന സിസ്റ്റം ഇന്‍പുട്ട് എടുത്തു് കാണിക്കുവാന്‍ ഉപയോഗിക്കുന്നു. കീമാപ്പുകളും കീ കൂട്ടങ്ങളും ഇവ എടുത്തു കാണിക്കുവാന്‍ സഹായിക്കുന്നു. ഉദാഹരണത്തിനു്:
+		</para>
+		 <blockquote>
+			<para>
+				നിങ്ങള്‍ ഇപ്പോള്‍ നില്‍ക്കുന്ന ഡയറക്ടറിയില്‍ <filename>my_next_bestselling_novel</filename> ഫയല്‍ കാണുന്നതിനായി, ഷെല്‍ പ്രോംപ്റ്റില്‍ <command>cat my_next_bestselling_novel</command> കമാന്‍ഡ് നല്‍കി <keycap>Enter</keycap> കീ അമര്‍ത്തുക.
+			</para>
+
+		</blockquote>
+		 <para>
+			മുകളില്‍ പറഞ്ഞിരിക്കുന്നതില്‍ ഒരു ഫയല്‍നാമം, ഷെല്‍ കമാന്‍ഡ്, കീകാപ്പ് എന്നിവ ഉള്‍പ്പെടുന്നു. എല്ലാം മോണോ-സ്പെയിഡ് ബോള്‍ഡില്‍ നല്‍കിയിരിക്കുന്നു, വ്യക്തമായി തിരിച്ചറിയുവാനും സാധിക്കുന്നു.
+		</para>
+		 <para>
+			കീ കൂട്ടങ്ങളും കീകാപ്പുകളും തമ്മില്‍ തിരിച്ചറിയുന്നതിനായി, ഓരോ കീ കൂട്ടത്തിന്റേയും ഭാഗം ഹൈഫന്‍ ഉപയോഗിച്ചു് ബന്ധപ്പെടുത്തുക. ഉദാഹരണത്തിനു്:
+		</para>
+		 <blockquote>
+			<para>
+				കമാന്‍ഡ് നടപ്പിലാക്കുന്നതിനായി <keycap>Enter</keycap> അമര്‍ത്തുക.
+			</para>
+			 <para>
+				ആദ്യത്തെ വിര്‍ച്ച്വല്‍ ടെര്‍മിനലിലേക്ക് പോകുന്നതിനായി <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F1</keycap></keycombo> ഉപയോഗിക്കുക. തിരികെ നിങ്ങളുടെ X-Windows സെഷനിലേക്ക് മടങ്ങുന്നതിനായി<keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F7</keycap></keycombo> ഉപയോഗിക്കുക.
+			</para>
+
+		</blockquote>
+		 <para>
+			ആദ്യത്തെ ഖണ്ഡിക അമര്‍ത്തുന്നതിനുള്ള കീക്കാപ്പ് എടുത്തുകാണിക്കുന്നു. രണ്ടാമത്തെ ഖണ്ഡിക രണ്ടു് കീ കൂട്ടങ്ങളെ കാണിക്കുന്നു. (ഓരോന്നും മൂന്നു് കീക്കാപ്പുകള്‍ ഉള്ള സെറ്റ്, അതില്‍ ഓരോ സെറ്റും അടുപ്പിച്ചു് അമര്‍ത്തുന്നു)
+		</para>
+		 <para>
+			സോഴ്സ് കോഡിനെപ്പറ്റി പറയുമ്പോള്‍, ഒരു ഖണ്ഡികയില്‍ ലഭ്യമാകുന്ന ക്ലാസ്സ് നെയിമുകള്‍, മെഥേഡുകള്‍, ഫംഗ്ഷനുകള്‍, വേരിയബിള്‍ നെയിമുകള്‍, തിരികെ ലഭിക്കുന്ന മൂല്ല്യങ്ങള്‍ എന്നിവ മുകളില്‍ പറഞ്ഞിരിക്കുന്നതു് പോലെ <literal>മോണോ-സ്പെയിസ്ഡ് ബോള്‍ഡ്</literal> ലഭ്യമാകുന്നു. ഉദാഹരണത്തിനു്:
+		</para>
+		 <blockquote>
+			<para>
+				ഫയലിനോടു് അനുബന്ധിച്ചുള്ള ക്ലാസ്സുകളില്‍, ഫയല്‍ സിസ്റ്റത്തിനു് <classname>filesystem</classname>, ഫയലുകള്‍ക്കു് <classname>file</classname>, ഡയറക്ടറികള്‍ക്കു് <classname>dir</classname> എന്നിവ ഉള്‍പ്പെടുന്നു. ഓരോ ക്ലാസ്സിനും അതിനനുസരിച്ചുള്ള അനുവാദങ്ങളുമുണ്ടു്.
+			</para>
+
+		</blockquote>
+		 <para>
+			<application>പ്രൊപോര്‍ഷണ്‍ ബോള്‍ഡ്</application>
+		</para>
+		 <para>
+			പ്രയോങ്ങളുടെ പേരുകള്‍; ഡയലോഗ് ബോക്സ് ടെക്സ്റ്റ്; ലേബല്‍ഡ് ബട്ടണുകള്‍; ചെക്ക്-ബോക്സും റേഡിയോ ബട്ടണ്‍ ലേബലുകളും; മെനുവിന്റെ തലക്കെട്ടുകളും ഉപ-മെനു തലക്കെട്ടുകളും എന്നിങ്ങനെയുള്ള സിസ്റ്റത്തില്‍ നിങ്ങള്‍ക്കു് ലഭ്യമാകുന്ന വാക്കുകളേയും വാക്ക്യങ്ങളേയും ഇവ സൂചിപ്പിക്കുന്നു. ഉദാഹരണത്തിനു്:
+		</para>
+		 <blockquote>
+			<para>
+				<application>മൌസിനുള്ള മുന്‍ഗണനകള്‍</application> ലഭ്യമാക്കുന്നതിനായി പ്രധാന മെനുവില്‍ നിന്നും <menuchoice><guimenu>സിസ്റ്റം</guimenu><guisubmenu>മുന്‍ഗണനകള്‍</guisubmenu><guimenuitem>മൌസ്</guimenuitem></menuchoice> തെരഞ്ഞെടുക്കുക.പ്രൈമറി മൌസ് ബട്ടണ്‍ ഇടത്തു് നിന്നും വലത്തേക്കു് മാറ്റുന്നതിനായി (ഇടത്തു് കൈയ്യുപയോഗിച്ചുള്ള മൌസ് പ്രവര്‍ത്തനത്തിനായി)<guilabel>ബട്ടണുകള്‍ </guilabel> എന്ന റ്റാബില്‍, <guilabel>ലെഫ്റ്റ്-ഹാന്‍ഡഡ് മൌസ്</guilabel> ചെക്ക് ബോക്സ് ക്ലിക്ക് ചെയ്തു് <guibutton>അടയ്ക്കുക</guibutton> ക്ലിക്ക് ചെയ്യുക .
+			</para>
+			 <para>
+				ഒരു <application>gedit</application> ഫയലിലേക്ക് ഒരു പ്രത്യേക അക്ഷരം ഉള്‍പ്പെടുത്തുന്നതിനായി, പ്രധാന മെനുബാറില്‍ നിന്നും <menuchoice><guimenu>പ്രയോഗങ്ങള്‍</guimenu><guisubmenu>ആക്സസറീസ്</guisubmenu><guimenuitem>ക്യാറക്ടര്‍ മാപ്പ്</guimenuitem></menuchoice> തെരഞ്ഞെടുക്കുക. അടുത്തതു്, <application>ക്യാറക്ടര്‍ മാപ്പ്</application>-ല്‍ മെനുബാറില്‍ നിന്നും <menuchoice><guimenu>തെരയുക</guimenu><guimenuitem>കണ്ടുപിടിക്കുക&hellip;</guimenuitem></menuchoice> തെരഞ്ഞെടുത്തു് <guilabel>തെരയുക</guilabel> ഫീള്‍ഡില്‍ അക്ഷരം ടൈപ്പ് ചെയ്തു് <guibutton>അടുത്തതു് </guibutton> ക്ലിക്ക് ചെയ്യുക. നിങ്ങള്‍ തെരയുന്ന അക്ഷരം <guilabel>ക്യാറക്ടര്‍ ടേബിളില്‍</guilabel> എടുത്തു് കാണിക്കപ്പെടുന്നു. <guilabel>പകര്‍ത്തേണ്ട വാചകം</guilabel> എന്ന ഫീള്‍ഡില്‍ ഈ അക്ഷരം ലഭിക്കുന്നതിനായി ഡബിള്‍ ക്ലിക്ക് ചെയ്യുക, എന്നിട്ടു് <guibutton>പകര്‍ത്തുക</guibutton> ബട്ടണ്‍ ക്ലിക്ക് ചെയ്യുക. ഇനി നിങ്ങളുടെ രേഖയിലേക്ക് തിരികെ പോയി, <application>gedit</application> പ്രധാന ബാറില്‍ നിന്നും <menuchoice><guimenu>ചിട്ടപ്പെടുത്തുക</guimenu><guimenuitem>ഒട്ടിക്കുക</guimenuitem></menuchoice> തെരഞ്ഞെടുക്കുക.
+			</para>
+
+		</blockquote>
+		 <para>
+			പ്രയോഗത്തിന്റെ പേരുകള്‍; സിസ്റ്റത്തിലുള്ള മെനുവിന്റെ പേരുകളും വസ്തുക്കളും; പ്രയോഗമസുസരിച്ചുള്ള മെനുകള്‍; ഒരു ജിയുഐ ഇന്റര്‍ഫെയിസിലുള്ള ബട്ടണുകളും വാചകങ്ങളും എന്നിവ മുകളില്‍ പറഞ്ഞിരിക്കുന്ന വാചകത്തില്‍ ഉള്‍പ്പെടുന്നു. ഇവ എല്ലാം പ്രൊപോര്‍ഷണല്‍ ബോള്‍ഡ് ഉപയോഗിച്ചു് സൂചിപ്പിച്ചിരിക്കുന്നു, എല്ലാം കോണ്‍ടെക്സ്റ്റ് അനുസരിച്ചു് വ്യക്തമാകുകയും ചെയ്യുന്നു.
+		</para>
+		 <para>
+			<command><replaceable>മോണോ-സ്പെയിസ്ഡ് ബോള്‍ഡ് ഇറ്റാലിക്</replaceable></command> അല്ലെങ്കില്‍ <application><replaceable>പ്രൊപോര്‍ഷണല്‍ ബോള്‍ഡ് ഇറ്റാലിക്</replaceable></application>
+		</para>
+		 <para>
+			മോണോ-സ്പെയിസ്ഡ് ബോള്‍ഡ് ആണെങ്കിലും പ്രൊപോര്‍ഷണല്‍ ബോള്‍ഡാണെങ്കിലും മാറ്റം സ്ഥാപിക്കുന്ന അല്ലെങ്കില്‍ വേരിയബിള്‍ വാചകത്തെ ചരിഞ്ഞുള്ള അക്ഷരശൈലി സൂചിപ്പിക്കുന്നു. നിങ്ങള്‍ ഇന്‍പുട്ട് ചെയ്യാത്ത വാചകങ്ങള്‍ അല്ലെങ്കില്‍ സാഹചര്യമനുസരിച്ചുള്ള വാചകങ്ങളെയാണു് ചരിഞ്ഞുള്ള അക്ഷരങ്ങള്‍ സൂചിപ്പിക്കുന്നതു്. ഉദാഹരണത്തിനു്:
+		</para>
+		 <blockquote>
+			<para>
+				ssh ഉപയോഗിച്ചു് വിദൂരത്തിലുള്ള ഒരു സിസ്റ്റവുമായി ബന്ധപ്പെടുന്നതിനു്, ഷെല്‍ പ്രോംപ്റ്റില്‍ <command>ssh <replaceable>username</replaceable>@<replaceable>domain.name</replaceable></command> ടൈപ്പ് ചെയ്യുക. വീദൂര സിസ്റ്റം <filename>example.com</filename> എന്നും നിങ്ങളുടെ ഉപയോക്തൃനാമം john എന്നുമാണെങ്കില്‍, <command>ssh john@example.com</command> എന്നു് ടൈപ്പ് ചെയ്യുക.
+			</para>
+			 <para>
+				<command>mount -o remount <replaceable>file-system</replaceable></command> കമാന്‍ഡ് നല്‍കിയിരിക്കുന്ന ഫയല്‍ സിസ്റ്റത്തിനെ റീമൌണ്ട് ചെയ്യുന്നു. ഉദാഹരണത്തിനു്, <filename>/home</filename> ഫയല്‍ സിസ്റ്റം റീമൌണ്ട് ചെയ്യുന്നതിനായുള്ള കമാന്‍ഡ് - <command>mount -o remount /home</command>.
+			</para>
+			 <para>
+				ഇപ്പോള്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്തിരിക്കുന്ന പാക്കേജിന്റെ നിലവിലുള്ള പതിപ്പു് കാണുന്നതിനായി, <command>rpm -q <replaceable>package</replaceable></command> കമാന്‍ഡ് ഉപയോഗിക്കുക. ഫലം: <command><replaceable>package-version-release</replaceable></command>.
+			</para>
+
+		</blockquote>
+		 <para>
+			മുകളില്‍ പറഞ്ഞിരിക്കുന്ന ചരഞ്ഞ കട്ടിയിലുള്ള വാക്കുകള്‍ ശ്രദ്ധിക്കുക &mdash; username, domain.name, file-system, package, version, release. ഓരോ വാക്കും ഓരോ കാര്യത്തെ സൂചിപ്പിക്കുന്നു, ഒന്നുകില്‍ നിങ്ങള്‍ നല്‍കുന്ന കമാന്‍ഡിനുള്ള വാചകത്തിനു് അല്ലെങ്കില്‍ സിസ്റ്റം ലഭ്യമാക്കുന്ന വാചകം.
+		</para>
+		 <para>
+			ഒരു സംരംഭത്തിന്റെ തലക്കെട്ട് വ്യക്തമാക്കുന്നതിനു പുറമേ, പുതിയതും പ്രധാനപ്പെട്ടതുമായ വാക്കിന്റെ ആദ്യത്തെ ഉപയോഗവും ചരിഞ്ഞ അക്ഷരശൈലിയില്‍ കാണിക്കുന്നു.
+		</para>
+		 <blockquote>
+			<para>
+				Publican ഒരു <firstterm>DocBook</firstterm> പബ്ലിഷിങ് സിസ്റ്റമാണു്.
+			</para>
+
+		</blockquote>
+
+	</section>
+	
+	 <section>
+		<title>Pull-quote Conventions</title>
+		 <para>
+			Terminal output and source code listings are set off visually from the surrounding text.
+		</para>
+		 <para>
+			ഒരു ടെര്‍മിനലിലേക്കുള്ള ഔട്ട്പുട്ട് <computeroutput>മോണോ-സ്പെയിസ്ഡ് റോമനില്‍</computeroutput> ക്രമികരിച്ചിരിക്കുന്നു. അവ നല്‍കിയിരിക്കുന്നതു് ഇപ്രകാരമാണു്:
+		</para>
+		 
+<screen>books        Desktop   documentation  drafts  mss    photos   stuff  svn
+books_tests  Desktop1  downloads      images  notes  scripts  svgs</screen>
+		 <para>
+			സോഴ്സ്-കോഡ് ലിസ്റ്റിങും <computeroutput>മോണോ-സ്പെയിസ്ഡ് റോമനില്‍</computeroutput> ക്രമികരിച്ചിട്ടുണ്ടു്, പക്ഷേ അവ ലഭ്യമാകുന്നതു് താഴെ പറയുന്ന രീതിയിലാണു്:
+		</para>
+		 
+<programlisting language="Java">package org.jboss.book.jca.ex1;
+
+import javax.naming.InitialContext;
+
+public class ExClient
+{
+   public static void main(String args[]) 
+       throws Exception
+   {
+      InitialContext iniCtx = new InitialContext();
+      Object         ref    = iniCtx.lookup(&#34;EchoBean&#34;);
+      EchoHome       home   = (EchoHome) ref;
+      Echo           echo   = home.create();
+
+      System.out.println(&#34;Created Echo&#34;);
+
+      System.out.println(&#34;Echo.echo(&#39;Hello&#39;) = &#34; + echo.echo(&#34;Hello&#34;));
+   }
+}</programlisting>
+
+	</section>
+	
+	 <section>
+		<title>കുറിപ്പുകളും മുന്നറിയിപ്പുകളും</title>
+		 <para>
+			Finally, we use three visual styles to draw attention to information that might otherwise be overlooked.
+		</para>
+		 <note>
+			<title>കുറിപ്പ്</title>
+			 <para>
+				നിങ്ങള്‍ ചെയ്യുന്ന ജോലിയ്ക്കാവശ്യമുള്ള ഒരു സൂചന അല്ലെങ്കില്‍ ഒരു കുറുക്കുവഴി ആണു് കുറിപ്പുകള്‍. ഇവ അവഗണിക്കുന്നതു് വിവരങ്ങള്‍ നഷ്ടമാക്കുന്നില്ല എങ്കിലും നിങ്ങളുടെ ജോലി എളുപ്പമാക്കുന്ന ഒരു കുറുക്കുവഴി നിങ്ങള്‍ക്കു് നഷ്ടപ്പെട്ടേക്കാം.
+			</para>
+
+		</note>
+		 <important>
+			<title>പ്രധാനപ്പെട്ടതു്</title>
+			 <para>
+				Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled &#39;Important&#39; won&#39;t cause data loss but may cause irritation and frustration.
+			</para>
+
+		</important>
+		 <warning>
+			<title>മുന്നറിയിപ്പ്</title>
+			 <para>
+				മുന്നറിയിപ്പുകള്‍ അവഗണിക്കുന്നതു് വിവരങ്ങള്‍ നഷ്ടപ്പെടുന്നതിനിടയാക്കുന്നു. അതിനാല്‍ അവ പ്രത്യേകം ശ്രദ്ധിക്കുക.
+			</para>
+
+		</warning>
+
+	</section>
+
+</section>
+
+

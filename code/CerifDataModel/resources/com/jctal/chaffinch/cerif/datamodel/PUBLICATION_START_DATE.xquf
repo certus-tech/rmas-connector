@@ -1,0 +1,69 @@
+(:
+  RMAS (Research Management and Administration System) Connector project
+  for data integration.
+  http://www.rmas.ac.uk/documentation/
+ 
+  Copyright (c) 2012 Certus Technology Associates Limited.
+  http://www.certus-tech.com/
+ 
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+:)
+declare namespace cf = "urn:xmlns:org:eurocris:cerif-1.4-0";
+
+(:
+
+if cfPers_ResPubl with PUBLICATION_ID exists
+  if cfStartDate exists
+    do nothing
+  else
+    insert cfStartDate = PUBLICATION_START_DATE
+else
+  create cfPers_ResPubl with PUBLICATION_ID and cfStartDate = PUBLICATION_START_DATE
+
+:)
+
+declare variable $PERSON_ID external;
+declare variable $PUBLICATION_ID external;
+declare variable $PUBLICATION_START_DATE external;
+let $resPubl := /cf:CERIF/cf:cfPers_ResPubl[
+  cf:cfPersId = $PERSON_ID and
+  cf:cfResPublId = $PUBLICATION_ID and
+  cf:cfClassId = 'cf7799e5-3477-11e1-b86c-0800200c9a66'
+]
+return
+if ($PERSON_ID and $PUBLICATION_ID and $PUBLICATION_START_DATE) then ( 
+
+  if ($resPubl) then (
+
+    (: Person/Publication link already exists. Check for start date :)
+    if ($resPubl/cf:cfStartDate) then (
+      (: Start date already set, nothing to do. :)
+    ) else (
+      insert node
+        <cf:cfStartDate>{string($PUBLICATION_START_DATE)}</cf:cfStartDate>
+      after $resPubl/cf:cfClassSchemeId
+    )
+
+  ) else (
+
+    (: Create Person/Pub link with start date :)
+    insert node
+      <cf:cfPers_ResPubl>
+        <cf:cfPersId>{string($PERSON_ID)}</cf:cfPersId>
+        <cf:cfResPublId>{string($PUBLICATION_ID)}</cf:cfResPublId>
+        <cf:cfClassId>cf7799e5-3477-11e1-b86c-0800200c9a66</cf:cfClassId> <!-- 'Publication' (CERIF 1.3 Vocabulary) -->
+        <cf:cfClassSchemeId>6e0d9af0-1cd6-11e1-8bc2-0800200c9a66</cf:cfClassSchemeId> <!-- 'CERIF1.3-All' (CERIF 1.3 Vocabulary) -->
+        <cf:cfStartDate>{string($PUBLICATION_START_DATE)}</cf:cfStartDate>
+      </cf:cfPers_ResPubl>
+    into /cf:CERIF
+
+  )
+) else ()

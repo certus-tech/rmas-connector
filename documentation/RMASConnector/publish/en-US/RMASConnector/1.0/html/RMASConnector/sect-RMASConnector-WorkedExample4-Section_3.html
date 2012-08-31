@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>8.3. Structure of the Example</title><link rel="stylesheet" href="Common_Content/css/default.css" type="text/css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 2.1" /><meta name="package" content="RMASConnector-RMASConnector-1.0-en-US-1-0" /><link rel="home" href="index.html" title="RMASConnector" /><link rel="up" href="chap-RMASConnector-WorkedExample4.html" title="Chapter 8. Worked Example 4: Event data SOAP wrapper to XML payload" /><link rel="prev" href="sect-RMASConnector-WorkedExample4-Section_2.html" title="8.2. User Story" /><link rel="next" href="sect-RMASConnector-WorkedExample4-Section_4.html" title="8.4. Running the job from Spoon" /></head><body class="toc_embeded "><div id="tocdiv" class="toc"><iframe id="tocframe" class="toc" src="../../../../toc.html">This is an iframe, to view it upgrade your browser or enable iframe display.</iframe></div><p id="title"><a class="left" href="http://rmas.certus-tech.com"><img src="Common_Content/images/image_left.png" alt="Product Site" /></a><a class="right" href="http://rmas.certus-tech.com/documentation"><img src="Common_Content/images/image_right.png" alt="Documentation Site" /></a></p><ul class="docnav"><li class="previous"><a accesskey="p" href="sect-RMASConnector-WorkedExample4-Section_2.html"><strong>Prev</strong></a></li><li class="next"><a accesskey="n" href="sect-RMASConnector-WorkedExample4-Section_4.html"><strong>Next</strong></a></li></ul><div class="section" title="8.3. Structure of the Example" id="sect-RMASConnector-WorkedExample4-Section_3"><div class="titlepage"><div><div><h2 class="title" id="sect-RMASConnector-WorkedExample4-Section_3">8.3. Structure of the Example</h2></div></div></div><div class="para">
+			Worked example 4 consists of a transformation which posts some content to the ‘listener’ web service endpoint (<span class="emphasis"><em>PostFileToTriggerService</em></span>), and a main job which performs the conversion to CERIF XML and posts the result to the final web service (<span class="emphasis"><em>WorkedExample4</em></span>). The <span class="emphasis"><em>WorkedExample4</em></span> job comprises two transformations: <span class="emphasis"><em>SymplecticCSVInput</em></span> and <span class="emphasis"><em>CERIFXMLToSOAPOutput</em></span>.
+		</div><div class="para">
+			<a class="xref" href="sect-RMASConnector-WorkedExample4-Section_3.html#sect-RMASConnector-WorkedExample4-Section_3_1_figure" title="Figure 8.1. Process overview of worked example 4">Figure 8.1, “Process overview of worked example 4”</a> aims to clarify the structure of the worked example. It indicates the four major steps which occur, the means by which they are connected, and the data which passes between them.
+		</div><div class="figure" title="Figure 8.1. Process overview of worked example 4" id="sect-RMASConnector-WorkedExample4-Section_3_1_figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="images/WorkedExample4/WE4_Overview.png" align="middle" width="444" alt="Process overview of worked example 4" /></div></div><h6>Figure 8.1. Process overview of worked example 4</h6></div><br class="figure-break" /><div class="section" title="8.3.1. Parameters" id="sect-RMASConnector-WorkedExample4-Section_3_1"><div class="titlepage"><div><div><h3 class="title" id="sect-RMASConnector-WorkedExample4-Section_3_1">8.3.1. Parameters</h3></div></div></div><div class="para">
+				The <span class="emphasis"><em>PostFileToTriggerService</em></span> transformation has the following parameters:
+			</div><table id="sect-RMASConnector-WorkedExample4-Section_3_1_table"><caption>Table 8.1. </caption><thead><tr>
+						<td>
+							Parameter
+						</td>
+						 <td>
+							Description
+						</td>
+
+					</tr></thead><tbody><tr>
+						<td>
+							datafile
+						</td>
+						 <td>
+							The path, including the filename, to the file which is posted to the listener web service. This should be a Symplectic CSV publication data export, or compatible.
+						</td>
+
+					</tr><tr>
+						<td>
+							service.url
+						</td>
+						 <td>
+							The URL to post the file to. This is the URL of the listener service.
+						</td>
+
+					</tr><tr>
+						<td>
+							project.dir
+						</td>
+						 <td>
+							The root directory for the project.
+						</td>
+
+					</tr></tbody></table><div class="para">
+				The <span class="emphasis"><em>WorkedExample4</em></span> job has the following parameters:
+			</div><table id="sect-RMASConnector-WorkedExample4-Section_3_2_table"><caption>Table 8.2. </caption><thead><tr>
+						<td>
+							Parameter
+						</td>
+						 <td>
+							Description
+						</td>
+
+					</tr></thead><tbody><tr>
+						<td>
+							input.file
+						</td>
+						 <td>
+							The path, including the filename, to the Symplectic CSV export which is read by the CSV input Transformation. When the Job is invoked by the listener web service, this parameter is overridden on the command line.
+						</td>
+
+					</tr><tr>
+						<td>
+							soap.template
+						</td>
+						 <td>
+							The path, including the filename, to the XML document containing the complete SOAP message template. The template may contain the placeholder <span class="emphasis"><em>CERIF_DATA</em></span> at the point at which the CERIF XML serialisation should be inserted.
+						</td>
+
+					</tr><tr>
+						<td>
+							webservice.url
+						</td>
+						 <td>
+							URL to the web service which the SOAP message is posted to.
+						</td>
+
+					</tr><tr>
+						<td>
+							webservice.action
+						</td>
+						 <td>
+							URI of the web service action to invoke.
+						</td>
+
+					</tr><tr>
+						<td>
+							project.dir
+						</td>
+						 <td>
+							The root directory of the project.
+						</td>
+
+					</tr></tbody></table></div></div><ul class="docnav"><li class="previous"><a accesskey="p" href="sect-RMASConnector-WorkedExample4-Section_2.html"><strong>Prev</strong>8.2. User Story</a></li><li class="up"><a accesskey="u" href="#"><strong>Up</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Home</strong></a></li><li class="next"><a accesskey="n" href="sect-RMASConnector-WorkedExample4-Section_4.html"><strong>Next</strong>8.4. Running the job from Spoon</a></li></ul></body></html>

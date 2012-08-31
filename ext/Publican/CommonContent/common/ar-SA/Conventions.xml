@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+]>
+<section>
+	<title>أعراف الوثيقة</title>
+	 <para>
+		هذا الكتيب يستخدم عدد من الأعراف لإبراز كلمات أو جملة معينة ولجلب الانتباه لمعلومة معينة.
+	</para>
+	 <para>
+		\tنسخة PDF والنسخة المطبوعة تستخدم خطوط من <ulink url="https://fedorahosted.org/liberation-fonts/">Liberation Fonts</ulink> (لا تدعم العربية). وقد تم تحديدها كي تستخدم في نسخة HTML إن كانت مثبتة على حاسبك. وإلا فإنها تعرض بخطوط بديلة لكن من نفس السمة العامة. ملاحظة: تتوفر هذه الخطوط في ريدهات إنتربرايز لينكس 5.
+	</para>
+	 <section>
+		<title>الأعراف الطباعية</title>
+		 <para>
+			هناك أربع أعراف طباعية تستخدم في جلب الانتباه لكلمات أو عبارات معينة. إليك تاليا الأعراف والظروف التي تنطبق عليها.
+		</para>
+		 <para>
+			<literal>Mono-spaced Bold</literal>
+		</para>
+		 <para>
+			Used to highlight system input, including shell commands, file names and paths. Also used to highlight keycaps and key combinations. For example:
+		</para>
+		 <blockquote>
+			<para>
+				لمشاهدة محتويات الملف <filename>my_next_bestselling_novel</filename> الموجود في الدليل (المجلد) الحالي اكتب الأمر‪ <command>cat my_next_bestselling_novel</command> ‬في المحث واضغط <keycap>Enter</keycap>لتنفيذ الأمر.
+			</para>
+
+		</blockquote>
+		 <para>
+			ما ذكر أعلاه يشتمل على اسم الملف file name مسبوقا بأمر shell command متبوعا بضغط مفتاح key capتظهر كلها بخط ثخين ثابت العرض mono-spaced ونستطيع التمييز بينها بفضل السياق.
+		</para>
+		 <para>
+			Key combinations can be distinguished from keycaps by the hyphen connecting each part of a key combination. For example:
+		</para>
+		 <blockquote>
+			<para>
+				اضغط <keycap>ENTER</keycap> لتنفيذ الأمر.
+			</para>
+			 <para>
+				اضغط ‪<keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F1</keycap></keycombo>‬ للتبديل إلى الطرفية الافتراضية الاولى. اضغط ‪<keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F7</keycap></keycombo>‬ للعودة إلى جلسة نظام نوافذ إكس.
+			</para>
+
+		</blockquote>
+		 <para>
+			The first paragraph highlights the particular keycap to press. The second highlights two key combinations (each a set of three keycaps with each set pressed simultaneously).
+		</para>
+		 <para>
+			If source code is discussed, class names, methods, functions, variable names and returned values mentioned within a paragraph will be presented as above, in <literal>mono-spaced bold</literal>. For example:
+		</para>
+		 <blockquote>
+			<para>
+				الصنوف المتعلقة بالملفات تتضمن <classname>filesystem</classname> لنظام الملفات، <classname>file</classname> للملفات، و <classname>dir</classname> للأدلة (المجلدات)، وكل صنف له ما يرتبط به من الصلاحيات.
+			</para>
+
+		</blockquote>
+		 <para>
+			<application>Proportional Bold</application>
+		</para>
+		 <para>
+			This denotes words or phrases encountered on a system, including application names; dialog box text; labeled buttons; check-box and radio button labels; menu titles and sub-menu titles. For example:
+		</para>
+		 <blockquote>
+			<para>
+				Choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Mouse</guimenuitem></menuchoice> from the main menu bar to launch <application>Mouse Preferences</application>. In the <guilabel>Buttons</guilabel> tab, click the <guilabel>Left-handed mouse</guilabel> check box and click <guibutton>Close</guibutton> to switch the primary mouse button from the left to the right (making the mouse suitable for use in the left hand).
+			</para>
+			 <para>
+				To insert a special character into a <application>gedit</application> file, choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Accessories</guisubmenu><guimenuitem>Character Map</guimenuitem></menuchoice> from the main menu bar. Next, choose <menuchoice><guimenu>Search</guimenu><guimenuitem>Find&hellip;</guimenuitem></menuchoice> from the <application>Character Map</application> menu bar, type the name of the character in the <guilabel>Search</guilabel> field and click <guibutton>Next</guibutton>. The character you sought will be highlighted in the <guilabel>Character Table</guilabel>. Double-click this highlighted character to place it in the <guilabel>Text to copy</guilabel> field and then click the <guibutton>Copy</guibutton> button. Now switch back to your document and choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem></menuchoice> from the <application>gedit</application> menu bar.
+			</para>
+
+		</blockquote>
+		 <para>
+			The above text includes application names; system-wide menu names and items; application-specific menu names; and buttons and text found within a GUI interface, all presented in proportional bold and all distinguishable by context.
+		</para>
+		 <para>
+			<command><replaceable>ثخين ثابت العرض مائل Mono-spaced Bold Italic</replaceable></command> أو <application><replaceable>ثخين متناسب مائل Proportional Bold Italic</replaceable></application>
+		</para>
+		 <para>
+			Whether mono-spaced bold or proportional bold, the addition of italics indicates replaceable or variable text. Italics denotes text you do not input literally or displayed text that changes depending on circumstance. For example:
+		</para>
+		 <blockquote>
+			<para>
+				للاتصال بجهاز بعيد عبر ssh، اكتب <command>ssh <replaceable>username</replaceable>@<replaceable>domain.name</replaceable></command> في محث سطر الأوامر. فإن كان الجهاز البعيد هو <filename>example.com</filename> واسمك عليه هو john، اكتب <command>ssh john@example.com</command>.
+			</para>
+			 <para>
+				الأمر <command>mount -o remount <replaceable>file-system</replaceable></command> يعمل على إعادة ضم نظام الملفات المسمى. مثلا، لإعادة ضم نظام الملفات ‪ <filename>/home</filename> ‬ الأمر هو <command>mount -o remount /home</command>.
+			</para>
+			 <para>
+				لمعرفة إصدار حزمة مثبتة استخدم الأمر <command>rpm -q <replaceable>package</replaceable></command>وهو يعطيك: <command><replaceable>package-version-release</replaceable></command>.
+			</para>
+
+		</blockquote>
+		 <para>
+			لاحظ الكلمات الثخينة المائلة أعلاه مثل &mdash; username و domain.name و file-system و package و version و release. كل واحدة منها توضح لك المكان الذي تضع فيه تلك القيم أو الذي يظهر فيه.
+		</para>
+		 <para>
+			وبعيدا عن الاستخدام القياسي لتمثيل العناوين، المائل يستخدم لتعين أول ظهور لحد (أي مصطلح) جديد. مثلا:
+		</para>
+		 <blockquote>
+			<para>
+				Publican is a <firstterm>DocBook</firstterm> publishing system.
+			</para>
+
+		</blockquote>
+
+	</section>
+	
+	 <section>
+		<title>أعراف الاقتباسات المقتطعة Pull-quote</title>
+		 <para>
+			Terminal output and source code listings are set off visually from the surrounding text.
+		</para>
+		 <para>
+			مخرجات مرسلة للطرفية تُصف <computeroutput>بالخط الرومي ثابت العرض c </computeroutput>Mono-spaced Roman لذا تظهر هكذا:
+		</para>
+		 
+<screen>books        Desktop   documentation  drafts  mss    photos   stuff  svn
+books_tests  Desktop1  downloads      images  notes  scripts  svgs</screen>
+		 <para>
+			Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:
+		</para>
+		 
+<programlisting language="Java">package org.jboss.book.jca.ex1;
+
+import javax.naming.InitialContext;
+
+public class ExClient
+{
+   public static void main(String args[]) 
+       throws Exception
+   {
+      InitialContext iniCtx = new InitialContext();
+      Object         ref    = iniCtx.lookup(&#34;EchoBean&#34;);
+      EchoHome       home   = (EchoHome) ref;
+      Echo           echo   = home.create();
+
+      System.out.println(&#34;Created Echo&#34;);
+
+      System.out.println(&#34;Echo.echo(&#39;Hello&#39;) = &#34; + echo.echo(&#34;Hello&#34;));
+   }
+}</programlisting>
+
+	</section>
+	
+	 <section>
+		<title>الملاحظات والتحذيرات</title>
+		 <para>
+			أخيرا، نستخدم ثلاث تنسيقات مرئية لجلب الانتباه إلى المعلومات التي قد تخطؤها العين.
+		</para>
+		 <note>
+			<title>ملاحظة</title>
+			 <para>
+				Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier.
+			</para>
+
+		</note>
+		 <important>
+			<title>مهم</title>
+			 <para>
+				Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled &#39;Important&#39; won&#39;t cause data loss but may cause irritation and frustration.
+			</para>
+
+		</important>
+		 <warning>
+			<title>تحذير</title>
+			 <para>
+				Warnings should not be ignored. Ignoring warnings will most likely cause data loss.
+			</para>
+
+		</warning>
+
+	</section>
+
+</section>
+
+

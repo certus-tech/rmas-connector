@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+]>
+<section>
+	<title>Conventions de documentation</title>
+	 <para>
+		Ce manuel utilise plusieurs conventions pour souligner l&#39;importance de certains mots ou expressions, mais aussi en vue d&#39;attirer l&#39;attention sur certains passages d&#39;informations précis.
+	</para>
+	 <para>
+		Dans les éditions support papier et PDF, ce manuel utilise des caractères issus de <ulink url="https://fedorahosted.org/liberation-fonts/">Liberation Fonts</ulink>. La police de caractères Liberation Fonts est également utilisée pour les éditions HTML si elle est installée sur votre système. Sinon, des polices de caractères alternatives équivalentes sont utilisées. Noter: Red Hat Enterprise Linux 5 et versions supérieures comprennent la police Liberation Fonts par défaut.
+	</para>
+	 <section>
+		<title>Conventions typographiques</title>
+		 <para>
+			Quatre conventions typographiques sont utilisées pour attirer l&#39;attention sur certains mots et expressions. Ces conventions, et les circonstances auxquelles elles s&#39;appliquent, sont les suivantes.
+		</para>
+		 <para>
+			<literal>Caractères gras à espacement fixe</literal>
+		</para>
+		 <para>
+			Utilisé pour surligner certaines entrées du système, comme les commandes de console, les noms de fichiers et les chemins d&#39;accès. Également utilisé pour surligner les touches et les combinaisons de touches. Par exemple :
+		</para>
+		 <blockquote>
+			<para>
+				Pour voir le contenu du fichier <filename>mon_nouvel_ouvrage_littéraire</filename> qui se trouve dans votre répertoire en cours, saisir la commande <command>cat mon_nouvel_ouvrage_littéraire</command> par invitation-console et appuyer sur <keycap>Enter</keycap> (entrer) pour exécuter la commande.
+			</para>
+
+		</blockquote>
+		 <para>
+			Cela comprendra un nom de fichier, une commande-console et un nom de touche, tous présentés sous forme de caractères gras à espacement fixe et tous bien distincts grâce au contexte.
+		</para>
+		 <para>
+			Les combinaisons de touches sont différenciées des noms de touches par le trait d&#39;union qui fait partie de chaque combinaison de touches. Ainsi :
+		</para>
+		 <blockquote>
+			<para>
+				Appuyer sur <keycap>Enter</keycap> (entrer) pour exécuter la commande.
+			</para>
+			 <para>
+				Appuyer sur <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F1</keycap></keycombo> pour passer au premier terminal virtuel. Appuyer sur <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F7</keycap></keycombo> pour retourner à votre session X-Windows.
+			</para>
+
+		</blockquote>
+		 <para>
+			Le premier paragraphe surligne la touche précise sur laquelle il faut appuyer. Le second surligne deux combinaisons de touches (chacun étant un ensemble de trois touches à presser simultanément).
+		</para>
+		 <para>
+			Si le code source est mentionné, les noms de classe, les méthodes, les fonctions, les noms de variables et les valeurs de retour citées dans un paragraphe seront présentées comme ci-dessus, en <literal>caractères gras à espacement fixe </literal>. Par exemple :
+		</para>
+		 <blockquote>
+			<para>
+				Les classes fichier comprennent le nom de classe <classname>filesystem</classname> pour les noms de fichier, <classname>file</classname> pour les fichiers, et <classname>dir</classname> pour les répertoires. Chaque classe correspond à un ensemble de permissions associées.
+			</para>
+
+		</blockquote>
+		 <para>
+			<application>Caractères gras proportionnels</application>
+		</para>
+		 <para>
+			Cela surligne des mots ou phrases que l&#39;on rencontre sur un système, comprenant des noms d&#39;application, des fenêtres de dialogue texte, des boutons étiquettés, des cases à cocher et des boutons d&#39;options; enfin, des intitulés de menus et de sous-menus. Par exemple :
+		</para>
+		 <blockquote>
+			<para>
+				Sélectionner <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Mouse</guimenuitem></menuchoice> à partir de la barre du menu principal pour lancer <application>Mouse Preferences</application>. A partir de l&#39;onglet <guilabel>Buttons</guilabel> (Boutons), cliquer sur la case à cocher <guilabel>Left-handed mouse</guilabel> (souris main gauche) et cliquer sur <guibutton>Close</guibutton> (Fermer) pour faire passer le bouton principal de la souris de la gauche vers la droite (ce qui permet l&#39;utilisation de la souris par la main gauche).
+			</para>
+			 <para>
+				Pour insérer un caractère spécial dans un fichier <application>gedit</application>, choisir <menuchoice><guimenu>Applications</guimenu><guisubmenu>Accessories</guisubmenu><guimenuitem>Character Map</guimenuitem></menuchoice> à partir de la barre du menu principal. Ensuite, sélectionner <menuchoice><guimenu>Search</guimenu><guimenuitem> Find&hellip;</guimenuitem></menuchoice> à partir de la barre de menu <application>Character Map</application>, taper le nom du caractère dans le champ <guilabel>Search</guilabel> et cliquer sur <guibutton>Next</guibutton>. Le caractère que vous cherchiez sera surligné dans la <guilabel>Character Map</guilabel> (Table de caractères). Double-cliquez sur ce caractère surligné pour l&#39;insérer dans le champ <guilabel>Text to copy</guilabel> (texte à copier), puis cliquer sur le bouton <guibutton>Copy</guibutton> (copier) . Maintenant, revenez à votre document, et sélectionnez <menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem></menuchoice> à partir de la barre de menu <application>gedit</application>.
+			</para>
+
+		</blockquote>
+		 <para>
+			Le texte ci-dessus comprend des noms d&#39;application, des noms de menu et autres éléments s&#39;appliquant à l&#39;ensemble du système, des noms de menu pour applications particulières; et des boutons et textes que l&#39;on trouve dans une interface GUI, tous présentés sous la forme Gras proportionnelle et identifiables en fonction du contexte.
+		</para>
+		 <para>
+			<command><replaceable>Italique gras à espacement fixe </replaceable></command> ou <application><replaceable>Italique gras proportiionnel</replaceable></application>
+		</para>
+		 <para>
+			Qu&#39;ils soient en caractères gras à espacement fixe ou à caractères gras proportionnels, l&#39;ajout des italiques indique la présence de texte remplaçable ou variable. Les caractères en italique indiquent la présence de texte que vous ne saisissez pas littéralement ou de texte affiché qui change en fonction des circonstances. Par exemple :
+		</para>
+		 <blockquote>
+			<para>
+				Pour connecter à une machine éloignée en utilisant ssh, taper <command>ssh <replaceable>nom d&#39;utilisateur</replaceable>@<replaceable>domain.name (nom.domaine)</replaceable></command> par invitation de la console. Si la machine éloignée est <filename>exemple.com</filename> et que votre nom d&#39;utilisateur pour cette machine est john, tapez <command>ssh john@example.com</command>.
+			</para>
+			 <para>
+				La commande <command>mount -o remount <replaceable> du système de fichiers</replaceable></command> remonte jusqu&#39;au nom du système de fichiers. Ainsi, pour remonter au <filename>/home</filename> du système de fichier, la commande est <command>mount -o remount /home</command>.
+			</para>
+			 <para>
+				Pour voir la version d&#39;un package actuellement installé, utiliser la commande du package <command>rpm -q <replaceable></replaceable></command> . Elle vous permettra de retourner le résultat suivant: <command><replaceable>package-version-release</replaceable></command>.
+			</para>
+
+		</blockquote>
+		 <para>
+			Notez les mots en caractères italique gras au dessus de &mdash; nom d&#39;utilisateur, domain.name, système fichier, package, version et mise à jour. Chaque mot est un signet, soit pour le texte que vous saisissez suite à l&#39;activation d&#39;une commande, soit pour le texte affiché par le système.
+		</para>
+		 <para>
+			Mis à part l&#39;utilisation habituelle de présentation du titre d&#39;un ouvrage, les caractères italiques indiquent l&#39;utilisation initiale d&#39;un terme nouveau et important. Ainsi:
+		</para>
+		 <blockquote>
+			<para>
+				Publican est un système de publication <firstterm>DocBook</firstterm>.
+			</para>
+
+		</blockquote>
+
+	</section>
+	
+	 <section>
+		<title>Conventions pour citations mises en vedette</title>
+		 <para>
+			Les sorties de terminaux et listings de code source ressortent visuellement du texte avoisinant.
+		</para>
+		 <para>
+			Les sorties envoyées vers un terminal sont en caractères <computeroutput>Romains à espacement fixe</computeroutput> et présentées ainsi :
+		</para>
+		 
+<screen>books        Desktop   documentation  drafts  mss    photos   stuff  svn
+books_tests  Desktop1  downloads      images  notes  scripts  svgs</screen>
+		 <para>
+			Des listings code-source sont également présentés en espaces <computeroutput>romains à espacement fixe</computeroutput> mais sont présentés et surlignés comme suit :
+		</para>
+		 
+<programlisting language="Java">package org.jboss.book.jca.ex1;
+
+import javax.naming.InitialContext;
+
+public class ExClient
+{
+   public static void main(String args[]) 
+       throws Exception
+   {
+      InitialContext iniCtx = new InitialContext();
+      Object         ref    = iniCtx.lookup(&#34;EchoBean&#34;);
+      EchoHome       home   = (EchoHome) ref;
+      Echo           echo   = home.create();
+
+      System.out.println(&#34;Created Echo&#34;);
+
+      System.out.println(&#34;Echo.echo(&#39;Hello&#39;) = &#34; + echo.echo(&#34;Hello&#34;));
+   }
+}</programlisting>
+
+	</section>
+	
+	 <section>
+		<title>Notes et avertissements</title>
+		 <para>
+			Finalement, nous utilisons trois styles visuels pour attirer l&#39;attention sur des informations qui auraient pu être normalement négligées.
+		</para>
+		 <note>
+			<title>Remarque</title>
+			 <para>
+				Une note est une forme de conseil, un raccourci ou une approche alternative par rapport à une tâche à entreprendre. L&#39;ignorer ne devrait pas provoquer de conséquences négatives, mais vous pourriez passer à côté d&#39;une astuce qui vous aurait simplifié la vie.
+			</para>
+
+		</note>
+		 <important>
+			<title>Important</title>
+			 <para>
+				Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled &#39;Important&#39; won&#39;t cause data loss but may cause irritation and frustration.
+			</para>
+
+		</important>
+		 <warning>
+			<title>Avertissement</title>
+			 <para>
+				Un avertissement ne devrait pas être ignoré. Ignorer des avertissements risque fortement d&#39;entrainer des pertes de données.
+			</para>
+
+		</warning>
+
+	</section>
+
+</section>
+
+
