@@ -1,11 +1,24 @@
-RMAS (Research Management and Administration System) Connector project
-for data integration.
+RMAS (Research Management and Administration System)
+http://www.rmas.ac.uk/
+
+RMAS Connector project for data integration.
 http://www.rmas.ac.uk/documentation/
+
+The RMAS Supplier Agnostic Connector was developed by Certus Technology
+as part of the RMAS project.
+http://www.certus-tech.com/cta/Services/Service_Detail/RMAS.cid1459
+
+It extracts data from disparate sources, transforms, and loads it into
+target systems or data warehouses. Delivering data in batch or real time,
+this enterprise-class data integration platform enables data synchronisation
+and accelerates Business Intelligence deployments.
 
 Copyright (c) 2012 Certus Technology Associates Limited.
 http://www.certus-tech.com/
 
-Branch directory structure:
+--------------------------------------------------------------------------------
+
+Directory structure:
 
 * code - Source code for Kettle plugins and example web service.
 * documentation - Documentation source for RMAS connector.
@@ -13,6 +26,8 @@ Branch directory structure:
 * ext - Support files required for documentation build.
 * install - Build scripts for Kettle plugins and RMAS connector documentation.
 * lib - Third party dependencies for source code.
+
+--------------------------------------------------------------------------------
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
